@@ -26,6 +26,7 @@ void useItem(){}
 #include "initializeEnemies.c"
 #include "addIntelligence.c"
 #include "initializeVariables.c"
+#include "calcRemain.cpp"
 #include "displayinformation.cpp"
 #include "calcFramerate.cpp"
 
@@ -34,10 +35,10 @@ int main (int argc, const char** argv)
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
-    framerateInitialization();
+    time::framerateInitialization();
     for (;;)
     {
-        calcFps();
+        time::calcFps();
         switch (state)
         {
         case 0:
@@ -48,7 +49,10 @@ int main (int argc, const char** argv)
             }
             break;
         case 1:
-            goto forceexit;
+            if (kbhit())
+            {
+                inputKey(getch());
+            }
         }
     }
 

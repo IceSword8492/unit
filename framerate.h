@@ -1,15 +1,18 @@
 #ifndef INITFRAMERATE
 #define INITFRAMERATE
 
-void framerateInitialization ()
+namespace time
 {
-    count = 0;
-    now = timeGetTime();
-    baseTime = now;
-    prevTime = now;
-    startTime = now;
-    limitTime = now + LIMIT_TIME;
-    fps = .0f;
+    void framerateInitialization ()
+    {
+        count = 0;
+        now = timeGetTime();
+        baseTime = now;
+        prevTime = now;
+        startTime = now;
+        limitTime = LIMIT_TIME;
+        fps = .0f;
+    }
 }
 
 #endif

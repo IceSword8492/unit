@@ -13,6 +13,8 @@ namespace display
         case 0:
             displayRule();
             break;
+        case 1:
+            printf("TIME: %ds                                                                               GRADE: %d\nFPS: %02d\n", (time::calcRemain() / 1000), player.pos[0] / 2 + 1, (int)fps);
         }
     }
 }
