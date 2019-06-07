@@ -38,6 +38,20 @@ int main (int argc, const char** argv)
     for (;;)
     {
         calcFps();
+        switch (state)
+        {
+        case 0:
+            if (kbhit())
+            {
+                getch();
+                state = 1;
+            }
+            break;
+        case 1:
+            goto forceexit;
+        }
     }
+
+    forceexit:;
     return 0;
 }
