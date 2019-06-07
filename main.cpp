@@ -18,7 +18,7 @@ void useItem(){}
 #include "gameClear.c"
 #include "initializedungeon.c"
 #include "addMoney.c"
-#include "displayRule.c"
+#include "displayRule.cpp"
 #include "move.c"
 #include "inputDirection.c"
 #include "inputKey.c"
@@ -26,8 +26,8 @@ void useItem(){}
 #include "initializeEnemies.c"
 #include "addIntelligence.c"
 #include "initializeVariables.c"
-#include "displayinformation.c"
-#include "calcFramerate.c"
+#include "displayinformation.cpp"
+#include "calcFramerate.cpp"
 
 int main (int argc, const char** argv)
 {

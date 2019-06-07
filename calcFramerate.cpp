@@ -10,7 +10,7 @@ void calcFps ()
     if (now - prevTime >= 33)
     {
         prevTime = now;
-        displayInformation();
+        display::displayInformation();
         count++;
     }
     if (now - baseTime >= 1000)
