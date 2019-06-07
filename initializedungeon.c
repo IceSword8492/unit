@@ -1,7 +1,7 @@
 //ƒ_ƒ“ƒWƒ‡ƒ“‚Ì‰Šú‰» ã™‘å’n
 #ifndef DUNGEON
 #define DUNGEON
-void initializeDungeon () // fixed by Yuya Nakamura
+void initializeDungeon () // fixed by Yuya Nakamura (bug fixed)
 {
     Room d[8][5] = {
         {

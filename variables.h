@@ -20,7 +20,7 @@ bool trueClear;     // 裏ボスを倒したか
 float score;        // スコア
 Student player;     // プレイヤー変数
 Room dungeon[8][5]; // ダンジョン変数
-Enemy* enemies;     // 敵配列
+Enemy enemies[9];     // 敵配列
 bool isInShop;      // 購買にいるか
 int state;          // ゲームの状態 (displayinformationより参照)
 

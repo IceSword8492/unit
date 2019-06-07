@@ -1,5 +1,5 @@
-//ç†Šæ¾¤ç¥å¸Œ
-//æ‰€æŒé‡‘ã®è¿½åŠ 
+//ŒFàV—SŠó
+//Š‹à‚Ì’Ç‰Á
 
 // fixed by Yuya Nakamura
 // added #ifndef~#endif

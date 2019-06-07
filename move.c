@@ -1,5 +1,5 @@
-//ç†Šæ¾¤ç¥å¸Œ
-//å­¦ç”Ÿã®ç§»å‹•
+//ŒFàV—SŠó
+//Šw¶‚ÌˆÚ“®
 
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
@@ -16,15 +16,15 @@ void move (int inputDirection)
         switch (inputDirection)
         {
         case 1:
-            player.pos[1]++; //å³
+            player.pos[1]++; //‰E
             break;
 
         case 2:
-            player.pos[0]++; //ä¸Š
+            player.pos[0]++; //ã
             break;
 
         case 4:
-            player.pos[1]--; //å·¦
+            player.pos[1]--; //¶
             break;
         }
     }

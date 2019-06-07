@@ -1,4 +1,4 @@
-//çŸ¥è­˜é‡ã®å¢—åŠ byå‰å²¡èª‡å¤ªéƒ
+//’m¯—Ê‚Ì‘‰Áby‹g‰ªŒÖ‘¾˜Y
 
 // fixed by Yuya Nakamura
 // added #ifndef~#endif

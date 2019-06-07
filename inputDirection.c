@@ -8,7 +8,7 @@
 #define LEFT 4
 #define UP 2
 #define RIGHT 1
-//ç§»å‹•æ–¹å‘ã®å…¥åŠ›byå‰å²¡èª‡å¤ªéƒ
+//ˆÚ“®•ûŒü‚Ì“ü—Íby‹g‰ªŒÖ‘¾˜Y
 void inputDirection (char key)
 {
     if(key=='w'){

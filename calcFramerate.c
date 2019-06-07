@@ -1,5 +1,5 @@
-// Author: 中村宥哉
-// FPS計算及び描画処理関数呼び出し用関数の定義
+// Author: �����G��
+// FPS�v�Z�y�ѕ`��֐��Ăяo���p�֐��̒�`
 
 #ifndef CALCFPS
 #define CALCFPS

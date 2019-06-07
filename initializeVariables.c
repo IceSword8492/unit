@@ -1,5 +1,5 @@
-// Author: ä¸­æ‘å®¥å“‰
-// ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°åˆæœŸåŒ–é–¢æ•°ã®å®šç¾©
+// Author: ’†‘º—GÆ
+// ƒOƒ[ƒoƒ‹•Ï”‰Šú‰»ŠÖ”‚Ì’è‹`
 
 #ifndef INITVARS
 #define INITVARS

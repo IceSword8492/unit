@@ -1,5 +1,5 @@
-// Author: ф╕нцЭСхоехУЙ
-// цГЕха▒шбичд║щЦвцХ░уБохоЪч╛й
+// Author: ТЖС║ЧGН╞
+// ПюХёХ\ОжК╓РФВ╠ТшЛ`
 
 #ifndef DISPLAYINFORMATION
 #define DISPLAYINFORMATION

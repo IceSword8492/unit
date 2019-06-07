@@ -9,12 +9,12 @@ typedef struct Room
     struct Room* self;
     int id;
     char name[256];
-    void* event;
+    void (*event)();
     int direction;
     int popProbabilty;
 } Room;
 
-Room new_Room(int id, const char* name, void* event, int direction, int popProb)
+Room new_Room(int id, const char* name, void (*event)(), int direction, int popProb)
 {
     Room r = {
         &r,

@@ -1,4 +1,12 @@
-//ã‚²ãƒ¼ãƒ ã®æ•—åŒ—å‡¦ç†byå‰å²¡èª‡å¤ªéƒ
+//ƒQ[ƒ€‚Ì”s–kˆ—by‹g‰ªŒÖ‘¾˜Y
+// fixed by Yuya Nakamura
+// added #ifndef~#endif
+
+#ifndef GAMEOVER
+#define GAMEOVER
+
 void gameOver(){
     lose=true;
 }
+
+#endif
