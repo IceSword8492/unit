@@ -10,7 +10,7 @@
 void initializeStudent ()
 {
     char name[256];
-    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë(¤? ? ?¤)\n> ");
+    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë\n> ");
     scanf("%s", name);
     player = new_Student(name);
 }

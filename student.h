@@ -15,7 +15,7 @@
 #define STUDENT_SKILLS {0, 0}
 
 typedef struct Student {
-    struct Student* this;
+    struct Student* self;
     char name[256];
     int pos[2];
     float maxHp;
@@ -44,6 +44,7 @@ Student new_Student (const char* name)
         STUDENT_SKILLS
     };
     strcpy(s.name, name);
+    printf("%d, %d\n", s.pos[0], s.pos[1]);
     return s;
 }
 

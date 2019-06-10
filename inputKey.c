@@ -35,6 +35,8 @@ void inputKey(char key){
     }
     else if(key==0x1B){
         exit(0);
+        // prevState = state;
+        // state = state == 99 ? prevState : 99;
     }
 }
 

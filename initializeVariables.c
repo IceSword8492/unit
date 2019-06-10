@@ -13,6 +13,8 @@ void initializeVariables ()
     score = 0;
     isInShop = false;
     state = 0;
+    bool tbs[] = {true, true, true, true};
+    memcpy(textBooks, tbs, 4);
 }
 
 #endif

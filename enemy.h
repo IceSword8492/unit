@@ -6,7 +6,7 @@
 
 typedef struct Enemy
 {
-    struct Enemy* this; // ©g
+    struct Enemy* self; // ©g
     int hp;             // HP
     int maxHp;          // Å‘åHP
     float stdAtk;       // Šî‘bUŒ‚—Í

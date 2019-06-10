@@ -21,6 +21,7 @@ int main (int argc, const char** argv)
     initializeDungeon();
     initializeEnemies();
     initializeSettings(argc, argv);
+    initializeStudent();
     time::framerateInitialization();
     for (;;)
     {
@@ -30,6 +31,7 @@ int main (int argc, const char** argv)
         case D_RULE:
             display::displayRule();
             getch();
+            prevState = state;
             state = 1;
             startTime = timeGetTime();
             break;
