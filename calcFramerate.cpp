@@ -1,5 +1,5 @@
 // Author: ’†‘º—GÆ
-// FPSŒvŽZ‹y‚Ñ•`‰æŠÖ”ŒÄ‚Ño‚µ—pŠÖ”‚Ì’è‹`
+// FPSŒvŽZŠÖ”‚Ì’è‹`
 
 #ifndef CALCFPS
 #define CALCFPS
@@ -12,7 +12,6 @@ namespace time
         if (now - prevTime >= 33)
         {
             prevTime = now;
-            display::displayInformation();
             count++;
         }
         if (now - baseTime >= 1000)
