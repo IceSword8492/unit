@@ -9,46 +9,39 @@ void pickUpText(){}
 void goShop(){}
 void useItem(){}
 
-#include "room.h"
-#include "enemy.h"
-#include "student.h"
-#include "variables.h"
-#include "framerate.h"
-#include "gameOver.c"
-#include "gameClear.c"
-#include "initializedungeon.c"
-#include "addMoney.c"
-#include "displayRule.cpp"
-#include "move.c"
-#include "inputDirection.c"
-#include "inputKey.c"
-#include "initializeStudent.c"
-#include "initializeEnemies.c"
-#include "addIntelligence.c"
-#include "initializeVariables.c"
-#include "calcRemain.cpp"
-#include "displayinformation.cpp"
-#include "calcFramerate.cpp"
+#include "headers.h"
+
+#define D_RULE 0
+#define D_DUNGEON 1
+#define D_ESC_MENU 99
 
 int main (int argc, const char** argv)
 {
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
+    initializeSettings(argc, argv);
     time::framerateInitialization();
     for (;;)
     {
         time::calcFps();
         switch (state)
         {
-        case 0:
+        case D_RULE:
+            display::displayRule();
+            getch();
+            state = 1;
+            startTime = timeGetTime();
+            break;
+        case D_DUNGEON:
             if (kbhit())
             {
-                getch();
-                state = 1;
+                inputKey(getch());
             }
+            display::displayInformation();
             break;
-        case 1:
+        
+        case D_ESC_MENU:
             if (kbhit())
             {
                 inputKey(getch());

@@ -6,7 +6,7 @@
 
 typedef struct Room
 {
-    struct Room* self;
+    struct Room* this;
     int id;
     char name[256];
     void (*event)();

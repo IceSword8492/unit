@@ -18,3 +18,4 @@
 #include "calcRemain.cpp"
 #include "displayinformation.cpp"
 #include "calcFramerate.cpp"
+#include "initializeSettings.h"

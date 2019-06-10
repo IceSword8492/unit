@@ -15,7 +15,7 @@
 #define STUDENT_SKILLS {0, 0}
 
 typedef struct Student {
-    struct Student* self;
+    struct Student* this;
     char name[256];
     int pos[2];
     float maxHp;

@@ -23,5 +23,7 @@ Room dungeon[8][5]; // ダンジョン変数
 Enemy enemies[9];     // 敵配列
 bool isInShop;      // 購買にいるか
 int state;          // ゲームの状態 (displayinformationより参照)
+bool showFps;
+char message[256];
 
 #endif
