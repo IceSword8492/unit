@@ -10,10 +10,10 @@ void pickUpText(){}
 void goShop(){}
 void useItem(){}
 
-#define D_RULE 0
-#define D_DUNGEON 1
-#define D_BATTLE 2
-#define D_ESC_MENU 99
+#define D_RULE       0
+#define D_DUNGEON    1
+#define D_BATTLE     2
+#define D_ESC_MENU  99
 
 #include "headers.h"
 
@@ -31,10 +31,10 @@ int main (int argc, const char** argv)
     for (;;)
     {
         calcFps();
+        displayInformation();
         switch (state)
         {
         case D_RULE:
-            displayInformation();
             getch();
             prevState = state;
             state = 1;
@@ -46,10 +46,8 @@ int main (int argc, const char** argv)
             {
                 inputKey(getch());
             }
-            displayInformation();
             break;
         case D_BATTLE:
-            displayInformation();
             if (kbhit())
             {
                 if (getch() == 0x1b) // DEBUG
