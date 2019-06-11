@@ -1,6 +1,8 @@
 //ƒ_ƒ“ƒWƒ‡ƒ“‚Ì‰Šú‰» ã™‘å’n
+// added Room* getRoom (void) by Yuya Nakamura
 #ifndef DUNGEON
 #define DUNGEON
+
 void initializeDungeon () // fixed by Yuya Nakamura (bug fixed)
 {
     Room d[8][5] = {
@@ -48,6 +50,7 @@ void initializeDungeon () // fixed by Yuya Nakamura (bug fixed)
             new_Room(64, "Œ¤302", pickUpText, "pickUpText", 0b100, .5f)
         },
         {
+            new_Room(70, "", NULL, "", 0b000, .0f),
             new_Room(71, "‘²‹Æ", gameClear, "gameClear", 0b000, .0f),
             new_Room(72, "uA301", NULL, "", 0b101, 1),
             new_Room(73, "–ÊÚº", NULL, "", 0b000, 1)
@@ -55,4 +58,10 @@ void initializeDungeon () // fixed by Yuya Nakamura (bug fixed)
     };
     memcpy(dungeon, d, sizeof(d));
 }
+
+Room* getRoom ()
+{
+    return &dungeon[player.pos[0]][player.pos[1]];
+}
+
 #endif

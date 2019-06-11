@@ -10,42 +10,60 @@ namespace display
     {
         switch (state)
         {
-        case 0:
+        case D_RULE:
             displayRule();
             break;
-        case 1:
+        case D_DUNGEON:
             if (showFps)
             {
-                printf("TIME: %03ds                                                                               GRADE: %d\nFPS: %02d\n", (time::calcRemain() / 1000), player.pos[0] / 2 + 1, (int)fps);
+                printf("TIME: %03ds                                                                               GRADE: %d\nFPS: %02d\n", (calcRemain() / 1000), player.pos[0] / 2 + 1, (int)fps);
             }
             else
             {
                 if (player.pos[0] % 2 == 0)
                 {
                     printf("TIME: %03ds                                                                               GRADE: %d\n\n%s\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
-                    (time::calcRemain() / 1000),
+                        (calcRemain() / 1000),
                         player.pos[0] / 2 + 1,
                         message,
                         dungeon[player.pos[0]][0].name,
-                        player.pos[1] == 0 ? ">" : "",
-                        player.pos[1] == 1 ? "<" : "",
+                        cursor.pos == 0 ? ">" : "",
+                        cursor.pos == 1 ? "<" : "",
                         dungeon[player.pos[0]][1].name,
-                        player.pos[1] == 1 ? ">" : "",
-                        player.pos[1] == 2 ? "<" : "",
+                        cursor.pos == 1 ? ">" : "",
+                        cursor.pos == 2 ? "<" : "",
                         dungeon[player.pos[0]][2].name,
-                        player.pos[1] == 2 ? ">" : "",
-                        player.pos[1] == 3 ? "<" : "",
+                        cursor.pos == 2 ? ">" : "",
+                        cursor.pos == 3 ? "<" : "",
                         dungeon[player.pos[0]][3].name,
-                        player.pos[1] == 3 ? ">" : "",
-                        player.pos[1] == 4 ? "<" : "",
+                        cursor.pos == 3 ? ">" : "",
+                        cursor.pos == 4 ? "<" : "",
                         dungeon[player.pos[0]][4].name
                     );
                 }
                 else if (player.pos[0] != 7)
                 {
-                    printf("TIME: %03ds                                                                               GRADE: %d\n\n%s\n", (time::calcRemain() / 1000), player.pos[0] / 2 + 1, "TEST");
+                    printf("TIME: %03ds                                                                               GRADE: %d\n\n%s\n", (calcRemain() / 1000), player.pos[0] / 2 + 1, dungeon[player.pos[0]][player.pos[1]].name);
+                }
+                else
+                {
+                    printf("TIME: %03ds                                                                               GRADE: %d\n\n%s\n|%s%s|%s%s%s|%s%s|\n",
+                    (calcRemain() / 1000),
+                        player.pos[0] / 2 + 1,
+                        message,
+                        dungeon[player.pos[0]][1].name,
+                        cursor.pos == 1 ? ">" : "",
+                        cursor.pos == 2 ? "<" : "",
+                        dungeon[player.pos[0]][2].name,
+                        cursor.pos == 2 ? ">" : "",
+                        cursor.pos == 3 ? "<" : "",
+                        dungeon[player.pos[0]][3].name);
                 }
             }
+            break;
+        case D_BATTLE:
+            displayBattle();
+            break;
         }
     }
 }

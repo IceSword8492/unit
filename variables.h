@@ -26,7 +26,7 @@ int state;          // ƒQ[ƒ€‚Ìó‘Ô
 int prevState;      // •Ï‘J‘O‚ÌƒQ[ƒ€‚Ìó‘Ô
 bool showFps;
 char message[256];
-int cursorPos;
+Cursor cursor;
 bool textBooks[4];
 
 #endif
