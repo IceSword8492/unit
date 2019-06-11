@@ -17,6 +17,8 @@ void useItem(){}
 
 #include "headers.h"
 
+#pragma comment(lib, "winmm.lib")
+
 using namespace display;
 
 int main (int argc, const char** argv)
@@ -61,6 +63,7 @@ int main (int argc, const char** argv)
             {
                 inputKey(getch());
             }
+            break;
         }
     }
 
