@@ -14,7 +14,7 @@ void createMessage ()
     {
         strcpy(message, "‘²‹ÆŒ±‚ğóŒ±‚Å‚«‚Ü‚· (w key)");
     }
-    else if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[1] / 2])
+    else if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
     {
         strcpy(message, "‹³‰È‘‚ğ”­Œ©‚µ‚Ü‚µ‚½ (’m¯ +50)");
     }
