@@ -4,7 +4,7 @@
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
 // fixed indent
-// added if (chec...
+// added if (moved...
 
 #ifndef MOVE
 #define MOVE
