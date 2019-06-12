@@ -20,6 +20,7 @@ void initializeVariables ()
     memcpy(&cursor, &tmpcsr, sizeof(Cursor));
     rand(); //‰‰ñ‚Ìƒ‰ƒ“ƒ_ƒ€’l‚ğÌ‚Ä‚é
     nextGradeFlag = false;
+    refreshSpeed = 33;
 }
 
 #endif

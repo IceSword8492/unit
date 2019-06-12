@@ -10,15 +10,12 @@ using namespace display;
 void controlFps ()
 {
     now = timeGetTime();
-    if (now - prevTime >= 33)
+    if (now - prevTime >= refreshSpeed)
     {
+        cls();
         displayInformation();
         prevTime = now;
         count++;
-    }
-    if (now - prevTime == 32)
-    {
-        cls();
     }
     if (now - baseTime >= 1000)
     {

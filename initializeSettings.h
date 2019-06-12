@@ -12,6 +12,14 @@ void initializeSettings (int argc, const char** argv)
         {
             showFps = true;
         }
+        if (strcmp(argv[i], "-lfps") == 0)
+        {
+            refreshSpeed = 100;
+        }
+        if (strcmp(argv[i], "-vlfps") == 0)
+        {
+            refreshSpeed = 500;
+        }
     }
 }
 

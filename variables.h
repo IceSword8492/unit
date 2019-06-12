@@ -29,5 +29,6 @@ char message[256];  // 画面にメッセージを出すための変数
 Cursor cursor;      // カーソルポジションを保持する変数
 bool textBooks[4];  // 各階層のテキストブック取得状況保持変数
 bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
+int refreshSpeed;
 
 #endif
