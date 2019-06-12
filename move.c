@@ -38,7 +38,7 @@ void move (int inputDirection)
     if (moved)
     {
         // エンカウントしたか判定
-        if (checkEncount())
+        if (checkEncount() && enemyPop)
         {
             setState(D_BATTLE);
             setCursor(0);

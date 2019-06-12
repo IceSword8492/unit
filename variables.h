@@ -31,5 +31,6 @@ Cursor cursor;      // カーソルポジションを保持する変数
 bool textBooks[4];  // 各階層のテキストブック取得状況保持変数
 bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
 int refreshSpeed;
+bool enemyPop;
 
 #endif

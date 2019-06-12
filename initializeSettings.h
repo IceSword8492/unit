@@ -32,6 +32,10 @@ void initializeSettings (int argc, const char** argv)
         {
             refreshSpeed = 4;
         }
+        if (strcmp(argv[1], "-noEnemy") == 0)
+        {
+            enemyPop = false;
+        }
     }
 }
 
