@@ -12,10 +12,10 @@ typedef struct Room
     void (*event)();
     char eventName[256];
     int direction;
-    int popProbabilty;
+    float popProbability;
 } Room;
 
-Room new_Room(int id, const char* name, void (*event)(), const char* eventName, int direction, int popProb)
+Room new_Room(int id, const char* name, void (*event)(), const char* eventName, int direction, float popProb)
 {
     Room r = {
         &r,
