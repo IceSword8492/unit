@@ -23,8 +23,13 @@ void inputKey(char key){
     case 'H':
         useItem();
         break;
-    case 0x1b:
-        exit(0);
+    case 13: // enter
+        execute();
+        break;
+    case 0x1b: // esc
+        setState(D_ESC_MENU);
+        setCursor(0);
+        break;
     }
 }
 

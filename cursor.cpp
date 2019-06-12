@@ -16,6 +16,9 @@ void moveCursor (int direction)
     case D_DUNGEON:
         move(direction);
         break;
+    case D_ESC_MENU:
+        cursor.pos ^= 1;
+        break;
     }
 }
 

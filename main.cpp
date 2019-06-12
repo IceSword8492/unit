@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <string.h>
 #include <time.h>
+#include <signal.h>
 
 void pickUpText(){}
 
@@ -22,6 +23,7 @@ using namespace display;
 int main (int argc, const char** argv)
 {
     srand(time(NULL));
+    initializeConsole();
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
@@ -30,14 +32,13 @@ int main (int argc, const char** argv)
     framerateInitialization();
     for (;;)
     {
-        calcFps();
-        displayInformation();
+        controlFps();
         switch (state)
         {
         case D_RULE:
+            displayRule();
             getch();
-            prevState = state;
-            state = 1;
+            setState(D_DUNGEON);
             startTime = timeGetTime();
             break;
         case D_DUNGEON:
@@ -50,9 +51,9 @@ int main (int argc, const char** argv)
         case D_BATTLE:
             if (kbhit())
             {
-                if (getch() == 0x1b) // DEBUG
+                if (getch()) // DEBUG
                 {
-                    state = D_DUNGEON;
+                    setState(D_DUNGEON);
                 }
             }
             break;
@@ -66,5 +67,5 @@ int main (int argc, const char** argv)
     }
 
     forceexit:;
-    return 0;
+    safeexit(0);
 }

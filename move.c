@@ -36,7 +36,7 @@ void move (int inputDirection)
         // エンカウントしたか判定
         if (checkEncount())
         {
-            state = D_BATTLE;
+            setState(D_BATTLE);
             setCursor(0);
         }
     }

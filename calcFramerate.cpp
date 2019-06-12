@@ -1,16 +1,24 @@
 // Author: ’†‘º—GÆ
 // FPSŒvŽZŠÖ”‚Ì’è‹`
+// displayInformationŒÄ‚Ño‚µ‚ÌŠÖŒW‚ÅŠÖ”–¼•ÏX (calcFps -> controlFps)
 
 #ifndef CALCFPS
 #define CALCFPS
 
-void calcFps ()
+using namespace display;
+
+void controlFps ()
 {
     now = timeGetTime();
     if (now - prevTime >= 33)
     {
+        displayInformation();
         prevTime = now;
         count++;
+    }
+    if (now - prevTime == 32)
+    {
+        cls();
     }
     if (now - baseTime >= 1000)
     {

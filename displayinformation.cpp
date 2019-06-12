@@ -10,9 +10,6 @@ namespace display
     {
         switch (state)
         {
-        case D_RULE:
-            displayRule();
-            break;
         case D_DUNGEON:
             if (showFps)
             {
@@ -63,6 +60,9 @@ namespace display
             break;
         case D_BATTLE:
             displayBattle();
+            break;
+        case D_ESC_MENU:
+            displayEscMenu();
             break;
         }
     }

@@ -44,7 +44,6 @@ Student new_Student (const char* name)
         STUDENT_SKILLS
     };
     strcpy(s.name, name);
-    printf("%d, %d\n", s.pos[0], s.pos[1]);
     return s;
 }
 
