@@ -20,6 +20,7 @@ void pickUpText(){}
 
 using namespace display;
 
+
 int main (int argc, const char** argv)
 {
     srand(time(NULL));
