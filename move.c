@@ -17,8 +17,7 @@ void move (int inputDirection)
     {
         if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
         {
-            textBooks[player.pos[0] / 2] = false; // pickUpText()Ç…ïœçXó\íË
-            addIntelligence(50);
+            pickUpText();
         }
         switch (inputDirection)
         {
