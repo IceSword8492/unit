@@ -4,13 +4,15 @@
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
 // fixed indent
+// added if (chec...
 
 #ifndef MOVE
 #define MOVE
 
 void move (int inputDirection)
 {
-    int direction = dungeon[player.pos[0]][player.pos[1]].direction;
+    int direction = getRoom()->direction;
+    bool moved = false;
     if (inputDirection & direction)
     {
         switch (inputDirection)
@@ -27,8 +29,17 @@ void move (int inputDirection)
             player.pos[1]--; //左
             break;
         }
+        moved = true;
     }
-    
+    if (moved)
+    {
+        // エンカウントしたか判定
+        if (checkEncount())
+        {
+            setState(D_BATTLE);
+            setCursor(0);
+        }
+    }
 }
 
 #endif

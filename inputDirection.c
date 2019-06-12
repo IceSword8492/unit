@@ -5,9 +5,6 @@
 #ifndef INPUTDIRECTION
 #define INPUTDIRECTION
 
-#define LEFT 4
-#define UP 2
-#define RIGHT 1
 //ˆÚ“®•ûŒü‚Ì“ü—Íby‹g‰ªŒÖ‘¾˜Y
 void inputDirection (char key)
 {

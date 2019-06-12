@@ -1,42 +1,55 @@
-//キー入力by吉岡誇太郎
-
- // fixed by Yuya Nakamura
- // added type of key
- // fixed "exit 0;" to "exit(0);"
- // added #ifndef~#endif
+// Author: 中村宥哉
+// キー入力関数定義
 
 #ifndef INPUTKEY
 #define INPUTKEY
 
-void inputKey(char key){
-    if(key=='w'){
-        inputDirection('w');
+void inputKey(){
+    char key;
+    key = getch();
+    if (key != 0xffffffe0)
+    {
+        switch (key)
+        {
+        case 'w':
+        case 'W':
+            moveCursor(UP);
+            break;
+        case 'a':
+        case 'A':
+            moveCursor(LEFT);
+            break;
+        case 'd':
+        case 'D':
+            moveCursor(RIGHT);
+            break;
+        case 'h':
+        case 'H':
+            useItem();
+            break;
+        case 13: // enter
+            execute();
+            break;
+        case 0x1b: // esc
+            setState(D_ESC_MENU);
+            setCursor(0);
+            break;
+        }
     }
-    else if(key=='W'){
-        inputDirection('W');
-    }
-    else if(key=='a'){
-        inputDirection('a');
-    }
-    else if(key=='A'){
-        inputDirection('A');
-    }
-    else if(key=='d'){
-        inputDirection('d');
-    }
-    else if(key=='D'){
-        inputDirection('D');    
-    }
-    else if(key=='h'){
-        useItem();
-    }
-    else if(key=='H'){
-        useItem();
-    }
-    else if(key==0x1B){
-        exit(0);
-        // prevState = state;
-        // state = state == 99 ? prevState : 99;
+    else
+    {
+        switch (key = getch())
+        {
+        case 0x48:
+            moveCursor(UP);
+            break;
+        case 0x4b:
+            moveCursor(LEFT);
+            break;
+        case 0x4d:
+            moveCursor(RIGHT);
+            break;
+        }
     }
 }
 
