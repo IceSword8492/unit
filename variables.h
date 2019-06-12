@@ -28,5 +28,6 @@ bool showFps;
 char message[256];
 Cursor cursor;
 bool textBooks[4];
+bool nextGradeFlag;
 
 #endif

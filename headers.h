@@ -6,6 +6,7 @@
 #include "framerate.h"
 #include "gameOver.c"
 #include "gameClear.c"
+#include "shop.cpp"
 #include "initializedungeon.c"
 #include "addMoney.c"
 #include "displayRule.cpp"
@@ -25,4 +26,3 @@
 #include "calcFramerate.cpp"
 #include "initializeSettings.h"
 #include "battle.cpp"
-#include "shop.cpp"

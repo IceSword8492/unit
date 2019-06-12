@@ -4,9 +4,9 @@
 #ifndef CHECKENCOUNT
 #define CHECKENCOUNT
 
-bool checkEncount ()
+bool checkEncount () // nextGradeFlag‚ªfalse && Šm—¦
 {
-    return ((float)rand() / (float)RAND_MAX) < getRoom()->popProbability ? true : false;
+    return (((float)rand() / (float)RAND_MAX) < getRoom()->popProbability) && !nextGradeFlag ? true : false;
 }
 
 #endif

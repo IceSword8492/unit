@@ -14,18 +14,7 @@ void moveCursor (int direction)
     switch (state)
     {
     case D_DUNGEON:
-        switch (direction)
-        {
-        case RIGHT:
-            move(direction);
-            break;
-        case UP:
-            move(direction);
-            break;
-        case LEFT:
-            move(direction);
-            break;
-        }
+        move(direction);
         break;
     }
 }

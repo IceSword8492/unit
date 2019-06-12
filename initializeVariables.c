@@ -18,6 +18,7 @@ void initializeVariables ()
     Cursor tmpcsr = {&tmpcsr, 2};
     memcpy(&cursor, &tmpcsr, sizeof(Cursor));
     rand(); //‰‰ñ‚Ìƒ‰ƒ“ƒ_ƒ€’l‚ğÌ‚Ä‚é
+    nextGradeFlag = false;
 }
 
 #endif
