@@ -8,8 +8,6 @@
 #include <time.h>
 #include <signal.h>
 
-void pickUpText(){}
-
 #define D_RULE       0
 #define D_DUNGEON    1
 #define D_BATTLE     2
