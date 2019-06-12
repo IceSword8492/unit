@@ -15,6 +15,11 @@ void move (int inputDirection)
     bool moved = false;
     if (inputDirection & direction)
     {
+        if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
+        {
+            textBooks[player.pos[0] / 2] = false;
+            addIntelligence(50);
+        }
         switch (inputDirection)
         {
         case 1:
