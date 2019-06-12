@@ -4,6 +4,9 @@
 #ifndef SHOP
 #define SHOP
 
-
+void goShop ()
+{
+    
+}
 
 #endif

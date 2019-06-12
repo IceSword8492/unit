@@ -7,7 +7,6 @@
 #include <time.h>
 
 void pickUpText(){}
-void goShop(){}
 void useItem(){}
 
 #define D_RULE       0
