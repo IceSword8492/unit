@@ -12,13 +12,25 @@ void initializeSettings (int argc, const char** argv)
         {
             showFps = true;
         }
-        if (strcmp(argv[i], "-lfps") == 0)
+        if (strcmp(argv[i], "-lfps") == 0) // target: 10fps
         {
             refreshSpeed = 100;
         }
-        if (strcmp(argv[i], "-vlfps") == 0)
+        if (strcmp(argv[i], "-vlfps") == 0) // target: 2fps
         {
             refreshSpeed = 500;
+        }
+        if (strcmp(argv[i], "-hfps") == 0) // target: 60fps (59fps)
+        {
+            refreshSpeed = 17;
+        }
+        if (strcmp(argv[i], "-vhfps") == 0) // target: 144fps (143fps)
+        {
+            refreshSpeed = 7;
+        }
+        if (strcmp(argv[i], "-vvhfps") == 0) // target: 240fps (250fps)
+        {
+            refreshSpeed = 4;
         }
     }
 }

@@ -16,4 +16,5 @@ typedef struct Cursor {
 } Cursor;
 extern struct Cursor cursor;
 void setCursor(int);
+void createMessage(void);
 #endif

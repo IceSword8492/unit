@@ -14,12 +14,14 @@ void controlFps ()
     {
         cls();
         displayInformation();
+        createMessage();
         prevTime = now;
         count++;
     }
     if (now - baseTime >= 1000)
     {
         fps = (float)(count * 1000) / (float)(now - baseTime);
+        sprintf(fpsString, "%03d", (unsigned int)fps);
         baseTime = now;
         count = 0;
     }

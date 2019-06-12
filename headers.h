@@ -14,6 +14,7 @@
 #include "gameClear.c"
 #include "shop.cpp"
 #include "initializedungeon.c"
+#include "createMessage.h"
 #include "addMoney.c"
 #include "displayRule.cpp"
 #include "checkEncount.cpp"
