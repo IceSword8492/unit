@@ -44,10 +44,7 @@ int main (int argc, const char** argv)
             break;
         case D_DUNGEON:
             setCursor(player.pos[1]);
-            if (kbhit())
-            {
-                inputKey();
-            }
+            inputKey();
             break;
         case D_BATTLE:
             if (kbhit())
@@ -59,10 +56,7 @@ int main (int argc, const char** argv)
             }
             break;
         case D_ESC_MENU:
-            if (kbhit())
-            {
-                inputKey();
-            }
+            inputKey();
             break;
         }
     }
