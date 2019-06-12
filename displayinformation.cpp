@@ -40,9 +40,11 @@ namespace display
             }
             else
             {
-                printf("TIME: %03ds                                                                               GRADE: %d\n\n%s\n|%s%s|%s%s%s|%s%s|\n",
-                (calcRemain() / 1000),
+                printf("TIME: %03ds                                                                               GRADE: %d\n%s%s\n%s\n|%s%s|%s%s%s|%s%s|\n",
+                    (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
+                    showFps ? "FPS: " : "",
+                    showFps ? fpsString : "",
                     message,
                     dungeon[player.pos[0]][1].name,
                     cursor.pos == 1 ? ">" : "",
@@ -50,7 +52,8 @@ namespace display
                     dungeon[player.pos[0]][2].name,
                     cursor.pos == 2 ? ">" : "",
                     cursor.pos == 3 ? "<" : "",
-                    dungeon[player.pos[0]][3].name);
+                    dungeon[player.pos[0]][3].name
+                );
             }
             break;
         case D_BATTLE:

@@ -9,6 +9,7 @@
 #include "preDeclear.h"
 #include "variables.h"
 #include "addIntelligence.c"
+#include "pickuptext.c"
 #include "setState.cpp"
 #include "framerate.h"
 #include "gameOver.c"
