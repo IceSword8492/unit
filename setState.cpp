@@ -1,3 +1,6 @@
+// Author: ’†‘º—GÆ
+// ƒQ[ƒ€‚Ìó‘Ô‚ð•ÏX‚·‚éŠÖ”‚Ì’è‹`
+
 #ifndef SETSTATE
 #define SETSTATE
 

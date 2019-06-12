@@ -1,3 +1,6 @@
+// Author: 中村宥哉
+// include順の関係で先に定義する必要のある変数類の定義
+
 #ifndef PREDECLEAR
 #define PREDECLEAR
 

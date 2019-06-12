@@ -1,3 +1,6 @@
+// Author: 中村宥哉
+// コンソール関連の初期化関数及び終了関数の定義
+
 #ifndef INITCONSOLE
 #define INITCONSOLE
 

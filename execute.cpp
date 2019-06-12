@@ -1,3 +1,6 @@
+// Author:中村宥哉
+// 決定キー押下時実行関数の定義
+
 #ifndef EXECUTE
 #define EXECUTE
 

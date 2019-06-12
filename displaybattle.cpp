@@ -1,3 +1,6 @@
+// Author: ’†‘º—GÆ
+// í“¬Žž‚Ì•`‰æŠÖ”‚Ì’è‹`
+
 #ifndef DISPLAYBATTLE
 #define DISPLAYBATTLE
 

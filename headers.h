@@ -1,3 +1,6 @@
+// Author: ’†‘º—GÆ
+// includeˆ—
+
 #include "cls.h"
 #include "initializeConsole.cpp"
 #include "room.h"
