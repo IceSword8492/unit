@@ -13,6 +13,7 @@ void execute ()
             break;
         case 1:
             safeexit(0);
+            break;
         }
         break;
     }

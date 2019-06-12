@@ -26,11 +26,11 @@ void initializeConsole ()
 
 void safeexit(int errnum)
 {
-    CONSOLE_CURSOR_INFO *cci;
+    CONSOLE_CURSOR_INFO cci;
     HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-    GetConsoleCursorInfo(hStdout, cci);
-    cci->bVisible = true;
-    SetConsoleCursorInfo(hStdout, cci);
+    GetConsoleCursorInfo(hStdout, &cci);
+    cci.bVisible = true;
+    SetConsoleCursorInfo(hStdout, &cci);
     exit(errnum);
 }
 

@@ -45,7 +45,7 @@ int main (int argc, const char** argv)
             setCursor(player.pos[1]);
             if (kbhit())
             {
-                inputKey(getch());
+                inputKey();
             }
             break;
         case D_BATTLE:
@@ -60,7 +60,7 @@ int main (int argc, const char** argv)
         case D_ESC_MENU:
             if (kbhit())
             {
-                inputKey(getch());
+                inputKey();
             }
             break;
         }
