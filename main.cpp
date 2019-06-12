@@ -11,6 +11,7 @@
 #define D_RULE       0
 #define D_DUNGEON    1
 #define D_BATTLE     2
+#define D_SHOP       3
 #define D_ESC_MENU  99
 
 #include "headers.h"
