@@ -24,10 +24,10 @@ Enemy enemies[9];     // 敵配列
 bool isInShop;      // 購買にいるか
 int state;          // ゲームの状態
 int prevState;      // 変遷前のゲームの状態
-bool showFps;
-char message[256];
-Cursor cursor;
-bool textBooks[4];
-bool nextGradeFlag;
+bool showFps;       // setting用変数
+char message[256];  // 画面にメッセージを出すための変数
+Cursor cursor;      // カーソルポジションを保持する変数
+bool textBooks[4];  // 各階層のテキストブック取得状況保持変数
+bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
 
 #endif
