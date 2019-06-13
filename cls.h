@@ -4,7 +4,7 @@
 #define CLS_SPACE ((WORD)(0x20))
 #define CLS_COLOR ((WORD)(0x0f))
 
-void cls()
+void cls ()
 {
     CONSOLE_SCREEN_BUFFER_INFO csbi = {0};
     COORD pos = {0};
