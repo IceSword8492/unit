@@ -31,6 +31,7 @@
 #include "initializeEnemies.c"
 #include "initializeVariables.c"
 #include "calcRemain.cpp"
+#include "displayShop.h"
 #include "displaybattle.cpp"
 #include "displayEscMenu.cpp"
 #include "displayinformation.cpp"

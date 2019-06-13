@@ -43,6 +43,11 @@ void move (int inputDirection)
             setState(D_BATTLE);
             setCursor(0);
         }
+        if (strcmp(getRoom()->eventName, "goShop") == 0)
+        {
+            setState(D_SHOP);
+            setCursor(0);
+        }
     }
 }
 

@@ -61,6 +61,9 @@ namespace display
         case D_BATTLE:
             displayBattle();
             break;
+        case D_SHOP:
+            displayShop();
+            break;
         case D_ESC_MENU:
             displayEscMenu();
             break;

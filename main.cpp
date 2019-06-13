@@ -54,6 +54,16 @@ int main (int argc, const char** argv)
                 }
             }
             break;
+        case D_SHOP:
+            if (kbhit())
+            {
+                if (getch())
+                {
+                    setState(D_DUNGEON);
+                }
+            }
+            // inputKey();
+            break;
         case D_ESC_MENU:
             inputKey();
             break;
