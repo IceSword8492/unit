@@ -4,7 +4,7 @@
 #ifndef INITFRAMERATE
 #define INITFRAMERATE
 
-void framerateInitialization ()
+void initializeFramerate ()
 {
     count = 0;
     now = timeGetTime();

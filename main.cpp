@@ -30,7 +30,7 @@ int main (int argc, const char** argv)
     initializeEnemies();
     initializeSettings(argc, argv);
     initializeStudent();
-    framerateInitialization();
+    initializeFramerate();
     for (;;)
     {
         controlFps();
