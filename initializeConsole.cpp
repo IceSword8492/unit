@@ -4,14 +4,14 @@
 #ifndef INITCONSOLE
 #define INITCONSOLE
 
-void safeexit(int);
+void safeExit(int);
 
 void signalHandler (int signal)
 {
     switch (signal)
     {
     case SIGINT: // received ctrl + C
-        safeexit(0);
+        safeExit(0);
         break;
     }
 }
@@ -27,7 +27,7 @@ void initializeConsole ()
     SetConsoleCursorInfo(hStdout, &cci);
 }
 
-void safeexit(int errnum)
+void safeExit(int errnum)
 {
     CONSOLE_CURSOR_INFO cci;
     HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);

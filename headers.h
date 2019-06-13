@@ -7,6 +7,7 @@
 #include "enemy.h"
 #include "student.h"
 #include "preDeclear.h"
+#include "shop.h"
 #include "variables.h"
 #include "addIntelligence.c"
 #include "pickuptext.c"

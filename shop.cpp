@@ -7,6 +7,8 @@
 void goShop ()
 {
     state = D_SHOP;
+    setCursor(0);
+
 }
 
 #endif

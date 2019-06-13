@@ -62,5 +62,5 @@ int main (int argc, const char** argv)
     }
 
     forceexit:;
-    safeexit(0);
+    safeExit(0);
 }

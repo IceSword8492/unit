@@ -15,7 +15,7 @@ void execute ()
             setState(prevState);
             break;
         case 1:
-            safeexit(0);
+            safeExit(0);
             break;
         }
         break;
