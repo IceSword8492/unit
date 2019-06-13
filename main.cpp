@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdlib.h>
 #include <windows.h>
 #include <conio.h>
 #include <string.h>
