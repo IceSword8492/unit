@@ -20,6 +20,14 @@
 #define STUDENT_RECAST {4, 5, 2, 5}
 #define STUDENT_SKILLS {0, 0}
 
+int state, prevState;
+
+void setState (int s)
+{
+    prevState = state;
+    state = s;
+}
+
 typedef struct Student {
     struct Student* self;
     char name[256];
@@ -59,7 +67,8 @@ typedef struct Cursor {
 
 Cursor cursor;
 Student player;
-int state;
+
+#include "useItem.c"
 
 int main (int argc, const char** argv)
 {
@@ -84,9 +93,15 @@ int main (int argc, const char** argv)
             case 'a':
                 if (cursor.pos > 0) cursor.pos--;
                 break;
+            case '.':
+                state++;
+                break;
+            case ',':
+                state--;
+                break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nstate: %d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n",
+        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n",
             player.name,
             player.intelligence,
             cursor.pos,
