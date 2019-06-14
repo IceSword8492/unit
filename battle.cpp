@@ -71,6 +71,16 @@ Student player;
 #include "useItem.c"
 #include "useSkill.c"
 
+void execute ()
+{
+    switch (state)
+    {
+    case D_BATTLE:
+
+        break;
+    }
+}
+
 int main (int argc, const char** argv)
 {
     cursor.pos = 0;
@@ -102,7 +112,7 @@ int main (int argc, const char** argv)
                 break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n",
+        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n",
             player.name,
             player.intelligence,
             cursor.pos,
@@ -111,7 +121,11 @@ int main (int argc, const char** argv)
             player.intelligence,
             player.item[0],
             player.item[1],
-            player.item[2]
+            player.item[2],
+            cursor.pos == 0 ? ">" : " ",
+            cursor.pos == 1 ? ">" : " ",
+            cursor.pos == 2 ? ">" : " ",
+            cursor.pos == 3 ? ">" : " "
         );
     }
     return 0;
