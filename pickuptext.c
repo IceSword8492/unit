@@ -5,7 +5,6 @@
 void pickUpText(){
     addIntelligence(50);
     textBooks[player.pos[0]/2] = false;
-    printf("%d\n", player.pos[0]);
 }
 
 #endif 
