@@ -7,4 +7,5 @@ void battleDefeat ()
 {
     lose = true;
 }
+
 #endif
