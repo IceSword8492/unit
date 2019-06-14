@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define D_RULE       0
+#define D_DUNGEON    1
+#define D_BATTLE     2
+#define D_SHOP       3
+#define D_ESC_MENU  99
 
 #define STUDENT_POS {0, 2}
 #define STUDENT_MAX_HP 10000.f
@@ -51,12 +59,19 @@ typedef struct Cursor {
 
 Cursor cursor;
 Student player;
+int state;
 
 int main (int argc, const char** argv)
 {
     cursor.pos = 0;
     player = new_Student("TestStudent");
     player.intelligence = 300;
+    player.item[0] = 2;
+    player.item[1] = 100;
+    player.item[2] = 1;
+    state = D_BATTLE;
+    srand(time(NULL));
+    rand();
     for (;;)
     {
         if (kbhit())
@@ -71,12 +86,16 @@ int main (int argc, const char** argv)
                 break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\nCursor: %d\nHP: %5d 知識: %4d\n",
+        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nstate: %d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n",
             player.name,
             player.intelligence,
             cursor.pos,
+            state,
             (int)player.hp,
-            player.intelligence
+            player.intelligence,
+            player.item[0],
+            player.item[1],
+            player.item[2]
         );
     }
     return 0;
