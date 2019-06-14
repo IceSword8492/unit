@@ -18,7 +18,7 @@
 #define STUDENT_INT 0
 #define STUDENT_MONEY 1000
 #define STUDENT_ITEM {0, 0, 0} // energy, paper, es
-#define STUDENT_RECAST {4, 5, 2, 5}
+#define STUDENT_RECAST {0, 0, 0, 0}
 #define STUDENT_SKILLS {0, 0}
 
 int state, prevState;
@@ -136,12 +136,34 @@ bool win;
 bool lose;
 bool trueClear;
 
+typedef struct Spact {
+    int (*spact)();
+} Spact;
+
+int turn; // åªç›ÇÃÉ^Å[ÉìêîÇï€éù
+
+int spact_1 ()
+{
+    if (enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].hp <= enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].maxHp / 2)
+    {
+        printf("hp half\n");
+        exit(0);
+    }
+    return 1;
+}
+
+Spact spact[] = {
+    {NULL},
+    {spact_1}
+};
+
 #include "useItem.c"
 #include "useSkill.c"
 #include "damage.c"
 #include "attack.c"
 #include "isCritical.c"
 #include "battleVictory.c"
+#include "enemyaction.c"
 
 void setCursor (int pos)
 {
@@ -159,6 +181,7 @@ void execute ()
         case 0:
             damage(0);
             attack();
+            enemyAction();
             break;
         case 1:
             if (player.item[1])
@@ -166,6 +189,7 @@ void execute ()
                 player.item[1]--;
                 damage(1);
                 attack();
+                enemyAction();
             }
             break;
         case 2:
@@ -188,10 +212,11 @@ void execute ()
             player.recast[3] -= 1;
         break;
     case D_SKILL:
-        if (cursor.pos <= player.pos[0] / 2 + 1)
+        if (cursor.pos <= player.pos[0] / 2 + 1 && !player.recast[cursor.pos])
         {
             useSkill();
             setState(D_BATTLE);
+            enemyAction();
             setCursor(0);
         }
         break;

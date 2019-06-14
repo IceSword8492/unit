@@ -14,7 +14,14 @@ void enemyAction ()
     {
         tmpAttack /= 2.f;
     }
-    player.hp -= tmpAttack * stdAttack;
+    if (enemy.spact && spact[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].spact)
+    {
+        player.hp -= tmpAttack * spact[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].spact();
+    }
+    else
+    {
+        player.hp -= tmpAttack * enemy.stdAtk;
+    }
 }
 
 #endif
