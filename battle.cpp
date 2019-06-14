@@ -69,6 +69,7 @@ Cursor cursor;
 Student player;
 
 #include "useItem.c"
+#include "useSkill.c"
 
 int main (int argc, const char** argv)
 {
