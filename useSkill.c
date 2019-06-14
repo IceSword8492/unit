@@ -1,39 +1,41 @@
+//by Daichi Uesugi
+
 #ifndef USESKILL
 #define USESKILL
 
- void useSkill ()
- {
-     switch (cursor.pos)
-     {
-     case 0:
+void useSkill ()
+{
+    switch (cursor.pos)
+    {
+    case 0:
 
-     player.skills[0] = 1;
-     player.recast[0] = 4;
-     break;
+    player.skills[0] = 1;
+    player.recast[0] = 4;
+    break;
 
-     case 1:
+    case 1:
 
-     player.skills[1] = 2;
-     player.recast[1] = 5;
-     break;
+    player.skills[1] = 2;
+    player.recast[1] = 5;
+    break;
 
-     case 2:
+    case 2:
 
-     player.hp += 2500;
-     player.recast[2] = 2;
-     break;
+    player.hp += 2500;
+    player.recast[2] = 2;
+    break;
 
-     case 3:
-     
-     player.recast[3] = 5;
+    case 3:
+    
+    player.recast[3] = 5;
 
-     player.recast[0] -= 1;
-     player.recast[1] -= 1;
-     player.recast[2] -= 1;
+    player.recast[0] -= 1;
+    player.recast[1] -= 1;
+    player.recast[2] -= 1;
 
-     break;
+    break;
 
-     }
- }
+    }
+}
 
 #endif
