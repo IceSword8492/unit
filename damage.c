@@ -6,6 +6,7 @@
 #define REPORT_ATTACK 1
 void damage(int a)
 {
+    Enemy enemy = enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
     switch (a)
     {
     case NORMAL_ATTACK:
@@ -23,7 +24,6 @@ void damage(int a)
     {
         tmpAttack /= 2;
     }
-
 }
 
 #endif

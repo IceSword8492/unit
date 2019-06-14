@@ -8,6 +8,7 @@
 #define D_DUNGEON    1
 #define D_BATTLE     2
 #define D_SHOP       3
+#define D_SKILL      4
 #define D_ESC_MENU  99
 
 #define STUDENT_POS {0, 2}
@@ -65,8 +66,8 @@ Student new_Student (const char* name)
 typedef struct Enemy
 {
     struct Enemy* self; // 自身
-    int hp;             // HP
-    int maxHp;          // 最大HP
+    float hp;             // HP
+    float maxHp;          // 最大HP
     float stdAtk;       // 基礎攻撃力
     bool charge;        // 溜めの有無
     int dmgCut;         // 半減の残りターン数
@@ -76,7 +77,7 @@ typedef struct Enemy
     int spact;          // 特殊行動
 } Enemy;
 
-Enemy new_Enemy (int hp, int maxHp, float stdAtk, int intelligence, int type, int act, int spact)
+Enemy new_Enemy (float hp, float maxHp, float stdAtk, int intelligence, int type, int act, int spact)
 {
     Enemy e = {
         &e,
@@ -138,15 +139,61 @@ bool trueClear;
 #include "useItem.c"
 #include "useSkill.c"
 #include "damage.c"
+#include "attack.c"
 #include "isCritical.c"
 #include "battleVictory.c"
+
+void setCursor (int pos)
+{
+    cursor.pos = pos;
+}
 
 void execute ()
 {
     switch (state)
     {
     case D_BATTLE:
-
+        isCritical();
+        switch (cursor.pos)
+        {
+        case 0:
+            damage(0);
+            attack();
+            break;
+        case 1:
+            if (player.item[1])
+            {
+                player.item[1]--;
+                damage(1);
+                attack();
+            }
+            break;
+        case 2:
+            setState(D_SKILL);
+            setCursor(0);
+            break;
+        }
+        
+        if (player.skills[0] > 0)
+            player.skills[0] -= 1;
+        if (player.skills[1] > 0)
+            player.skills[1] -= 1;
+        if (player.recast[0] > 0)
+            player.recast[0] -= 1;
+        if (player.recast[1] > 0)
+            player.recast[1] -= 1;
+        if (player.recast[2] > 0)
+            player.recast[2] -= 1;
+        if (player.recast[3] > 0)
+            player.recast[3] -= 1;
+        break;
+    case D_SKILL:
+        if (cursor.pos <= player.pos[0] / 2 + 1)
+        {
+            useSkill();
+            setState(D_BATTLE);
+            setCursor(0);
+        }
         break;
     }
 }
@@ -166,8 +213,15 @@ int main (int argc, const char** argv)
     srand(time(NULL));
     initializeEnemies();
     rand();
+    tmpAttack = 0;
     for (;;)
     {
+        switch (state)
+        {
+        case D_DUNGEON:
+            player.pos[1] = cursor.pos;
+            break;
+        }
         if (kbhit())
         {
             switch (getch())
@@ -178,17 +232,25 @@ int main (int argc, const char** argv)
             case 'a':
                 if (cursor.pos > 0) cursor.pos--;
                 break;
+            case 'w':
+                player.pos[0]++;
+                break;
             case '.':
                 state++;
                 break;
             case ',':
                 state--;
                 break;
+            case 13:
+                execute();
+                break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n",
+        printf("---\n名前: %s\n知識: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n|%s予\習 |%s復習 |%s深呼吸 |%s研究室訪問 |\nEnemy\nHP: %f\n",
             player.name,
             player.intelligence,
+            player.pos[0],
+            player.pos[1],
             cursor.pos,
             state,
             (int)player.hp,
@@ -199,7 +261,12 @@ int main (int argc, const char** argv)
             cursor.pos == 0 ? ">" : " ",
             cursor.pos == 1 ? ">" : " ",
             cursor.pos == 2 ? ">" : " ",
-            cursor.pos == 3 ? ">" : " "
+            cursor.pos == 3 ? ">" : " ",
+            cursor.pos == 0 ? ">" : " ",
+            cursor.pos == 1 ? ">" : " ",
+            cursor.pos == 2 ? ">" : " ",
+            cursor.pos == 3 ? ">" : " ",
+            enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].hp
         );
     }
     return 0;

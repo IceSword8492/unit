@@ -26,9 +26,8 @@ void useSkill ()
     break;
 
     case 3:
-    
     player.recast[3] = 5;
-
+    
     player.recast[0] -= 1;
     player.recast[1] -= 1;
     player.recast[2] -= 1;

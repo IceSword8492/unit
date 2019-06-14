@@ -5,17 +5,8 @@
 
 void attack ()
 {
-    enemy.hp -= tmpAttack;
-
-    if (player.skills[0] > 0)
-    {
-        player.skills[0] -= 1;
-    }
-
-    if (player.skills[1] > 0)
-    {
-        player.skills[1] -= 1;
-    }
+    Enemy* enemy = &enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
+    enemy->hp -= tmpAttack;
 }
 
 #endif
