@@ -1,7 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "Disabled",
-    "files.encoding": "shiftjis",
-    "files.associations": {
-        "system_error": "cpp"
-    }
-}
