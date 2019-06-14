@@ -17,7 +17,7 @@ void move (int inputDirection)
     {
         if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
         {
-            pickUpText();
+            getRoom()->event();
         }
         switch (inputDirection)
         {
@@ -45,8 +45,7 @@ void move (int inputDirection)
         }
         if (strcmp(getRoom()->eventName, "goShop") == 0)
         {
-            setState(D_SHOP);
-            setCursor(0);
+            getRoom()->event();
         }
     }
 }
