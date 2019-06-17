@@ -4,23 +4,29 @@
 
 void enemyAction ()
 {
-    Enemy enemy = enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
+    Enemy* enemy = getEnemy();
     isCritical();
-    if (enemy.charge)
+    acttmp = false;
+    if (enemy->charge)
     {
         tmpAttack *= 2.f;
+        enemy->charge = false;
     }
     if (player.skills[1])
     {
         tmpAttack /= 2.f;
     }
-    if (enemy.spact && spact[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].spact)
+    if (enemy->spact && spact[enemy->spact - 1].spact)
     {
-        player.hp -= tmpAttack * spact[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].spact();
+        player.hp -= tmpAttack * spact[enemy->spact - 1].spact();
+    }
+    if ((!enemy->spact || acttmp) && enemy->act && act[enemy->act - 1].act)
+    {
+        player.hp -= tmpAttack * act[enemy->act - 1].act();
     }
     else
     {
-        player.hp -= tmpAttack * enemy.stdAtk;
+        player.hp -= tmpAttack * enemy->stdAtk;
     }
 }
 

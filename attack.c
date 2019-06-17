@@ -5,7 +5,7 @@
 
 void attack ()
 {
-    Enemy* enemy = &enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
+    Enemy* enemy = getEnemy();
     enemy->hp -= tmpAttack;
 }
 

@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+float CRITICAL = 1.5f;
+
 #define D_RULE       0
 #define D_DUNGEON    1
 #define D_BATTLE     2
@@ -100,9 +102,9 @@ Enemy enemies[9];
 #define SKILL_F2B 2
 #define SKILL_F3B 3
 #define SKILL_F4B 4
-#define ROUTINE_F4B 5
-#define SKILL_LAST 6
-#define ROUTINE_LAST 7
+#define ROUTINE_F4B 1
+#define SKILL_LAST 5
+#define ROUTINE_LAST 2
 //敵の初期化by吉岡誇太郎
 void initializeEnemies(){
     Enemy e[9] = {
@@ -135,16 +137,20 @@ void addIntelligence(int intelligence){
 bool win;
 bool lose;
 bool trueClear;
+bool acttmp; // spactを実行したのちにactも実行する場合はtrueにする
+
+Enemy* getEnemy ()
+{
+    return &enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
+}
 
 typedef struct Spact {
-    int (*spact)();
+    float (*spact)();
 } Spact;
 
-int turn; // 現在のターン数を保持
-
-int spact_1 ()
+float spact_1b ()
 {
-    if (enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].hp <= enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].maxHp / 2)
+    if (getEnemy()->hp <= getEnemy()->maxHp / 2)
     {
         printf("hp half\n");
         exit(0);
@@ -152,10 +158,75 @@ int spact_1 ()
     return 1;
 }
 
+float spact_2b ()
+{
+    return 0;
+}
+
+float spact_3b ()
+{
+    return 0;
+}
+
+float spact_4b ()
+{
+    return 0;
+}
+
+float spact_last ()
+{
+    acttmp = true;
+    return 0;
+}
+
 Spact spact[] = {
-    {NULL},
-    {spact_1}
+    {spact_1b},
+    {spact_2b},
+    {spact_3b},
+    {spact_4b},
+    {spact_last}
 };
+
+int turn; // 現在のターン数を保持
+
+typedef struct Act {
+    float (*act)();
+} Act;
+
+float act_4b ()
+{
+    switch (turn % 4)
+    {
+    case 1:
+        getEnemy()->charge = true;
+        return 0;
+    default:
+        return getEnemy()->stdAtk;
+    }
+}
+
+float act_last ()
+{
+    switch (turn % 5)
+    {
+    case 1:
+        getEnemy()->dmgCut = 2;
+        return 0;
+    case 2:
+        getEnemy()->charge = true;
+        return 0;
+    default:
+        return getEnemy()->stdAtk;
+    }
+}
+
+Act act[] = {
+    {act_4b},
+    {act_last}
+};
+
+
+
 
 #include "useItem.c"
 #include "useSkill.c"
@@ -170,6 +241,36 @@ void setCursor (int pos)
     cursor.pos = pos;
 }
 
+void updateSkillsRecastTurn ()
+{
+    if (player.skills[0] > 0)
+        player.skills[0] -= 1;
+    if (player.skills[1] > 0)
+        player.skills[1] -= 1;
+    if (player.recast[0] > 0)
+        player.recast[0] -= 1;
+    if (player.recast[1] > 0)
+        player.recast[1] -= 1;
+    if (player.recast[2] > 0)
+        player.recast[2] -= 1;
+    if (player.recast[3] > 0)
+        player.recast[3] -= 1;
+}
+
+void battleBegin ()
+{
+    turn = 0;
+    setState(D_BATTLE);
+    setCursor(0);
+    if (getEnemy()->type == 3)
+    {
+        if (!player.item[2])
+        {
+            player.hp = 0; // 先制攻撃
+        }
+    }
+}
+
 void execute ()
 {
     switch (state)
@@ -182,6 +283,8 @@ void execute ()
             damage(0);
             attack();
             enemyAction();
+            updateSkillsRecastTurn();
+            turn++;
             break;
         case 1:
             if (player.item[1])
@@ -190,6 +293,8 @@ void execute ()
                 damage(1);
                 attack();
                 enemyAction();
+                updateSkillsRecastTurn();
+                turn++;
             }
             break;
         case 2:
@@ -198,25 +303,33 @@ void execute ()
             break;
         }
         
-        if (player.skills[0] > 0)
-            player.skills[0] -= 1;
-        if (player.skills[1] > 0)
-            player.skills[1] -= 1;
-        if (player.recast[0] > 0)
-            player.recast[0] -= 1;
-        if (player.recast[1] > 0)
-            player.recast[1] -= 1;
-        if (player.recast[2] > 0)
-            player.recast[2] -= 1;
-        if (player.recast[3] > 0)
-            player.recast[3] -= 1;
+
         break;
     case D_SKILL:
-        if (cursor.pos <= player.pos[0] / 2 + 1 && !player.recast[cursor.pos])
+        if (!cursor.pos)
+        {
+            setState(D_BATTLE);
+            setCursor(2);
+        }
+        else if (player.pos[0] == 7 && player.pos[1] == 3 && !player.recast[cursor.pos - 1])
+        {
+            if (cursor.pos <= 3)
+            {
+                useSkill();
+                setState(D_BATTLE);
+                enemyAction();
+                updateSkillsRecastTurn();
+                turn++;
+                setCursor(0);
+            }
+        }
+        else if (cursor.pos <= player.pos[0] / 2 + 1 && !player.recast[cursor.pos - 1])
         {
             useSkill();
             setState(D_BATTLE);
             enemyAction();
+            updateSkillsRecastTurn();
+            turn++;
             setCursor(0);
         }
         break;
@@ -225,6 +338,13 @@ void execute ()
 
 int main (int argc, const char** argv)
 {
+    for (int i = 0; i < argc; i++)
+    {
+        if (strcmp(argv[i], "-noCritical") == 0)
+        {
+            CRITICAL = 1.0f;
+        }
+    }
     win = false;
     lose = false;
     trueClear = false;
@@ -234,6 +354,8 @@ int main (int argc, const char** argv)
     player.item[0] = 2;
     player.item[1] = 100;
     player.item[2] = 1;
+    player.pos[0] = 7;
+    player.pos[1] = 3;
     state = D_BATTLE;
     srand(time(NULL));
     initializeEnemies();
@@ -269,9 +391,12 @@ int main (int argc, const char** argv)
             case 13:
                 execute();
                 break;
+            case 'p':
+                battleBegin();
+                break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\n|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n|%s予\習 |%s復習 |%s深呼吸 |%s研究室訪問 |\nEnemy\nHP: %f\n",
+        printf("---\n名前: %s\n知識: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\nTurn: %d\n|%s|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n|%s|%s戻る |%s予\習 |%s復習 |%s深呼吸 |%s研究室訪問 |\nEnemy\nHP: %f\n",
             player.name,
             player.intelligence,
             player.pos[0],
@@ -283,15 +408,19 @@ int main (int argc, const char** argv)
             player.item[0],
             player.item[1],
             player.item[2],
+            turn,
+            state == 2 ? "*" : " ",
             cursor.pos == 0 ? ">" : " ",
             cursor.pos == 1 ? ">" : " ",
             cursor.pos == 2 ? ">" : " ",
             cursor.pos == 3 ? ">" : " ",
+            state == 4 ? "*" : " ",
             cursor.pos == 0 ? ">" : " ",
             cursor.pos == 1 ? ">" : " ",
             cursor.pos == 2 ? ">" : " ",
             cursor.pos == 3 ? ">" : " ",
-            enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8].hp
+            cursor.pos == 4 ? ">" : " ",
+            getEnemy()->hp
         );
     }
     return 0;

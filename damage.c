@@ -6,7 +6,7 @@
 #define REPORT_ATTACK 1
 void damage(int a)
 {
-    Enemy enemy = enemies[player.pos[0] != 7 ? player.pos[0] : player.pos[1] == 2 ? 7 : 8];
+    Enemy enemy = *getEnemy();
     switch (a)
     {
     case NORMAL_ATTACK:

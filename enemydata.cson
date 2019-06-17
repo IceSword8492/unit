@@ -1,0 +1,117 @@
+enemies:
+    f1b:
+        hp: 1000
+        atk: 1000
+        skills:
+            {
+                cond: "if (this->hp <= 50%)"
+                act: "this->atk *= 1.5f"
+            }
+        int: 400
+    f2b:
+        hp: 4500
+        atk: 1000
+        skills:
+            {
+                cond: "if (this->hp <= 25%)"
+                act: "this->atk *= 1.5f"
+            }
+            {
+                cond: "if (this->hp <= 10%)"
+                act: "this->hp += 20%"
+            }
+        int: 400
+    f3b:
+        hp: 10000
+        atk: 1000
+        skills:
+            {
+                cond: "if (this->hp <= 3000)"
+                act: "this->atk *= 2.f"
+            }
+            {
+                cond: "if (this->hp <= 25%)"
+                act: "player->atk /= 2"
+            }
+        int: 800
+    f4b:
+        hp: 15000
+        atk: 1000
+        skills:
+            {
+                cond: "loop1"
+                act: "atk 1000"
+            }
+            {
+                cond: "loop2"
+                act: "charge"
+            }
+            {
+                cond: "loop3"
+                act: "atk 2500"
+            }
+            {
+                cond: "loop4"
+                act: "atk 1000"
+            }
+            {
+                cond: "if once (this->hp <= 50%)"
+                act: "atk 99%"
+            }
+            {
+                cond: "if (this->hp <= 20%)"
+                act: "this->hp = 50%"
+            }
+            {
+                cond: "if once (this->hp <= 10%)"
+                act: "this->根性 = off"
+            }
+            {
+                cond: "if (this->根性 && this->hp <= 0)"
+                act: "this->hp = 1"
+            }
+        int: 1000
+    last:
+        hp: 50000
+        atk: 2000
+        skills:
+            {
+                cond: "先制, if (!player->履歴書)"
+                act: "atk 100%"
+            }
+            {
+                cond: "if (this->hp == 100%)"
+                act: "atk 99%"
+            }
+            {
+                cond: "loop1"
+                act: "atk 2000"
+            }
+            {
+                cond: "loop2"
+                act: "半減 (2 turns)"
+            }
+            {
+                cond: "loop3"
+                act: "charge (x2)"
+            }
+            {
+                cond: "loop4"
+                act: "atk 2000"
+            }
+            {
+                cond: "loop5"
+                act: "atk 2000"
+            }
+            {
+                cond: "if (this->hp <= 20%)"
+                act: "半減 (1 turn)"
+            }
+            {
+                cond: "if once (this->hp <= 20%)"
+                act: "this->根性 = off"
+            }
+            {
+                cond: "if (this->根性 && this->hp <= 0)"
+                act: "this->hp = 1"
+            }

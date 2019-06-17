@@ -9,7 +9,7 @@ void isCritical ()
     int s = rand() % 6;
     if (s == 1)
     {
-        tmpAttack = 1.5;
+        tmpAttack = CRITICAL;
     }else{
         tmpAttack = 1;
     }
