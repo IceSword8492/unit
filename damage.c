@@ -23,6 +23,7 @@ void damage(int a)
     if (enemy.dmgCut)
     {
         tmpAttack /= 2;
+        enemy.dmgCut--;
     }
 }
 

@@ -280,7 +280,7 @@ void execute ()
         switch (cursor.pos)
         {
         case 0:
-            damage(0);
+            damage(NORMAL_ATTACK);
             attack();
             enemyAction();
             updateSkillsRecastTurn();
@@ -290,7 +290,7 @@ void execute ()
             if (player.item[1])
             {
                 player.item[1]--;
-                damage(1);
+                damage(REPORT_ATTACK);
                 attack();
                 enemyAction();
                 updateSkillsRecastTurn();
