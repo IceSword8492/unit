@@ -203,7 +203,8 @@ float spact_4b ()
         getEnemy()->hp = getEnemy()->maxHp / 2;
         return 0;
     }
-    return getEnemy()->stdAtk;
+    acttmp = true;
+    return 0;
 }
 
 float spact_last ()
