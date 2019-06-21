@@ -191,24 +191,23 @@ float spact_3b ()
 
 float spact_4b ()
 {
-    if (true)
+    if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[0] == 0)
     {
-        if (getEnemy()->hp <= getEnemy()->maxHp / 2)
-        {
-            player.hp -= (player.hp/100)*99;
-            return 0;
-        }
-
+        player.hp -= (player.hp/100)*99;
+        getEnemy()->state[0] = 1;
+        return 0;
     }
+        
 
     if (getEnemy()->hp <= getEnemy()->maxHp / 5)
     {
-        getEnemy()->hp += (getEnemy()->maxHp / 2) - getEnemy()->hp;
+        getEnemy()->hp = getEnemy()->maxHp / 2;
+        return 0;
     }
-    return 0;
+    return getEnemy()->stdAtk;
 }
 
-float spact_last ()
+float spact_last ()//Daichi
 {
     acttmp = true;
     return 0;
