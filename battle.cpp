@@ -375,12 +375,22 @@ int main (int argc, const char** argv)
             {
             case 'd':
                 cursor.pos++;
+                initializeEnemies();
                 break;
             case 'a':
-                if (cursor.pos > 0) cursor.pos--;
+                if (cursor.pos > 0) 
+                {
+                    cursor.pos--;
+                    initializeEnemies();
+                }
                 break;
             case 'w':
                 player.pos[0]++;
+                initializeEnemies();
+                break;
+            case 's':
+                player.pos[0]--;
+                initializeEnemies();
                 break;
             case '.':
                 state++;
