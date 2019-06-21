@@ -154,10 +154,9 @@ float spact_1b ()
 {
     if (getEnemy()->hp <= getEnemy()->maxHp / 2)
     {
-        printf("hp half\n");
-        exit(0);
+        return 1.5*getEnemy()->stdAtk;
     }
-    return 1;
+    return getEnemy()->stdAtk;
 }
 
 float spact_2b ()
@@ -207,8 +206,12 @@ float spact_4b ()
     return getEnemy()->stdAtk;
 }
 
-float spact_last ()//#Daichi
+float spact_last ()
 {
+    if (getEnemy()->hp <= getEnemy()->maxHp / 5)
+    {
+        getEnemy()->dmgCut = 1;
+    }
     acttmp = true;
     return 0;
 }
@@ -390,7 +393,7 @@ int main (int argc, const char** argv)
     player.item[1] = 100;
     player.item[2] = 1;
     player.pos[0] = 7;
-    player.pos[1] = 2;
+    player.pos[1] = 3;
     state = D_BATTLE;
     srand(time(NULL));
     initializeEnemies();

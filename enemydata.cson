@@ -64,10 +64,10 @@ enemies:
             }
             {
                 cond: "if once (this->hp <= 10%)"
-                act: "this->æ ¹æ€§ = off"
+                act: "this->ª« = off"
             }
             {
-                cond: "if (this->æ ¹æ€§ && this->hp <= 0)"
+                cond: "if (this->ª« && this->hp <= 0)"
                 act: "this->hp = 1"
             }
         int: 1000
@@ -76,7 +76,7 @@ enemies:
         atk: 2000
         skills:
             {
-                cond: "å…ˆåˆ¶, if (!player->å±¥æ­´æ›¸)"
+                cond: "æ§, if (!player->—š—ð‘)"
                 act: "atk 100%"
             }
             {
@@ -89,7 +89,7 @@ enemies:
             }
             {
                 cond: "loop2"
-                act: "åŠæ¸› (2 turns)"
+                act: "”¼Œ¸ (2 turns)"
             }
             {
                 cond: "loop3"
@@ -105,13 +105,13 @@ enemies:
             }
             {
                 cond: "if (this->hp <= 20%)"
-                act: "åŠæ¸› (1 turn)"
+                act: "”¼Œ¸ (1 turn)"
             }
             {
                 cond: "if once (this->hp <= 20%)"
-                act: "this->æ ¹æ€§ = off"
+                act: "this->ª« = off"
             }
             {
-                cond: "if (this->æ ¹æ€§ && this->hp <= 0)"
+                cond: "if (this->ª« && this->hp <= 0)"
                 act: "this->hp = 1"
             }
