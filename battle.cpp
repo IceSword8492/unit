@@ -77,6 +77,7 @@ typedef struct Enemy
     int type;           // 中:1, 通常:2, 裏ボス:3か雑魚:0か
     int act;            // 行動ルーチン
     int spact;          // 特殊行動
+    int state[256];     // 特殊行動用配列
 } Enemy;
 
 Enemy new_Enemy (float hp, float maxHp, float stdAtk, int intelligence, int type, int act, int spact)
@@ -91,7 +92,8 @@ Enemy new_Enemy (float hp, float maxHp, float stdAtk, int intelligence, int type
         intelligence,
         type,
         act,
-        spact
+        spact,
+        {0}
     };
     return e;
 }
@@ -160,6 +162,14 @@ float spact_1b ()
 
 float spact_2b ()
 {
+    if(getEnemy()->hp <= getEnemy()->maxHp / 4)
+    {
+        tmpAttack *= 1.5;
+    }
+    if(getEnemy()->hp <= getEnemy()->maxHp / 10)
+    {
+        getEnemy()->hp  += getEnemy()->maxHp / 5;
+    }
     
     return 0;
 }
@@ -181,6 +191,20 @@ float spact_3b ()
 
 float spact_4b ()
 {
+    if (true)
+    {
+        if (getEnemy()->hp <= getEnemy()->maxHp / 2)
+        {
+            player.hp -= (player.hp/100)*99;
+            return 0;
+        }
+
+    }
+
+    if (getEnemy()->hp <= getEnemy()->maxHp / 5)
+    {
+        getEnemy()->hp += (getEnemy()->maxHp / 2) - getEnemy()->hp;
+    }
     return 0;
 }
 
@@ -366,7 +390,7 @@ int main (int argc, const char** argv)
     player.item[1] = 100;
     player.item[2] = 1;
     player.pos[0] = 7;
-    player.pos[1] = 3;
+    player.pos[1] = 2;
     state = D_BATTLE;
     srand(time(NULL));
     initializeEnemies();
