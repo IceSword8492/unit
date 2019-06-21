@@ -171,7 +171,7 @@ float spact_3b ()
 
 float spact_4b ()
 {
-    a
+    a unchi
     return 0;
 }
 
