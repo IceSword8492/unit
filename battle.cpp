@@ -214,6 +214,7 @@ float spact_last ()//#Daichi
 }
 
 Spact spact[] = {
+    
     {spact_1b},
     {spact_2b},
     {spact_3b},
