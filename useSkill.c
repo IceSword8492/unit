@@ -5,7 +5,7 @@
 
 void useSkill ()
 {
-    switch (cursor.pos)
+    switch (cursor.pos + 1)
     {
     case 0:
 
