@@ -162,21 +162,31 @@ float spact_1b ()
 
 float spact_2b ()
 {
+    if(getEnemy()->hp <= getEnemy()->maxHp / 4)
+    {
+        tmpAttack *= 1.5;
+    }
+    if(getEnemy()->hp <= getEnemy()->maxHp / 10)
+    {
+        getEnemy()->hp  += getEnemy()->maxHp / 5;
+    }
+    return 0;
     
     return 0;
 }
 
 float spact_3b ()
 {
-    if(getEnemy()->hp <= 3000)
-    {
-        tmpAttack *= 2;
-    }
-
     if(getEnemy()->hp <= getEnemy()->maxHp / 4)
     {
         getEnemy()->dmgCut = 1 ;
     }
+
+    if(getEnemy()->hp <= 3000)
+    {
+        return 2;
+    }
+
     return 0;
 }
 
