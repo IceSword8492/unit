@@ -165,6 +165,7 @@ float spact_2b ()
 
 float spact_3b ()
 {
+    c
     return 0;
 }
 
