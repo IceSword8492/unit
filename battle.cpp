@@ -207,7 +207,7 @@ float spact_4b ()
     return getEnemy()->stdAtk;
 }
 
-float spact_last ()//Daichi
+float spact_last ()//#Daichi
 {
     acttmp = true;
     return 0;
