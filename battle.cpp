@@ -160,19 +160,18 @@ float spact_1b ()
 
 float spact_2b ()
 {
-    b
+    
     return 0;
 }
 
 float spact_3b ()
 {
-    c
+    
     return 0;
 }
 
 float spact_4b ()
 {
-    a unchi
     return 0;
 }
 
