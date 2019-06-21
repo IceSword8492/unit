@@ -170,6 +170,7 @@ float spact_3b ()
 
 float spact_4b ()
 {
+    a
     return 0;
 }
 
