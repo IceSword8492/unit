@@ -396,7 +396,7 @@ int main (int argc, const char** argv)
                 break;
             }
         }
-        printf("---\n名前: %s\n知識: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\nTurn: %d\n|%s|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n|%s|%s戻る |%s予\習 |%s復習 |%s深呼吸 |%s研究室訪問 |\nEnemy\nHP: %f\n",
+        printf("---\n名前: %s\n知識: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, 知識: %4d\nエナジードリンク: %2d本, レポート用紙: %3d枚, 履歴書: %1d枚\nRecast: %d %d %d %d\nTurn: %d\n|%s|%s出席 |%sレポート提出 |%sスキル |%sアイテム |\n|%s|%s戻る |%s予\習 |%s復習 |%s深呼吸 |%s研究室訪問 |\nEnemy\nHP: %f\n",
             player.name,
             player.intelligence,
             player.pos[0],
@@ -408,6 +408,10 @@ int main (int argc, const char** argv)
             player.item[0],
             player.item[1],
             player.item[2],
+            player.recast[0],
+            player.recast[1],
+            player.recast[2],
+            player.recast[3],
             turn,
             state == 2 ? "*" : " ",
             cursor.pos == 0 ? ">" : " ",
