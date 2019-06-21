@@ -5,8 +5,8 @@
 #ifndef GAMEOVER
 #define GAMEOVER
 
-void gameOver(){
-    lose=true;
+void gameOver () {
+    lose = true;
 }
 
 #endif
