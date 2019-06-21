@@ -6,7 +6,7 @@
 #define REPORT_ATTACK 1
 void damage(int a)
 {
-    Enemy enemy = *getEnemy();
+    Enemy *enemy = getEnemy();
     switch (a)
     {
     case NORMAL_ATTACK:
@@ -20,10 +20,10 @@ void damage(int a)
     {
         tmpAttack *= 2.5;
     }
-    if (enemy.dmgCut)
+    if (enemy->dmgCut)
     {
         tmpAttack /= 2;
-        enemy.dmgCut--;
+        enemy->dmgCut--;
     }
 }
 
