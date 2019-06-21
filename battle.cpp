@@ -160,6 +160,7 @@ float spact_1b ()
 
 float spact_2b ()
 {
+    b
     return 0;
 }
 
