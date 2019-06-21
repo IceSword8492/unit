@@ -160,6 +160,15 @@ float spact_1b ()
 
 float spact_2b ()
 {
+    if(getEnemy()->hp <= getEnemy()->maxHp / 4)
+    {
+        tmpAttack *= 1.5;
+    }
+    if(getEnemy()->hp <= getEnemy()->maxHp / 10)
+    {
+        getEnemy()->hp  += getEnemy()->maxHp / 5;
+    }
+    return 0;
     
     return 0;
 }
