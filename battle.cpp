@@ -170,7 +170,6 @@ float spact_2b ()
     {
         getEnemy()->hp  += getEnemy()->maxHp / 5;
     }
-    return 0;
     
     return 0;
 }
