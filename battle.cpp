@@ -173,7 +173,7 @@ float spact_3b ()
 
     if(getEnemy()->hp <= 3000)
     {
-        return 2;
+        return getEnemy()->stdAtk * 2;
     }
 
     return 0;
