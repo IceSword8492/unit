@@ -27,7 +27,7 @@ void inputKey(){
                 break;
             case 'h':
             case 'H':
-                useItem();
+                useItem(0);
                 break;
             case 13: // enter
                 execute();
