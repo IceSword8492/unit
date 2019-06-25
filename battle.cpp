@@ -67,17 +67,17 @@ Student new_Student (const char* name)
 
 typedef struct Enemy
 {
-    struct Enemy* self; // ©g
+    struct Enemy* self; // ï¿½ï¿½ï¿½g
     float hp;             // HP
-    float maxHp;          // Å‘åHP
-    float stdAtk;       // Šî‘bUŒ‚—Í
-    bool charge;        // —­‚ß‚Ì—L–³
-    int dmgCut;         // ”¼Œ¸‚Ìc‚èƒ^[ƒ“”
-    int intelligence;   // ‚à‚ç‚¦‚é’m¯—Ê
-    int type;           // ’†:1, ’Êí:2, — ƒ{ƒX:3‚©G‹›:0‚©
-    int act;            // s“®ƒ‹[ƒ`ƒ“
-    int spact;          // “Áês“®
-    int state[256];     // “Áês“®—p”z—ñ
+    float maxHp;          // ï¿½Å‘ï¿½HP
+    float stdAtk;       // ï¿½ï¿½bï¿½Uï¿½ï¿½ï¿½ï¿½
+    bool charge;        // ï¿½ï¿½ï¿½ß‚Ì—Lï¿½ï¿½
+    int dmgCut;         // ï¿½ï¿½ï¿½ï¿½ï¿½Ìcï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½ï¿½
+    int intelligence;   // ï¿½ï¿½ï¿½ç‚¦ï¿½ï¿½mï¿½ï¿½ï¿½ï¿½
+    int type;           // ï¿½ï¿½:1, ï¿½Êï¿½:2, ï¿½ï¿½ï¿½{ï¿½X:3ï¿½ï¿½ï¿½Gï¿½ï¿½:0ï¿½ï¿½
+    int act;            // ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½`ï¿½ï¿½
+    int spact;          // ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
+    int state[256];     // ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½pï¿½zï¿½ï¿½
 } Enemy;
 
 Enemy new_Enemy (float hp, float maxHp, float stdAtk, int intelligence, int type, int act, int spact)
@@ -107,7 +107,7 @@ Enemy enemies[9];
 #define ROUTINE_F4B 1
 #define SKILL_LAST 5
 #define ROUTINE_LAST 2
-//“G‚Ì‰Šú‰»by‹g‰ªŒÖ‘¾˜Y
+//ï¿½Gï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½byï¿½gï¿½ï¿½ï¿½Ö‘ï¿½ï¿½Y
 void initializeEnemies(){
     Enemy e[9] = {
         new_Enemy(500,500,500,100,0,0,0),//f1z
@@ -139,7 +139,7 @@ void addIntelligence(int intelligence){
 bool win;
 bool lose;
 bool trueClear;
-bool acttmp; // spact‚ğÀs‚µ‚½‚Ì‚¿‚Éact‚àÀs‚·‚éê‡‚Ítrue‚É‚·‚é
+bool acttmp; // spactï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½actï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ê‡ï¿½ï¿½trueï¿½É‚ï¿½ï¿½ï¿½
 
 Enemy* getEnemy ()
 {
@@ -170,7 +170,7 @@ float spact_2b ()
         getEnemy()->hp  += getEnemy()->maxHp / 5;
     }
     
-    return 0;
+    return getEnemy()->stdAtk ;
 }
 
 float spact_3b ()
@@ -226,7 +226,7 @@ Spact spact[] = {
     {spact_last}
 };
 
-int turn; // Œ»İ‚Ìƒ^[ƒ“”‚ğ•Û
+int turn; // ï¿½ï¿½ï¿½İ‚Ìƒ^ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ûï¿½
 
 typedef struct Act {
     float (*act)();
@@ -305,7 +305,7 @@ void battleBegin ()
     {
         if (!player.item[2])
         {
-            player.hp = 0; // æ§UŒ‚
+            player.hp = 0; // ï¿½æ§ï¿½Uï¿½ï¿½
         }
     }
 }
@@ -445,7 +445,7 @@ int main (int argc, const char** argv)
                 break;
             }
         }
-        printf("---\n–¼‘O: %s\n’m¯: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, ’m¯: %4d\nƒGƒiƒW[ƒhƒŠƒ“ƒN: %2d–{, ƒŒƒ|[ƒg—p†: %3d–‡, —š—ğ‘: %1d–‡\nRecast: %d %d %d %d\nTurn: %d\n|%s|%soÈ |%sƒŒƒ|[ƒg’ño |%sƒXƒLƒ‹ |%sƒAƒCƒeƒ€ |\n|%s|%s–ß‚é |%s—\\K |%s•œK |%s[ŒÄ‹z |%sŒ¤‹†º–K–â |\nEnemy\nHP: %f\n",
+        printf("---\nï¿½ï¿½ï¿½O: %s\nï¿½mï¿½ï¿½: %d\npos[0]: %d, pos[1]: %d\nCursor: %d\nstate: %d\nHP: %5d, ï¿½mï¿½ï¿½: %4d\nï¿½Gï¿½iï¿½Wï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½N: %2dï¿½{, ï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½pï¿½ï¿½: %3dï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: %1dï¿½ï¿½\nRecast: %d %d %d %d\nTurn: %d\n|%s|%sï¿½oï¿½ï¿½ |%sï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½o |%sï¿½Xï¿½Lï¿½ï¿½ |%sï¿½Aï¿½Cï¿½eï¿½ï¿½ |\n|%s|%sï¿½ß‚ï¿½ |%sï¿½\\ï¿½K |%sï¿½ï¿½ï¿½K |%sï¿½[ï¿½Ä‹z |%sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½ï¿½ |\nEnemy\nHP: %f\n",
             player.name,
             player.intelligence,
             player.pos[0],
