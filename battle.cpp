@@ -1,13 +1,10 @@
-#include <stdio.h>
-#include <conio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
+ï»¿#ifndef BATTLE
+#define BATTLE
 
 float CRITICAL = 1.5f;
 
 
-bool acttmp; // spact?¿½?¿½?¿½?¿½?¿½s?¿½?¿½?¿½?¿½?¿½Ì‚ï¿½?¿½?¿½act?¿½?¿½?¿½?¿½?¿½s?¿½?¿½?¿½?¿½ê??¿½?¿½true?¿½É‚ï¿½?¿½?¿½
+bool acttmp; // spact?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½s?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½Ì‚ï¿½?ï¿½ï¿½?ï¿½ï¿½act?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½s?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½?ï¿½ï¿½true?ï¿½ï¿½É‚ï¿½?ï¿½ï¿½?ï¿½ï¿½
 
 Enemy* getEnemy ()
 {
@@ -67,7 +64,7 @@ Spact spact[] = {
     {spact_last}
 };
 
-int turn; // ?¿½?¿½?¿½İ‚Ìƒ^?¿½[?¿½?¿½?¿½?¿½?¿½?¿½Ûï¿½
+int turn; // ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½İ‚Ìƒ^?ï¿½ï¿½[?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½Ûï¿½
 
 typedef struct Act {
     float (*act)();
@@ -142,7 +139,8 @@ void battleBegin ()
     {
         if (!player.item[2])
         {
-            player.hp = 0; // ?¿½æ§?¿½U?¿½?¿½
+            player.hp = 0; // ?ï¿½ï¿½æ§?ï¿½ï¿½U?ï¿½ï¿½?ï¿½ï¿½
         }
     }
 }
+#endif
