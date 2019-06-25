@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <conio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
+#ifndef BATTLE
+#define BATTLE
 
 float CRITICAL = 1.5f;
 
@@ -22,39 +19,64 @@ float spact_1b ()
 {
     if (getEnemy()->hp <= getEnemy()->maxHp / 2)
     {
-        printf("hp half\n");
-        exit(0);
+        return 1.5*getEnemy()->stdAtk;
     }
-    return 1;
+    return getEnemy()->stdAtk;
 }
 
 float spact_2b ()
 {
-    
+    if(getEnemy()->hp <= getEnemy()->maxHp / 4)
+    {
+        tmpAttack *= 1.5;
+    }
+    if(getEnemy()->hp <= getEnemy()->maxHp / 10)
+    {
+        getEnemy()->hp  += getEnemy()->maxHp / 5;
+    }
     return 0;
 }
 
 float spact_3b ()
 {
-    if(getEnemy()->hp <= 3000)
-    {
-        tmpAttack *= 2;
-    }
-
-    if(getEnemy()->hp <= getEnemy()->maxHp / 4)
+     if(getEnemy()->hp <= getEnemy()->maxHp / 4)
     {
         getEnemy()->dmgCut = 1 ;
     }
+
+    if(getEnemy()->hp <= 3000)
+    {
+        return getEnemy()->stdAtk * 2;
+    }
+
     return 0;
 }
 
 float spact_4b ()
 {
+    if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[0] == 0)
+    {
+        player.hp -= (player.hp/100)*99;
+        getEnemy()->state[0] = 1;
+        return 0;
+    }
+        
+
+    if (getEnemy()->hp <= getEnemy()->maxHp / 5)
+    {
+        getEnemy()->hp = getEnemy()->maxHp / 2;
+        return 0;
+    }
+    acttmp = true;
     return 0;
 }
 
 float spact_last ()
 {
+    if (getEnemy()->hp <= getEnemy()->maxHp / 5)
+    {
+        getEnemy()->dmgCut = 1;
+    }
     acttmp = true;
     return 0;
 }
@@ -146,3 +168,4 @@ void battleBegin ()
         }
     }
 }
+#endif

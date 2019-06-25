@@ -16,6 +16,7 @@ typedef struct Enemy
     int type;           // 中:1, 通常:2, 裏ボス:3か雑魚:0か
     int act;            // 行動ルーチン
     int spact;          // 特殊行動
+    int state[256];
 } Enemy;
 
 Enemy new_Enemy (int hp, int maxHp, float stdAtk, int intelligence, int type, int act, int spact)
