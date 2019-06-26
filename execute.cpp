@@ -14,7 +14,10 @@ void execute ()
         {
         case 0:
             damage(NORMAL_ATTACK);
-            attack();
+            if (attack())
+            {
+                break;
+            }
             enemyAction();
             updateSkillsRecastTurn();
             turn++;

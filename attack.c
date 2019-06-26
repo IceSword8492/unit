@@ -3,20 +3,23 @@
 #ifndef ATTACK
 #define ATTACK
 
-void attack ()
+bool attack () // void -> bool by Yuya Nakamura
 {
     Enemy* enemy = getEnemy();
     enemy->hp -= tmpAttack;
+    bool res = false;
     if (enemy->hp <= .0)
     {
         if (enemy->state[0])
         {
-            enemy->hp = 50;
+            enemy->hp = enemy->maxHp / 2;
             goto a;
         }
         battleVictory();
+        res = true;
     }
     a:;
+    return res;
 }
 
 #endif
