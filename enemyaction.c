@@ -28,6 +28,10 @@ void enemyAction ()
     {
         player.hp -= tmpAttack * enemy->stdAtk;
     }
+    if (player.hp <= .0)
+    {
+        battleDefeat();
+    }
 }
 
 #endif

@@ -11,7 +11,7 @@
 #define STUDENT_INT 0
 #define STUDENT_MONEY 1000
 #define STUDENT_ITEM {0, 0, 0} // energy, paper, es
-#define STUDENT_RECAST {4, 5, 2, 5}
+#define STUDENT_RECAST {0, 0, 0, 0}
 #define STUDENT_SKILLS {0, 0}
 
 typedef struct Student {

@@ -1,5 +1,5 @@
-//吉岡誇太郎
-//ダメージ計算
+//吉岡�?太�?
+//ダメージ計�?
 #ifndef DAMAGE
 #define DAMAGE
 #define NORMAL_ATTACK 0

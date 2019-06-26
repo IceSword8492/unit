@@ -40,6 +40,10 @@ void inputKey(){
                 execute();
                 break;
             case 0x1b: // esc
+                if (state == D_ESC_MENU)
+                {
+                    break;
+                }
                 setState(D_ESC_MENU);
                 setCursor(0);
                 break;

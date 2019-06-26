@@ -160,6 +160,7 @@ void updateSkillsRecastTurn ()
 
 void battleBegin ()
 {
+    initializeEnemies();
     turn = 0;
     setState(D_BATTLE);
     setCursor(0);

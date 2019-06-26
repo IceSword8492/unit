@@ -1,9 +1,10 @@
 #include <ios>
 #include <iomanip>
 #include <iostream>
-#include <climits>
+#include <string>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <windows.h>
 #include <conio.h>
 #include <string.h>
@@ -52,13 +53,10 @@ int main (int argc, const char** argv)
             inputKey();
             break;
         case D_BATTLE:
-            if (kbhit())
-            {
-                if (getch()) // DEBUG
-                {
-                    setState(D_DUNGEON);
-                }
-            }
+            inputKey();
+            break;
+        case D_SKILL:
+            inputKey();
             break;
         case D_SHOP:
             inputKey();
@@ -73,6 +71,10 @@ int main (int argc, const char** argv)
         case D_ESC_MENU:
             inputKey();
             break;
+        }
+        if (lose)
+        {
+            safeExit(0); // #DEBUG
         }
     }
 

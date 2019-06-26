@@ -4,6 +4,7 @@ void battleVictory ()
 {
     Enemy enemy = *getEnemy();
     addIntelligence(enemy.intelligence);
+    setState(D_DUNGEON);
     if(enemy.type == 1)
     {
         player.pos[0]++;

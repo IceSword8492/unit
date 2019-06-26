@@ -37,13 +37,14 @@ void execute ()
         case 3: // use item
             if (player.item[0] > 0)
             {
-                player.item[0]--;
+                useItem(0);
                 enemyAction();
                 updateSkillsRecastTurn();
                 turn++;
             }
             break;
         }
+        break;
     case D_SKILL:
         if (!cursor.pos)
         {
@@ -52,19 +53,16 @@ void execute ()
         }
         else if (player.pos[0] == 7 && player.pos[1] == 3 && !player.recast[cursor.pos - 1])
         {
-            if (cursor.pos <= 4)
-            {
-                useSkill();
-                setState(D_BATTLE);
-                enemyAction();
-                updateSkillsRecastTurn();
-                turn++;
-                setCursor(0);
-            }
+            useSkill(cursor.pos - 1);
+            setState(D_BATTLE);
+            enemyAction();
+            updateSkillsRecastTurn();
+            turn++;
+            setCursor(0);
         }
-        else if (cursor.pos <= player.pos[0] / 2 + 1 && !player.recast[cursor.pos - 1])
+        else if (!player.recast[cursor.pos - 1])
         {
-            useSkill();
+            useSkill(cursor.pos - 1);
             setState(D_BATTLE);
             enemyAction();
             updateSkillsRecastTurn();
