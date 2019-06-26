@@ -13,11 +13,13 @@ namespace display
         case D_DUNGEON:
             if (player.pos[0] % 2 == 0)
             {
-                printf("残り時間: %03ds                                                                               学年: %d\n%s%s\n知識: %d\n%s\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
+                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n%s\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
                     showFps ? fpsString : "",
+                    (int) player.hp,
+                    (int) STUDENT_MAX_HP,
                     player.intelligence,
                     message,
                     dungeon[player.pos[0]][0].name,

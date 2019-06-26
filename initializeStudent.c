@@ -9,6 +9,7 @@
 
 void initializeStudent ()
 {
+    cls();
     char name[256];
     printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë\n> ");
     scanf("%s", name);

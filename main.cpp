@@ -1,3 +1,5 @@
+#include <ios>
+#include <iomanip>
 #include <iostream>
 #include <stdio.h>
 #include <stdbool.h>
@@ -24,7 +26,6 @@ using namespace display;
 int main (int argc, const char** argv)
 {
     srand(time(NULL));
-    initializeConsole();
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
@@ -41,6 +42,7 @@ int main (int argc, const char** argv)
             getch();
             setState(D_DUNGEON);
             startTime = timeGetTime();
+            initializeConsole();
             break;
         case D_DUNGEON:
             setCursor(player.pos[1]);
