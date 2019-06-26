@@ -17,7 +17,7 @@ void displayEscMenu ()
     using namespace std;
 
     cout << "Menu" << endl 
-        << "Žc‚èŽžŠÔ: " << right << setw(4) << calcRemain() / 1000 << "s" << endl << endl
+        << "Žc‚èŽžŠÔ: " << setw(3) << setfill('0') << (calcRemain() / 1000) << "s" << endl << endl
         << "|" << (cursor.pos == 0 ? ">" : " ") << "Resume |" << (cursor.pos == 1 ? ">" : " ") << "Quit |" << endl << endl
         << messages[(calcRemain() / 1000) % 10 > 5] << endl;
 }
