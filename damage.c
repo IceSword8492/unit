@@ -1,5 +1,5 @@
-//蜷牙ｲ｡隱?螟ｪ驛?
-//繝繝｡繝ｼ繧ｸ險育ｮ?
+//吉岡誇太郎
+//ダメージ計算
 #ifndef DAMAGE
 #define DAMAGE
 #define NORMAL_ATTACK 0
