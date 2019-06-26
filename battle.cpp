@@ -185,7 +185,7 @@ float spact_3b ()
         return getEnemy()->stdAtk * 2;
     }
 
-    return 0;
+    return getEnemy()->stdAtk;
 }
 
 float spact_4b ()
