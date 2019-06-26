@@ -33,6 +33,7 @@ float spact_2b ()
     if(getEnemy()->hp <= getEnemy()->maxHp / 10)
     {
         getEnemy()->hp  += getEnemy()->maxHp / 5;
+        return 0;
     }
     
     return getEnemy()->stdAtk ;
