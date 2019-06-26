@@ -6,7 +6,6 @@
 
 typedef struct Enemy
 {
-    struct Enemy* self; // ©g
     int hp;             // HP
     int maxHp;          // Å‘åHP
     float stdAtk;       // Šî‘bUŒ‚—Í
@@ -22,7 +21,6 @@ typedef struct Enemy
 Enemy new_Enemy (int hp, int maxHp, float stdAtk, int intelligence, int type, int act, int spact)
 {
     Enemy e = {
-        &e,
         hp,
         maxHp,
         stdAtk,

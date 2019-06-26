@@ -137,6 +137,7 @@ Act act[] = {
 #include "attack.c"
 #include "isCritical.c"
 #include "battleVictory.c"
+#include "battleDefeat.c"
 #include "enemyaction.c"
 
 

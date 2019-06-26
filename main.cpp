@@ -1,6 +1,7 @@
 #include <ios>
 #include <iomanip>
 #include <iostream>
+#include <climits>
 #include <stdio.h>
 #include <stdbool.h>
 #include <windows.h>
@@ -14,6 +15,7 @@
 #define D_BATTLE     2
 #define D_SHOP       3
 #define D_SKILL      4
+#define D_ITEM       5
 #define D_ESC_MENU  99
 
 #include "headers.h"
@@ -29,8 +31,9 @@ int main (int argc, const char** argv)
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
-    initializeSettings(argc, argv);
     initializeStudent();
+    initializeSettings(argc, argv);
+    initializeShops();
     initializeFramerate();
     for (;;)
     {
@@ -58,14 +61,14 @@ int main (int argc, const char** argv)
             }
             break;
         case D_SHOP:
+            inputKey();
+            break;
+        case D_ITEM:
             if (kbhit())
             {
-                if (getch())
-                {
-                    setState(D_DUNGEON);
-                }
+                getch();
+                setState(prevState);
             }
-            // inputKey();
             break;
         case D_ESC_MENU:
             inputKey();

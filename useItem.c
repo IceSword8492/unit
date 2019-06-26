@@ -1,3 +1,5 @@
+// Author: •s–¾
+
 void useItem (int a)
 {
     if (a == 0)

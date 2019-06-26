@@ -15,7 +15,6 @@
 #define STUDENT_SKILLS {0, 0}
 
 typedef struct Student {
-    struct Student* self;
     char name[256];
     int pos[2];
     float maxHp;
@@ -26,12 +25,19 @@ typedef struct Student {
     int item[3];
     int recast[4];
     int skills[2];
+    int getGradeId ()
+    {
+        return pos[0] / 2;
+    }
+    int getGrade ()
+    {
+        return getGradeId() + 1;
+    }
 } Student;
 
 Student new_Student (const char* name)
 {
     Student s = {
-        &s,
         "",
         STUDENT_POS,
         STUDENT_MAX_HP,

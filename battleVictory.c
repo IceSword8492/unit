@@ -1,5 +1,5 @@
-//吉岡誇太郎
-//戦闘の勝利処理
+//吉岡�?太�?
+//戦闘�?�勝利処�?
 void battleVictory ()
 {
     Enemy enemy = *getEnemy();
@@ -7,6 +7,7 @@ void battleVictory ()
     if(enemy.type == 1)
     {
         player.pos[0]++;
+        player.money += 1000;
     }
     if(enemy.type == 3)
     {

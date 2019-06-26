@@ -32,5 +32,6 @@ bool textBooks[4];  // 各階層のテキストブック取得状況保持変数
 bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
 int refreshSpeed;
 bool enemyPop;
+Shop shops[4];
 
 #endif

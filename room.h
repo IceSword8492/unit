@@ -6,7 +6,6 @@
 
 typedef struct Room
 {
-    struct Room* self;
     int id;
     char name[256];
     void (*event)();
@@ -18,7 +17,6 @@ typedef struct Room
 Room new_Room(int id, const char* name, void (*event)(), const char* eventName, int direction, float popProb)
 {
     Room r = {
-        &r,
         id,
         "",
         event,

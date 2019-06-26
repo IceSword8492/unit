@@ -34,6 +34,15 @@ void execute ()
             setState(D_SKILL);
             setCursor(0);
             break;
+        case 3: // use item
+            if (player.item[0] > 0)
+            {
+                player.item[0]--;
+                enemyAction();
+                updateSkillsRecastTurn();
+                turn++;
+            }
+            break;
         }
     case D_SKILL:
         if (!cursor.pos)
@@ -62,10 +71,20 @@ void execute ()
             turn++;
             setCursor(0);
         }
-        break;        
-
         break;
-
+    case D_SHOP:
+        switch (cursor.pos)
+        {
+        case 0:
+            setState(D_DUNGEON);
+            break;
+        case 1:
+        case 2:
+        case 3:
+            buy(cursor.pos - 1);
+            break;
+        }
+        break;
     case D_ESC_MENU:
         switch (cursor.pos)
         {
