@@ -27,7 +27,10 @@ void inputKey(){
                 break;
             case 'h':
             case 'H':
-                useItem(0);
+                if(state == D_DUNGEON)
+                {
+                    useItem(0);
+                }
                 break;
             case 'i':
             case 'I':
