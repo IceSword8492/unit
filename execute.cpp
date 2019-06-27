@@ -27,7 +27,10 @@ void execute ()
             {
                 player.item[1]--;
                 damage(REPORT_ATTACK);
-                attack();
+                if(attack())
+                {
+                    break;
+                }
                 enemyAction();
                 updateSkillsRecastTurn();
                 turn++;
