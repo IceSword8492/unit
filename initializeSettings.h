@@ -45,6 +45,10 @@ void initializeSettings (int argc, const char** argv)
             player.pos[0] = atoi(argv[++i]);
             player.pos[1] = atoi(argv[++i]);
         }
+        else if (strcmp(argv[i], "--set-intelligence") == 0 | strcmp(argv[i], "-si") == 0)
+        {
+            player.intelligence = atoi(argv[++i]);
+        }
         else
         {
             std::cerr << "Unknown option: " << argv[i] << std::endl;
