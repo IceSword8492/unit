@@ -6,7 +6,6 @@
 
 namespace display
 {
-    using namespace std;
     void displayBattle ()
     {
         strcpy(message, getEnemy()->state[0] ? "“G‚Ìó‘Ô: ª«" : "");
