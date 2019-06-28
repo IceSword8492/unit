@@ -58,7 +58,7 @@ void initializeSettings (int argc, const char** argv)
         else
         {
             std::cerr << "Unknown option: " << argv[i] << std::endl;
-            safeExit(1);
+            safeExit(-1);
         }
     }
 }

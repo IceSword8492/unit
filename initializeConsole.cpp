@@ -29,7 +29,10 @@ void initializeConsole ()
 
 void safeExit(int errnum)
 {
-    cls();
+    if (errnum >= 0)
+    {
+        cls();
+    }
     CONSOLE_CURSOR_INFO cci;
     HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
     GetConsoleCursorInfo(hStdout, &cci);
