@@ -168,6 +168,7 @@ void battleBegin ()
     {
         if (!player.item[2])
         {
+            player.item[2] -= 1;
             player.hp = 0; // æ§UŒ‚
         }
     }
