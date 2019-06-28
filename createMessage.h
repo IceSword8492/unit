@@ -9,7 +9,8 @@ void createMessage ()
     if (state == D_BATTLE)
     {
 
-    }else if (getRoom()->direction & 0b010 && player.pos[0] % 2 == 0 && player.pos[0] != 6 && state == D_DUNGEON)
+    }
+    else if (getRoom()->direction & 0b010 && player.pos[0] % 2 == 0 && player.pos[0] != 6 && state == D_DUNGEON)
     {
         strcpy(message, "進級試験を受験できます (w key)  (十\分な知識量が必要となります)");
     }
