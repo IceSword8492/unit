@@ -69,8 +69,8 @@ float spact_4b ()
         getEnemy()->hp = getEnemy()->maxHp / 2;
         return 0;
     }
-    acttmp = true;
-    return 0;
+    //acttmp = true;
+    return getEnemy()->stdAtk;
 }
 
 float spact_last ()
@@ -79,8 +79,8 @@ float spact_last ()
     {
         getEnemy()->dmgCut = 1;
     }
-    acttmp = true;
-    return 0;
+    //acttmp = true;
+    return getEnemy()->stdAtk;
 }
 
 Spact spact[] = {

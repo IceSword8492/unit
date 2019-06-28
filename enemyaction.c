@@ -24,7 +24,7 @@ void enemyAction ()
     {
         player.hp -= tmpAttack * act[enemy->act - 1].act();
     }
-    else
+    if(enemy->type == 0)
     {
         player.hp -= tmpAttack * enemy->stdAtk;
     }

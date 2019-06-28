@@ -14,6 +14,14 @@ void createMessage ()
     {
         strcpy(message, "卒業試験を受験できます (w key)");
     }
+    else if ( (player.pos[0] == 7) && (player.pos[1] == 2))
+    {
+        strcpy(message, "卒業(ゲーム終了{a key} 就職面接(Exステージ{d key}))");
+    }
+    else if ( (player.pos[0] == 7) && (player.pos[1] == 3))
+    {
+        strcpy(message, "面接を終えました(ゲーム終了:ctrl+c)");
+    }
     else if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
     {
         strcpy(message, "教科書を発見しました (知識 +50)");
