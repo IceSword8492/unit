@@ -45,9 +45,15 @@ void initializeSettings (int argc, const char** argv)
             player.pos[0] = atoi(argv[++i]);
             player.pos[1] = atoi(argv[++i]);
         }
-        else if (strcmp(argv[i], "--set-intelligence") == 0 | strcmp(argv[i], "-si") == 0)
+        else if (strcmp(argv[i], "--set-intelligence") == 0 | strcmp(argv[i], "-sint") == 0)
         {
             player.intelligence = atoi(argv[++i]);
+        }
+        else if (strcmp(argv[i], "--set-items") == 0 | strcmp(argv[i], "-sitem") == 0)
+        {
+            player.item[0] = atoi(argv[++i]);
+            player.item[1] = atoi(argv[++i]);
+            player.item[2] = atoi(argv[++i]);
         }
         else
         {
