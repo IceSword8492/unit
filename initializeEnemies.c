@@ -23,7 +23,7 @@ void initializeEnemies(){
         new_Enemy(4000,4000,800,300,0,0,0),//f3z
         new_Enemy(10000,10000,1000,800,1,0,SKILL_F3B),//f3b
         new_Enemy(10000,10000,1000,450,0,0,0),//f4z
-        new_Enemy(30000,30000,1000,1000,2,ROUTINE_F4B,SKILL_F4B),//f4b テストプレイ中のみhpを15000から30000に変更
+        new_Enemy(15000,15000,1000,1000,2,ROUTINE_F4B,SKILL_F4B),//f4b
         new_Enemy(50000,50000,2000,0,3,ROUTINE_LAST,SKILL_LAST),//last
     };
     memcpy(enemies, e, sizeof(e));
