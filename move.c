@@ -40,8 +40,7 @@ void move (int inputDirection)
         // エンカウントしたか判定
         if (checkEncount() && enemyPop)
         {
-            setState(D_BATTLE);
-            setCursor(0);
+            battleBegin();
         }
         if (strcmp(getRoom()->eventName, "goShop") == 0)
         {

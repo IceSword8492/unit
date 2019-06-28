@@ -16,7 +16,7 @@ void initializeVariables ()
     state = 0;
     bool tbs[] = {true, true, true, true};
     memcpy(textBooks, tbs, 4);
-    Cursor tmpcsr = {&tmpcsr, 2};
+    Cursor tmpcsr{2};
     memcpy(&cursor, &tmpcsr, sizeof(Cursor));
     rand(); //‰‰ñ‚Ìƒ‰ƒ“ƒ_ƒ€’l‚ğÌ‚Ä‚é
     nextGradeFlag = false;

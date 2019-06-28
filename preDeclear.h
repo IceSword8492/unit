@@ -11,10 +11,13 @@
 extern int state;
 extern Student player;
 typedef struct Cursor {
-    struct Cursor* self;
     int pos;
 } Cursor;
 extern struct Cursor cursor;
 void setCursor(int);
 void createMessage(void);
+typedef struct Shop Shop;
+extern Shop shops[4];
+void battleVictory();
+void initializeEnemies();
 #endif

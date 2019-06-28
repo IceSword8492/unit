@@ -27,12 +27,26 @@ void inputKey(){
                 break;
             case 'h':
             case 'H':
-                useItem();
+                if(state == D_DUNGEON)
+                {
+                    useItem(0);
+                }
+                break;
+            case 'i':
+            case 'I':
+                if (state == D_DUNGEON)
+                {
+                    setState(D_ITEM);
+                }
                 break;
             case 13: // enter
                 execute();
                 break;
             case 0x1b: // esc
+                if (state == D_ESC_MENU)
+                {
+                    break;
+                }
                 setState(D_ESC_MENU);
                 setCursor(0);
                 break;

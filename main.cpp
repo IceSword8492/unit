@@ -1,6 +1,10 @@
+#include <ios>
+#include <iomanip>
 #include <iostream>
+#include <string>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <windows.h>
 #include <conio.h>
 #include <string.h>
@@ -11,6 +15,8 @@
 #define D_DUNGEON    1
 #define D_BATTLE     2
 #define D_SHOP       3
+#define D_SKILL      4
+#define D_ITEM       5
 #define D_ESC_MENU  99
 
 #include "headers.h"
@@ -23,12 +29,12 @@ using namespace display;
 int main (int argc, const char** argv)
 {
     srand(time(NULL));
-    initializeConsole();
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
-    initializeSettings(argc, argv);
     initializeStudent();
+    initializeSettings(argc, argv);
+    initializeShops();
     initializeFramerate();
     for (;;)
     {
@@ -40,33 +46,35 @@ int main (int argc, const char** argv)
             getch();
             setState(D_DUNGEON);
             startTime = timeGetTime();
+            initializeConsole();
             break;
         case D_DUNGEON:
             setCursor(player.pos[1]);
             inputKey();
             break;
         case D_BATTLE:
-            if (kbhit())
-            {
-                if (getch()) // DEBUG
-                {
-                    setState(D_DUNGEON);
-                }
-            }
+            inputKey();
+            break;
+        case D_SKILL:
+            inputKey();
             break;
         case D_SHOP:
+            inputKey();
+            break;
+        case D_ITEM:
             if (kbhit())
             {
-                if (getch())
-                {
-                    setState(D_DUNGEON);
-                }
+                getch();
+                setState(prevState);
             }
-            // inputKey();
             break;
         case D_ESC_MENU:
             inputKey();
             break;
+        }
+        if (lose)
+        {
+            safeExit(0); // #DEBUG
         }
     }
 

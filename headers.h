@@ -37,4 +37,4 @@
 #include "displayinformation.cpp"
 #include "calcFramerate.cpp"
 #include "initializeSettings.h"
-#include "battle.cpp"
+#include "initializeShops.cpp"

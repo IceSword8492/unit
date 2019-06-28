@@ -14,7 +14,7 @@ int baseTime;       // フレームレート制御用変数
 int count;          // フレームレート制御用変数
 float fps;          // フレームレート保持変数
 char fpsString[256];
-int tmpAttack;      // 攻撃力計算用変数
+float tmpAttack;      // 攻撃力計算用変数
 bool win;           // 買ったか
 bool lose;          // 負けたか
 bool trueClear;     // 裏ボスを倒したか
@@ -32,5 +32,6 @@ bool textBooks[4];  // 各階層のテキストブック取得状況保持変数
 bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
 int refreshSpeed;
 bool enemyPop;
+Shop shops[4];
 
 #endif
