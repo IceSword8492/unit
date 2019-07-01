@@ -1,5 +1,6 @@
 # Unit
 
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.1-important.svg)
 
 ## €”õ
 
