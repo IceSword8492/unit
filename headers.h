@@ -38,3 +38,4 @@
 #include "calcFramerate.cpp"
 #include "initializeSettings.h"
 #include "initializeShops.cpp"
+#include "score.c"
