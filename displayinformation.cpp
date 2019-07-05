@@ -13,7 +13,7 @@ namespace display
         case D_DUNGEON:
             if (player.pos[0] % 2 == 0)
             {
-                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n%s\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
+                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
@@ -38,6 +38,22 @@ namespace display
                     cursor.pos == 4 ? "<" : "",
                     dungeon[player.pos[0]][4].name
                 );
+                printf("                                        *                   *\n");
+                printf("                                        * * * * *   * * * * *\n");
+                printf("* * * * * * * * * * * * * * * * * * * * * * * * *   * * * * * * * * * * * * * * * * * * * * * * * * *\n");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("*         %s                   %s                   %s                   %s                   %s         *\n",
+                player.pos[1] == 0 ? "P" : " ",
+                player.pos[1] == 1 ? "P" : " ",
+                player.pos[1] == 2 ? "P" : " ",
+                player.pos[1] == 3 ? "P" : " ",
+                player.pos[1] == 4 ? "P" : " ");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("*                   *                   *                   *                   *                   *\n");
+                printf("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
             }
             else if (player.pos[0] != 7)
             {
@@ -45,12 +61,16 @@ namespace display
             }
             else
             {
-                printf("残り時間: %03ds                                                                               学年: %d\n%s%s\n知識: %d\n%s\n|%s%s|%s%s%s|%s%s|\n",
+                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s|\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
                     showFps ? fpsString : "",
+                    (int) player.hp,
+                    (int) STUDENT_MAX_HP,
                     player.intelligence,
+                    player.money,
+                    player.item[0],
                     message,
                     dungeon[player.pos[0]][1].name,
                     cursor.pos == 1 ? ">" : "",
@@ -60,6 +80,18 @@ namespace display
                     cursor.pos == 3 ? "<" : "",
                     dungeon[player.pos[0]][3].name
                 );
+                printf("                    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    *         %s                   %s                   %s         *\n",
+                player.pos[1] == 1 ? "P" : " ",
+                player.pos[1] == 2 ? "P" : " ",
+                player.pos[1] == 3 ? "P" : " ");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    *                   *                   *                   *\n");
+                printf("                    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
             }
             break;
         case D_BATTLE:
