@@ -13,7 +13,7 @@ namespace display
         case D_DUNGEON:
             if (player.pos[0] % 2 == 0)
             {
-                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n",
+                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
@@ -61,7 +61,7 @@ namespace display
             }
             else
             {
-                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s|\n",
+                printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n所持金: %4d      エナジードリンク: %1d個\n\n%s\n\n|%s%s|%s%s%s|%s%s|\n\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
