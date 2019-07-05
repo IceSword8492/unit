@@ -4,15 +4,15 @@
 #ifndef SCORE
 #define SCORE
 
-void Score ()
+void getScore ()
 {
     if(trueClear)
     {
-        score = calcRemain() / 1000 + player.money + 500;
+        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000;
     }
     else
     {
-        score = calcRemain() / 1000 + player.money;
+        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money;
     }
 }
 
