@@ -1,5 +1,6 @@
 # Unit
 
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.1b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
 
 ## 準備
 
@@ -28,41 +29,65 @@ g++ ./main.cpp -lwinmm
 
 fpsを表示
 ```sh
--fps
+--show-fps
 ```
 
 
 2fpsで実行
 ```sh
--vlfps
+--very-low-fps
 ```
 
 
 10fpsで実行
 ```sh
--lfps
+--low-fps
 ```
 
 
 60fpsで実行
 ```sh
--hfps
+--high-fps
 ```
 
 
 120fpsで実行
 ```sh
--vhfps
+--very-high-fps
 ```
 
 
 240fpsで実行
 ```sh
--vvhfps
+--extremely-very-high-fps
 ```
 
 
 教授のスポーン確率を0に変更 (Scoreは0に固定されます)
 ```sh
--noEnemy
+--no-enemy
+```
+
+
+任意のフレームレートで実行
+```sh
+--set-fps <fps: int>
+```
+
+
+開始地点を設定
+```sh
+--set-start-position <floor: int> <room: int>
+```
+
+
+開始時の知識量を設定
+```sh
+--set-intelligence <intelligence: int>
+```
+
+
+開始時に所持しているアイテム量を設定
+```sh
+--set-items <energyDrinkCount: int> <paperCount: int> <esCount: int>
 ```

@@ -6,10 +6,9 @@
 
 namespace display
 {
-    using namespace std;
     void displayBattle ()
     {
-        strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
+        // strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
         printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
@@ -32,10 +31,10 @@ namespace display
     }
     void displaySkill ()
     {
-        char r1[256], r2[256], r3[256];
-        sprintf(r1, "%d", player.recast[1]);
-        sprintf(r2, "%d", player.recast[2]);
-        sprintf(r3, "%d", player.recast[3]);
+        char r1[256] = "", r2[256] = "", r3[256] = "";
+        if (player.pos[0] / 2 > 0) sprintf(r1, "%d", player.recast[1]);
+        if (player.pos[0] / 2 > 1) sprintf(r2, "%d", player.recast[2]);
+        if (player.pos[0] / 2 > 2) sprintf(r3, "%d", player.recast[3]);
         strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
         printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s戻る|%s予\習(%d)|%s%s%s%s%s%s%s%s%s%s%s%s\n",
             (calcRemain() / 1000),

@@ -56,10 +56,10 @@ float spact_3b ()
 
 float spact_4b ()
 {
-    if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[0] == 0)
+    if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[1] == 0)
     {
         player.hp -= (player.hp/100)*99;
-        getEnemy()->state[0] = 1;
+        getEnemy()->state[1] = 1;
         return 0;
     }
         
@@ -69,8 +69,8 @@ float spact_4b ()
         getEnemy()->hp = getEnemy()->maxHp / 2;
         return 0;
     }
-    acttmp = true;
-    return 0;
+    //acttmp = true;
+    return getEnemy()->stdAtk;
 }
 
 float spact_last ()
@@ -79,8 +79,8 @@ float spact_last ()
     {
         getEnemy()->dmgCut = 1;
     }
-    acttmp = true;
-    return 0;
+    //acttmp = true;
+    return getEnemy()->stdAtk;
 }
 
 Spact spact[] = {
@@ -168,6 +168,7 @@ void battleBegin ()
     {
         if (!player.item[2])
         {
+            player.item[2] -= 1;
             player.hp = 0; // æ§UŒ‚
         }
     }
