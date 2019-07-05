@@ -18,6 +18,7 @@
 #define D_SKILL      4
 #define D_ITEM       5
 #define D_CLEAR      6
+#define D_GAMEOVER   7
 #define D_ESC_MENU  99
 
 #include "headers.h"
@@ -81,16 +82,24 @@ int main (int argc, const char** argv)
                 
              }
             break;
+        case D_GAMEOVER:
+             if (kbhit())
+             {
+                 getch();
+                 safeExit(0);
+                
+             }
+            break;
         }
+    }
         if (win)
         {
             setState(D_CLEAR);
         }
         if (lose)
         {
-            safeExit(0); // #DEBUG
+            setState(D_GAMEOVER);
         }
-    }
 
     forceexit:;
     safeExit(0);
