@@ -17,6 +17,7 @@
 #define D_SHOP       3
 #define D_SKILL      4
 #define D_ITEM       5
+#define D_CLEAR      6
 #define D_ESC_MENU  99
 
 #include "headers.h"
@@ -71,6 +72,19 @@ int main (int argc, const char** argv)
         case D_ESC_MENU:
             inputKey();
             break;
+            
+        case D_CLEAR:
+             if (kbhit())
+             {
+                 getch();
+                 safeExit(0);
+                
+             }
+            break;
+        }
+        if (win)
+        {
+            setState(D_CLEAR);
         }
         if (lose)
         {

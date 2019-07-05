@@ -78,6 +78,9 @@ namespace display
                 player.item[2]
             );
             break;
+        case D_CLEAR:
+            printf("ƒQ[ƒ€ƒNƒŠƒA\n");
+            break;
         case D_ESC_MENU:
             displayEscMenu();
             break;
