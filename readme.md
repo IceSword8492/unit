@@ -9,7 +9,7 @@
 
 
 ```sh
-g++ ./main.cpp -lwinmm
+g++ ./main.cpp -lwinmm -lws2_32
 ```
 
 
