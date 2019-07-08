@@ -29,7 +29,7 @@ void initializeConsole ()
 
 void safeExit(int errnum)
 {
-    if (errnum >= 0)
+    if (errnum == 0)
     {
         cls();
     }

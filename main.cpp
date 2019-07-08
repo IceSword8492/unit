@@ -10,6 +10,7 @@
 #include <string.h>
 #include <time.h>
 #include <signal.h>
+#include <winsock.h>
 
 #define D_RULE       0
 #define D_DUNGEON    1

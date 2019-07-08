@@ -33,5 +33,6 @@ bool nextGradeFlag; // 学年が上がった時にエンカウントしないようにするための変数
 int refreshSpeed;
 bool enemyPop;
 Shop shops[4];
+Scores scores;
 
 #endif

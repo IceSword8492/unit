@@ -20,4 +20,7 @@ typedef struct Shop Shop;
 extern Shop shops[4];
 void battleVictory();
 void initializeEnemies();
+extern float score;
+void request(const char*, const char*, int);
+
 #endif
