@@ -1,6 +1,6 @@
 # Unit
 
-![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.8b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.9b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
 
 ## 準備
 
@@ -25,6 +25,12 @@ g++ ./main.cpp -lwinmm -lws2_32
 
 
 ### オプション
+
+
+debugモードで起動 (Scoreは0に固定されます)
+```sh
+--debug
+```
 
 
 fpsを表示
@@ -63,7 +69,7 @@ fpsを表示
 ```
 
 
-教授のスポーン確率を0に変更 (Scoreは0に固定されます)
+教授のスポーン確率を0に変更
 ```sh
 --no-enemy
 ```
