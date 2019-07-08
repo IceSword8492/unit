@@ -34,5 +34,6 @@ int refreshSpeed;
 bool enemyPop;
 Shop shops[4];
 Scores scores;
+bool debug;
 
 #endif

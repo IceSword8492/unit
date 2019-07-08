@@ -35,6 +35,7 @@ int main (int argc, const char** argv)
     initializeEnemies();
     initializeStudent();
     initializeSettings(argc, argv);
+    initializeStudentName();
     initializeShops();
     initializeFramerate();
     for (;;)

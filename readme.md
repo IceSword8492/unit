@@ -59,7 +59,7 @@ fps‚ğ•\¦
 
 240fps‚ÅÀs
 ```sh
---extremely-very-high-fps
+--extremely-high-fps
 ```
 
 

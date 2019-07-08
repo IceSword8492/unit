@@ -28,12 +28,13 @@ void initializeSettings (int argc, const char** argv)
         {
             refreshSpeed = 7;
         }
-        else if (strcmp(argv[i], "--extremely-very-high-fps") == 0 | strcmp(argv[i], "-evhfps") == 0 | strcmp(argv[i], "-vvhfps") == 0) // target: 240fps (250fps)
+        else if (strcmp(argv[i], "--extremely-high-fps") == 0 | strcmp(argv[i], "-ehfps") == 0 | strcmp(argv[i], "-vvhfps") == 0) // target: 240fps (250fps)
         {
             refreshSpeed = 4;
         }
         else if (strcmp(argv[i], "--no-enemy") == 0 | strcmp(argv[i], "-noEnemy") == 0)
         {
+            debug = true;
             enemyPop = false;
         }
         else if (strcmp(argv[i], "--set-fps") == 0 | strcmp(argv[i], "-sfps") == 0)
@@ -42,15 +43,18 @@ void initializeSettings (int argc, const char** argv)
         }
         else if (strcmp(argv[i], "--set-start-position") == 0 | strcmp(argv[i], "-ssp") == 0)
         {
+            debug = true;
             player.pos[0] = atoi(argv[++i]);
             player.pos[1] = atoi(argv[++i]);
         }
         else if (strcmp(argv[i], "--set-intelligence") == 0 | strcmp(argv[i], "-sint") == 0)
         {
+            debug = true;
             player.intelligence = atoi(argv[++i]);
         }
         else if (strcmp(argv[i], "--set-items") == 0 | strcmp(argv[i], "-sitem") == 0)
         {
+            debug = true;
             player.item[0] = atoi(argv[++i]);
             player.item[1] = atoi(argv[++i]);
             player.item[2] = atoi(argv[++i]);
