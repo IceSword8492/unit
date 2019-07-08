@@ -45,10 +45,13 @@ void inputKey(){
             case 0x1b: // esc
                 if (state == D_ESC_MENU)
                 {
-                    break;
+                    setState(prevState);
                 }
-                setState(D_ESC_MENU);
-                setCursor(0);
+                else
+                {
+                    setState(D_ESC_MENU);
+                    setCursor(0);
+                }
                 break;
             }
         }
