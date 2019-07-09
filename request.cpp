@@ -84,7 +84,7 @@ void request (const char *host, const char *uri, int mode)
         while ((len = recv(sock, szBuff, sizeof(szBuff)/sizeof(szBuff[0]), 0)) > 0)
         {
             fwrite(szBuff, len, 1, fp);
-            fwrite(szBuff, len, 1, stdout);
+            // fwrite(szBuff, len, 1, stdout);
         }
         fclose(fp);
         char str[4096];
