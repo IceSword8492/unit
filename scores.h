@@ -12,7 +12,7 @@ typedef struct Scores {
 void updateScores ()
 {
     request("unit-server.glitch.me", "test", 1);
-    FILE *fp = fopen("./data.csv", "r");
+    FILE *fp = fopen("./scores.dat", "r");
     if (fp == NULL)
     {
         printf("not found: data.csv");
