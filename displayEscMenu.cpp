@@ -20,6 +20,8 @@ void displayEscMenu ()
         << "Žc‚èŽžŠÔ: " << setw(3) << setfill('0') << (calcRemain() / 1000) << "s" << "\n\n"
         << "|" << (cursor.pos == 0 ? ">" : " ") << "Resume |" << (cursor.pos == 1 ? ">" : " ") << "Quit |" << "\n\n"
         << messages[(calcRemain() / 1000) % 10 >= 5] << "\n";
+
+    
 }
 
 #endif

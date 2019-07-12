@@ -30,6 +30,10 @@ void createMessage ()
     {
         strcpy(message, "‹³‰È‘‚ğ”­Œ©‚µ‚Ü‚µ‚½ (’m¯ +50)");
     }
+    else if((player.pos[0] == 7) && (player.pos[1] == 1))
+    {
+        strcpy(message,"[Normal End]‘²‹Æ‚¨‚ß‚Å‚Æ‚¤(ƒQ[ƒ€I—¹:ctrl+c)");
+    }
     else
     {
         strcpy(message, "");

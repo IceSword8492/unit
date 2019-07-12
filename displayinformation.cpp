@@ -110,6 +110,12 @@ namespace display
                 player.item[2]
             );
             break;
+        case D_CLEAR:
+            printf("ゲームクリア\n");
+            break;
+        case D_GAMEOVER:
+            printf("ゲームオーバー\n");
+            break;
         case D_ESC_MENU:
             displayEscMenu();
             break;
