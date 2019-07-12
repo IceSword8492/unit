@@ -4,9 +4,11 @@
 #ifndef ISCRITICAL
 #define ISCRITICAL
 
+int criticalWeight = 6;
+
 void isCritical ()
 {
-    int s = rand() % 6;
+    int s = rand() % criticalWeight;
     if (s == 1)
     {
         tmpAttack = CRITICAL;

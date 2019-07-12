@@ -36,6 +36,10 @@ void initializeSettings (int argc, const char** argv)
         {
             refreshSpeed = 4;
         }
+        else if (strcmp(argv[i], "--set-critical") == 0 | strcmp(argv[i], "-critical") == 0)
+        {
+            criticalWeight = 100 / atoi(argv[++i]);
+        }
         else if (strcmp(argv[i], "--no-enemy") == 0 | strcmp(argv[i], "-noEnemy") == 0)
         {
             if (debug)
