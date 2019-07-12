@@ -38,7 +38,15 @@ void initializeSettings (int argc, const char** argv)
         }
         else if (strcmp(argv[i], "--set-critical") == 0 | strcmp(argv[i], "-critical") == 0)
         {
-            criticalWeight = 100 / atoi(argv[++i]);
+            if (debug)
+            {
+                criticalWeight = 100 / atoi(argv[++i]);
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
         }
         else if (strcmp(argv[i], "--no-enemy") == 0 | strcmp(argv[i], "-noEnemy") == 0)
         {
