@@ -22,5 +22,6 @@ void battleVictory();
 void initializeEnemies();
 extern float score;
 void request(const char*, const char*, int);
+extern struct Scores scores;
 
 #endif

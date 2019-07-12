@@ -17,10 +17,10 @@ void request (const char *host, const char *uri, int mode)
     char lpHttpRequest[4096];
     switch (mode)
     {
-    case 0: // スコア送信
+    case 0:
         sprintf(lpHttpRequest, "GET /%s?name=NAME&score=%d HTTP/1.0\r\nHost: %s\r\n\r\n", uri, host, (int)score);
         break;
-    case 1: // スコア受信
+    case 1:
         sprintf(lpHttpRequest, "GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n", uri, host);
         break;
     }
@@ -35,21 +35,21 @@ void request (const char *host, const char *uri, int mode)
     sockaddr.sin_family = AF_INET;
     sockaddr.sin_addr = *((LPIN_ADDR)lpHostEntry->h_addr_list[0]);
     sockaddr.sin_port = htons(nPort);
-    // ソケット作成
+    
     sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == INVALID_SOCKET)
     {
         printf("sock error");
         safeExit(1);
     }
-    // サーバに接続
+    
     nRet = connect(sock, (const SOCKADDR*)&sockaddr, sizeof(sockaddr));
     if (nRet != 0)
     {
         printf("connection failed");
         safeExit(1);
     }
-    // 送信
+    
     nOffset = 0;
     nRemainingBytes = (int)strlen(lpHttpRequest);
     while (nRemainingBytes > 0)
