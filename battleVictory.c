@@ -17,6 +17,6 @@ void battleVictory ()
     if (enemy.type == 3)
     {
         win = true;
-        trueClear = true; 
+        trueClear = true;
     }
 }

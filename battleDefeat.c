@@ -6,13 +6,14 @@
 Enemy enemy = *getEnemy();
 void battleDefeat ()
 {
-    if(enemy.type == 3)
+    Enemy enemy = *getEnemy();
+    if (enemy.type == 3)
     {
-        win = true; 
+        win = true;
     }
     else
     {
-    lose = true;
+        lose = true;
     }
 }
 

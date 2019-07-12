@@ -95,15 +95,17 @@ int main (int argc, const char** argv)
              }
             break;
         }
-    }
+
         if (win)
         {
+            getScore();
             setState(D_CLEAR);
         }
         if (lose)
         {
             setState(D_GAMEOVER);
         }
+    }
 
     forceexit:;
     safeExit(0);
