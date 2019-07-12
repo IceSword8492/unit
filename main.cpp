@@ -31,8 +31,6 @@ using namespace display;
 
 int main (int argc, const char** argv)
 {
-    updateScores();
-    safeExit(1);
     srand(time(NULL));
     initializeVariables();
     initializeDungeon();
@@ -96,7 +94,7 @@ int main (int argc, const char** argv)
             break;
         }
 
-        if (win)
+        if (win && !score)
         {
             getScore();
             setState(D_CLEAR);
