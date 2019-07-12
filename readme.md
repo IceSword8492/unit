@@ -1,6 +1,6 @@
 # Unit
 
-![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.9b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.10b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
 
 ## 準備
 
@@ -97,3 +97,10 @@ fpsを表示
 ```sh
 --set-items <energyDrinkCount: int> <paperCount: int> <esCount: int>
 ```
+
+
+クリティカル確率を設定
+```sh
+--set-critical <probability: integer>
+```
+`probability`は0~100で指定 (それ以外は実行時エラーとなる)
