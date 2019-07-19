@@ -1,6 +1,6 @@
 # Unit
 
-![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.15b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg)
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.15b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg) ![STABLE](https://img.shields.io/badge/stable-N%2FA-red.svg)
 
 ## èÄîı
 
