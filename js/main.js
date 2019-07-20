@@ -23,7 +23,12 @@ let subState = SD_NAME;
 let player = {
     name: "",
     pos: [0, 2],
-    hp: 10000
+    hp: 10000,
+    maxHp: 10000,
+    intelligence: 0,
+    money: 1000,
+    item: [0, 0, 0],
+
 };
 
 let buf = "";
@@ -35,11 +40,13 @@ print = str => term.write(str);
 
 remain = 900000;
 
+message = "message-test";
+
 displayInformation = _ => {
     switch (state)
     {
     case D_DUNGEON:
-        print(`残り時間: ${("" + Math.floor(remain / 1000)).padStart(3, "0")}s                  学年: ${Math.floor(player.pos[0] / 2) + 1}\r\n\r\nHP: ${("" + player.hp).padStart(5, " ")}`);
+        print(`残り時間: ${("" + Math.floor(remain / 1000)).padStart(3, "0")}s                  学年: ${Math.floor(player.pos[0] / 2) + 1}\r\n\r\nHP: ${("" + player.hp).padStart(5, " ")} / ${("" + player.maxHp).padStart(5, " ")}           知識: ${("" + player.intelligence).padStart(5, " ")}\r\n所持金: ${("" + player.money).padStart(4, " ")}      エナジードリンク: ${("" + player.item[0]).padStart(1, " ")}個\r\n\r\n${message}\r\n\r\nMAP`);
         break;
     }
 };
