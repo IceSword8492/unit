@@ -29,7 +29,7 @@ void request (const char *host, const char *uri, int mode)
     lpHostEntry = gethostbyname(host);
     if (lpHostEntry == NULL)
     {
-        printf("not found: host");
+        printf("host not found: %s\n", host);
         safeExit(1);
     }
     sockaddr.sin_family = AF_INET;
@@ -39,14 +39,14 @@ void request (const char *host, const char *uri, int mode)
     sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == INVALID_SOCKET)
     {
-        printf("sock error");
+        printf("sock error\n");
         safeExit(1);
     }
     
     nRet = connect(sock, (const SOCKADDR*)&sockaddr, sizeof(sockaddr));
     if (nRet != 0)
     {
-        printf("connection failed");
+        printf("connection failed\n");
         safeExit(1);
     }
     
@@ -57,7 +57,7 @@ void request (const char *host, const char *uri, int mode)
         nSentBytes = send(sock, &lpHttpRequest[nOffset], nRemainingBytes, 0);
         if (nSentBytes == SOCKET_ERROR)
         {
-            printf("send error");
+            printf("send error\n");
             safeExit(1);
         }
         nOffset += nSentBytes;
@@ -74,7 +74,7 @@ void request (const char *host, const char *uri, int mode)
 
         if (fp == NULL)
         {
-            printf("not found: tmp.dat");
+            printf("can't open: tmp.dat\n");
             safeExit(1);
         }
 
@@ -93,7 +93,7 @@ void request (const char *host, const char *uri, int mode)
 
         if (fp3 == NULL)
         {
-            printf("not found: scores.dat");
+            printf("can't open: scores.dat\n");
             safeExit(1);
         }
 

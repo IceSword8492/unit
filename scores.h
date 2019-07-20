@@ -19,8 +19,8 @@ void updateScores ()
     FILE *fp = fopen("./scores.dat", "r");
     if (fp == NULL)
     {
-        printf("not found: data.csv");
-        safeExit(1); // not found
+        printf("can't open: scores.dat");
+        safeExit(1);
     }
     char name[4096], score[256];
     int i = 0;
