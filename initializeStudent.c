@@ -16,7 +16,7 @@ void initializeStudent ()
 void initializeStudentName ()
 {
     char name[256];
-    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë\n> ");
+    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë(”¼Šp‰p”Žš)\n> ");
     scanf("%s", name);
     strcpy(player.name, name);
 }
