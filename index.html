@@ -3,8 +3,18 @@
     <head>
         <meta charset="utf-8" />
         <title>Unit.js</title>
+        <link rel="stylesheet" href="xterm/xterm.css" />
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+        <style>
+        html {
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+        }
+        </style>
     </head>
     <body>
-        Hello, world!
+        <div id="terminal" style="height: 800px;"></div>
+        <script src="./xterm/xterm.js"></script>
+        <script src="./xterm/addons/fit/fit.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>
