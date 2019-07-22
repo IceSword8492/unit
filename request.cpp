@@ -18,9 +18,13 @@ void request (const char *host, const char *uri, int mode)
     switch (mode)
     {
     case 0:
-        sprintf(lpHttpRequest, "GET /%s?name=NAME&score=%d HTTP/1.0\r\nHost: %s\r\n\r\n", uri, host, (int)score);
+        printf("GET /%s?name=%s&score=%d HTTP/1.0\r\nHost: %s\r\n\r\n", uri, player.name, (int)score, host);
+        // safeExit(1);
+        sprintf(lpHttpRequest, "GET /%s?name=%s&score=%d HTTP/1.0\r\nHost: %s\r\n\r\n", uri, player.name, (int)score, host);
         break;
     case 1:
+        printf("GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n", uri, host);
+        safeExit(1);
         sprintf(lpHttpRequest, "GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n", uri, host);
         break;
     }

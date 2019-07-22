@@ -7,6 +7,8 @@
 
 void gameClear(){
     win=true;
+    saveScore();
+    updateScores();
 }
 
 #endif

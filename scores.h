@@ -15,7 +15,7 @@ void updateScores ()
     第二引数を"test"でデバッグ
     第二引数を"load"で本番環境
     ********************/
-    request("unit-server.glitch.me", "test", 1);
+    request("unit-server.glitch.me", "load", 1);
     FILE *fp = fopen("./scores.dat", "r");
     if (fp == NULL)
     {

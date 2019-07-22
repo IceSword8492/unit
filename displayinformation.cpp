@@ -111,8 +111,8 @@ namespace display
             );
             break;
         case D_CLEAR:
-            printf("ゲームクリア\n");
-            printf("score :%d",(int)score);
+            printf("         ゲームクリア\n\n");
+            printf("         score :%5d",(int)score);
             break;
         case D_GAMEOVER:
             printf("ゲームオーバー\n");

@@ -8,7 +8,10 @@ void getScore ()
 {
     if (debug)
     {
-        score = 0;
+        // score = 0;
+        printf("called\n");
+        safeExit(1);
+        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000; // #DEBUG
     }
     else if (trueClear)
     {

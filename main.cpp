@@ -81,7 +81,6 @@ int main (int argc, const char** argv)
              {
                  getch();
                  safeExit(0);
-                
              }
             break;
         case D_GAMEOVER:
@@ -89,14 +88,12 @@ int main (int argc, const char** argv)
              {
                  getch();
                  safeExit(0);
-                
              }
             break;
         }
 
         if (win && !score)
         {
-            getScore();
             setState(D_CLEAR);
         }
         if (lose)
