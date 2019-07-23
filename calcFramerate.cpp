@@ -17,6 +17,10 @@ void controlFps ()
         createMessage();
         prevTime = now;
         count++;
+        if (calcRemain() < 0)
+        {
+            gameOver();
+        }
     }
     if (now - baseTime >= 1000)
     {

@@ -92,12 +92,13 @@ int main (int argc, const char** argv)
             break;
         }
 
-        if (win && !score)
+        if (win && state != D_CLEAR)
         {
-            setState(D_CLEAR);
+            gameClear();
         }
-        if (lose)
+        if (lose && state != D_GAMEOVER)
         {
+            gameOver();
             setState(D_GAMEOVER);
         }
     }

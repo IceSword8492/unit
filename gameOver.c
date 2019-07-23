@@ -7,6 +7,11 @@
 
 void gameOver () {
     lose = true;
+    // à»â∫ÇÃAuthor íÜë∫óGç∆
+    score = getScore();
+    saveScore();
+    updateScores();
+    setState(D_GAMEOVER);
 }
 
 #endif

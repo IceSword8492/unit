@@ -6,9 +6,12 @@
 #define GAMECLEAR
 
 void gameClear(){
-    win=true;
+    win = true;
+    // à»â∫ÇÃAuthor íÜë∫óGç∆
+    score = getScore();
     saveScore();
     updateScores();
+    setState(D_CLEAR);
 }
 
 #endif

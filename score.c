@@ -4,22 +4,29 @@
 #ifndef SCORE
 #define SCORE
 
-void getScore ()
+int getScore ()
 {
     if (debug)
     {
-        // score = 0;
-        printf("called\n");
-        safeExit(1);
-        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000; // #DEBUG
+        return 0;
+        // return 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000; // #DEBUG
     }
     else if (trueClear)
     {
-        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000;
+        return 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money + 5000;
+    }
+    else if (win)
+    {
+        return 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money;
+    }
+    else if (lose)
+    {
+        return 0;
     }
     else
     {
-        score = 10000 / 660 * (calcRemain() / 1000) + 1500 / 4000 * player.money;
+
+        return 0;
     }
 }
 
