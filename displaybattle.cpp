@@ -8,7 +8,7 @@ namespace display
 {
     void displayBattle ()
     {
-        // strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
+         strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
         printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d\n             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,

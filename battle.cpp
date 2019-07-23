@@ -56,10 +56,6 @@ float spact_3b ()
 
 float spact_4b ()
 {
-    if (getEnemy()->hp <= getEnemy()->maxHp / 5 && getEnemy()->state[0] == 1)
-    {
-        getEnemy()->state[0] = 0;
-    }
     if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[1] == 0)
     {
         player.hp -= (player.hp/100)*99;
@@ -76,10 +72,6 @@ float spact_4b ()
 
 float spact_last ()
 {
-    if (getEnemy()->hp <= getEnemy()->maxHp / 5 && getEnemy()->state[0] == 1)
-    {
-        getEnemy()->state[0] = 0;
-    }
     if (getEnemy()->hp <= getEnemy()->maxHp / 5)
     {
         getEnemy()->dmgCut = 1;
