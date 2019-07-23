@@ -39,4 +39,22 @@ void saveScore ()
     request("unit-server.glitch.me", "push", 0);
 }
 
+void printScores ()
+{
+    FILE *fp = fopen("./scores.dat", "r");
+    if (fp == NULL)
+    {
+        printf("can't open: scores.dat");
+        safeExit(1);
+    }
+    char name[4096], score[256];
+    int i = 0;
+    printf("名前%16s |スコア\n\n", "");
+    while (fscanf(fp, "%[^:]:%s\n", name, score) != EOF)
+    {
+        printf("%20s |%s\n", name, score);
+    }
+    fclose(fp);
+}
+
 #endif

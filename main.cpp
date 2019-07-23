@@ -31,12 +31,14 @@ using namespace display;
 
 int main (int argc, const char** argv)
 {
+    s_argc = argc;
+    s_argv = argv;
     srand(time(NULL));
     initializeVariables();
     initializeDungeon();
     initializeEnemies();
     initializeStudent();
-    initializeSettings(argc, argv);
+    initializeSettings();
     initializeStudentName();
     initializeShops();
     initializeFramerate();
@@ -77,18 +79,10 @@ int main (int argc, const char** argv)
             break;
             
         case D_CLEAR:
-             if (kbhit())
-             {
-                 getch();
-                 safeExit(0);
-             }
+            inputKey();
             break;
         case D_GAMEOVER:
-             if (kbhit())
-             {
-                 getch();
-                 safeExit(0);
-             }
+            inputKey();
             break;
         }
 

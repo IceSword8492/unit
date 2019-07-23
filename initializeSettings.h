@@ -4,8 +4,11 @@
 #ifndef INITSETTINGS
 #define INITSETTINGS
 
-void initializeSettings (int argc, const char** argv)
+void initializeSettings ()
 {
+    int argc = s_argc;
+    const char** argv = s_argv;
+
     for (int i = 1; i < argc; i++)
     {
         if (strcmp(argv[i], "--debug") == 0 | strcmp(argv[i], "-d") == 0)

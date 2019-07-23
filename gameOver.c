@@ -12,6 +12,7 @@ void gameOver () {
     saveScore();
     updateScores();
     setState(D_GAMEOVER);
+    setCursor(0);
 }
 
 #endif

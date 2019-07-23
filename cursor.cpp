@@ -65,6 +65,8 @@ void moveCursor (int direction)
             }
         }
         break;
+    case D_CLEAR:
+    case D_GAMEOVER:
     case D_ESC_MENU:
         cursor.pos ^= 1;
         break;

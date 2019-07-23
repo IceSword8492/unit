@@ -89,6 +89,26 @@ void execute ()
             break;
         }
         break;
+    case D_CLEAR:
+    case D_GAMEOVER:
+        switch (cursor.pos)
+        {
+        case 0:
+            initializeVariables();
+            initializeDungeon();
+            initializeEnemies();
+            initializeStudent();
+            initializeSettings();
+            initializeStudentName();
+            initializeShops();
+            initializeFramerate();
+            setState(D_RULE);
+            break;
+        case 1:
+            safeExit(0);
+            break;
+        }
+        break;
     case D_ESC_MENU:
         switch (cursor.pos)
         {
