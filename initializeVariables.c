@@ -23,6 +23,7 @@ void initializeVariables ()
     refreshSpeed = 33;
     enemyPop = true;
     debug = false;
+    debugTime = 0;
 }
 
 #endif

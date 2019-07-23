@@ -35,5 +35,6 @@ bool enemyPop;
 Shop shops[4];
 Scores scores;
 bool debug;
+int debugTime;
 
 #endif
