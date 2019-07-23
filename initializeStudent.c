@@ -1,4 +1,4 @@
-//Šw¶‚Ì‰Šú‰»by‹g‰ªŒÖ‘¾˜Y
+//å­¦ç”Ÿã®åˆæœŸåŒ–byå‰å²¡èª‡å¤ªéƒŽ
 
 // fixed by Yuya Nakamura
 // fixed "char name;" to "char name[256];"
@@ -16,7 +16,7 @@ void initializeStudent ()
 void initializeStudentName ()
 {
     char name[256];
-    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë(”¼Šp‰p”Žš)\n> ");
+    printf("åå‰ã‚’å…¥åŠ›ã—ã¦ã­(åŠè§’è‹±æ•°å­—)\n> ");
     scanf("%s", name);
     strcpy(player.name, name);
 }

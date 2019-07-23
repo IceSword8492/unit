@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// http’ÊMŠÖŒW
+// Author: ä¸­æ‘å®¥å“‰
+// httpé€šä¿¡é–¢ä¿‚
 
 #ifndef REQUEST
 #define REQUEST
@@ -82,7 +82,7 @@ void request (const char *host, const char *uri, int mode)
 
         fprintf(fp, "");
 
-        // ŽóM
+        // å—ä¿¡
         while ((len = recv(sock, szBuff, sizeof(szBuff)/sizeof(szBuff[0]), 0)) > 0)
         {
             fwrite(szBuff, len, 1, fp);

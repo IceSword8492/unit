@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// î•ñ•\Ž¦ŠÖ”‚Ì’è‹`
+// Author: ä¸­æ‘å®¥å“‰
+// æƒ…å ±è¡¨ç¤ºé–¢æ•°ã®å®šç¾©
 
 #ifndef DISPLAYINFORMATION
 #define DISPLAYINFORMATION
@@ -13,7 +13,7 @@ namespace display
         case D_DUNGEON:
             if (player.pos[0] % 2 == 0)
             {
-                printf("Žc‚èŽžŠÔ: %03ds                  Šw”N: %d\n%s%s\nHP: %5d / %5d           ’mŽ¯: %5d\nŠŽ‹à: %4d      ƒGƒiƒW[ƒhƒŠƒ“ƒN: %1dŒÂ\n\n%s\n\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n\n",
+                printf("æ®‹ã‚Šæ™‚é–“: %03ds                  å­¦å¹´: %d\n%s%s\nHP: %5d / %5d           çŸ¥è­˜: %5d\næ‰€æŒé‡‘: %4d      ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯: %1då€‹\n\n%s\n\n|%s%s|%s%s%s|%s%s%s|%s%s%s|%s%s|\n\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
@@ -61,7 +61,7 @@ namespace display
             }
             else
             {
-                printf("Žc‚èŽžŠÔ: %03ds                  Šw”N: %d\n%s%s\nHP: %5d / %5d           ’mŽ¯: %5d\nŠŽ‹à: %4d      ƒGƒiƒW[ƒhƒŠƒ“ƒN: %1dŒÂ\n\n%s\n\n|%s%s|%s%s%s|%s%s|\n\n",
+                printf("æ®‹ã‚Šæ™‚é–“: %03ds                  å­¦å¹´: %d\n%s%s\nHP: %5d / %5d           çŸ¥è­˜: %5d\næ‰€æŒé‡‘: %4d      ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯: %1då€‹\n\n%s\n\n|%s%s|%s%s%s|%s%s|\n\n",
                     (calcRemain() / 1000),
                     player.pos[0] / 2 + 1,
                     showFps ? "FPS: " : "",
@@ -104,7 +104,7 @@ namespace display
             displayShop();
             break;
         case D_ITEM:
-            printf("Items\n\n\tEƒGƒiƒW[ƒhƒŠƒ“ƒN(‰ñ•œ):\t%3dŒÂ\n\tEƒŒƒ|[ƒg—pŽ†:\t\t\t%3d–‡\n\tE—š—ð‘:\t\t\t%3d–‡\n\nPress any key to return.\n",
+            printf("Items\n\n\tãƒ»ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯(å›žå¾©):\t%3då€‹\n\tãƒ»ãƒ¬ãƒãƒ¼ãƒˆç”¨ç´™:\t\t\t%3dæžš\n\tãƒ»å±¥æ­´æ›¸:\t\t\t%3dæžš\n\nPress any key to return.\n",
                 player.item[0],
                 player.item[1],
                 player.item[2]
@@ -113,11 +113,11 @@ namespace display
         case D_CLEAR:
             printf("Congratulations!\n\n");
             printf("%s\n\n",
-                trueClear ? "ƒgƒDƒ‹[ƒNƒŠƒA" : "ƒQ[ƒ€ƒNƒŠƒA"
+                trueClear ? "ãƒˆã‚¥ãƒ«ãƒ¼ã‚¯ãƒªã‚¢" : "ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢"
             );
-            printf("–¼‘O:    %-s\n", player.name);
-            printf("ƒXƒRƒA:  %-5d\n\n",(int)score);
-            printf("ƒ‰ƒ“ƒLƒ“ƒO\n\n");
+            printf("åå‰:    %-s\n", player.name);
+            printf("ã‚¹ã‚³ã‚¢:  %-5d\n\n",(int)score);
+            printf("ãƒ©ãƒ³ã‚­ãƒ³ã‚°\n\n");
             printScores();
             printf("\n\n|%sRetry |%sQuit|\n",
                 cursor.pos == 0 ? ">" : " ",
@@ -125,10 +125,10 @@ namespace display
             );
             break;
         case D_GAMEOVER:
-            printf("ƒQ[ƒ€ƒI[ƒo[\n\n");
-            printf("–¼‘O:    %-s\n", player.name);
-            printf("ƒXƒRƒA:  %-5d\n\n",(int)score);
-            printf("ƒ‰ƒ“ƒLƒ“ƒO\n\n");
+            printf("ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼\n\n");
+            printf("åå‰:    %-s\n", player.name);
+            printf("ã‚¹ã‚³ã‚¢:  %-5d\n\n",(int)score);
+            printf("ãƒ©ãƒ³ã‚­ãƒ³ã‚°\n\n");
             printScores();
             printf("\n\n|%sRetry |%sQuit|\n",
                 cursor.pos == 0 ? ">" : " ",

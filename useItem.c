@@ -1,4 +1,4 @@
-// Author: ‹g‰ªŒÖ‘¾˜Y
+// Author: å‰å²¡èª‡å¤ªéƒ
 
 void useItem (int a)
 {

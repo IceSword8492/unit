@@ -1,4 +1,4 @@
-// Author: ’†‘º —GÆ
+// Author: ä¸­æ‘ å®¥å“‰
 // Scores
 
 #ifndef SCORESDEF
@@ -12,8 +12,8 @@ typedef struct Scores {
 void updateScores ()
 {
     /********************
-    ‘æ“ñˆø”‚ğ"test"‚ÅƒfƒoƒbƒO
-    ‘æ“ñˆø”‚ğ"load"‚Å–{”ÔŠÂ‹«
+    ç¬¬äºŒå¼•æ•°ã‚’"test"ã§ãƒ‡ãƒãƒƒã‚°
+    ç¬¬äºŒå¼•æ•°ã‚’"load"ã§æœ¬ç•ªç’°å¢ƒ
     ********************/
     request("unit-server.glitch.me", "load", 1);
     FILE *fp = fopen("./scores.dat", "r");
@@ -49,7 +49,7 @@ void printScores ()
     }
     char name[4096], score[256];
     int i = 0;
-    printf("–¼‘O%16s |ƒXƒRƒA\n\n", "");
+    printf("åå‰%16s |ã‚¹ã‚³ã‚¢\n\n", "");
     while (fscanf(fp, "%[^:]:%s\n", name, score) != EOF)
     {
         printf("%20s |%s\n", name, score);

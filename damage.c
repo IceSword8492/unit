@@ -1,5 +1,5 @@
-//‹g‰ªŒÖ‘¾˜Y
-//ƒ_ƒ[ƒWŒvŽZ
+//å‰å²¡èª‡å¤ªéƒŽ
+//ãƒ€ãƒ¡ãƒ¼ã‚¸è¨ˆç®—
 #ifndef DAMAGE
 #define DAMAGE
 #define NORMAL_ATTACK 0

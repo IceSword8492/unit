@@ -1,5 +1,5 @@
-//ŒFàV—SŠó
-//ƒXƒRƒAZo
+//ç†Šæ¾¤ç¥å¸Œ
+//ã‚¹ã‚³ã‚¢ç®—å‡º
 
 #ifndef SCORE
 #define SCORE

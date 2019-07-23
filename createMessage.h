@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// •\¦—pƒƒbƒZ[ƒWì¬ŠÖ”
+// Author: ä¸­æ‘å®¥å“‰
+// è¡¨ç¤ºç”¨ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä½œæˆé–¢æ•°
 
 #ifndef CREATEMESSAGE
 #define CREATEMESSAGE
@@ -12,27 +12,27 @@ void createMessage ()
     }
     else if (getRoom()->direction & 0b010 && player.pos[0] % 2 == 0 && player.pos[0] != 6 && state == D_DUNGEON)
     {
-        strcpy(message, "i‹‰Œ±‚ğóŒ±‚Å‚«‚Ü‚· (w key)  (\\•ª‚È’m¯—Ê‚Å’§‚İ‚Ü‚µ‚å‚¤)");
+        strcpy(message, "é€²ç´šè©¦é¨“ã‚’å—é¨“ã§ãã¾ã™ (w key)  (å\åˆ†ãªçŸ¥è­˜é‡ã§æŒ‘ã¿ã¾ã—ã‚‡ã†)");
     }
     else if (getRoom()->direction & 0b010 && player.pos[0] == 6 && state == D_DUNGEON)
     {
-        strcpy(message, "‘²‹ÆŒ±‚ğóŒ±‚Å‚«‚Ü‚· (w key)");
+        strcpy(message, "å’æ¥­è©¦é¨“ã‚’å—é¨“ã§ãã¾ã™ (w key)");
     }
     else if ( (player.pos[0] == 7) && (player.pos[1] == 2))
     {
-        strcpy(message, "‘²‹Æ(ƒQ[ƒ€I—¹{a key} AE–ÊÚ(ExƒXƒe[ƒW{d key}))");
+        strcpy(message, "å’æ¥­(ã‚²ãƒ¼ãƒ çµ‚äº†{a key} å°±è·é¢æ¥(Exã‚¹ãƒ†ãƒ¼ã‚¸{d key}))");
     }
     else if ( (player.pos[0] == 7) && (player.pos[1] == 3))
     {
-        strcpy(message, "–ÊÚ‚ğI‚¦‚Ü‚µ‚½(ƒQ[ƒ€I—¹:ctrl+c)");
+        strcpy(message, "é¢æ¥ã‚’çµ‚ãˆã¾ã—ãŸ(ã‚²ãƒ¼ãƒ çµ‚äº†:ctrl+c)");
     }
     else if (strcmp(getRoom()->eventName, "pickUpText") == 0 && textBooks[player.pos[0] / 2])
     {
-        strcpy(message, "‹³‰È‘‚ğ”­Œ©‚µ‚Ü‚µ‚½ (’m¯ +50)");
+        strcpy(message, "æ•™ç§‘æ›¸ã‚’ç™ºè¦‹ã—ã¾ã—ãŸ (çŸ¥è­˜ +50)");
     }
     else if((player.pos[0] == 7) && (player.pos[1] == 1))
     {
-        strcpy(message,"[Normal End]‘²‹Æ‚¨‚ß‚Å‚Æ‚¤(ƒQ[ƒ€I—¹:ctrl+c)");
+        strcpy(message,"[Normal End]å’æ¥­ãŠã‚ã§ã¨ã†(ã‚²ãƒ¼ãƒ çµ‚äº†:ctrl+c)");
     }
     else
     {

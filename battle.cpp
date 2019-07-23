@@ -4,7 +4,7 @@
 float CRITICAL = 1.5f;
 
 
-bool acttmp; // spact‚ğÀs‚µ‚½‚Ì‚¿‚Éact‚àÀs‚·‚éê‡‚Ítrue‚É‚·‚é
+bool acttmp; // spactã‚’å®Ÿè¡Œã—ãŸã®ã¡ã«actã‚‚å®Ÿè¡Œã™ã‚‹å ´åˆã¯trueã«ã™ã‚‹
 
 Enemy* getEnemy ()
 {
@@ -87,7 +87,7 @@ Spact spact[] = {
     {spact_last}
 };
 
-int turn; // Œ»İ‚Ìƒ^[ƒ“”‚ğ•Û
+int turn; // ç¾åœ¨ã®ã‚¿ãƒ¼ãƒ³æ•°ã‚’ä¿æŒ
 
 typedef struct Act {
     float (*act)();
@@ -169,7 +169,7 @@ void battleBegin ()
         if (!player.item[2])
         {
             player.item[2] -= 1;
-            player.hp = 0; // æ§UŒ‚
+            player.hp = 0; // å…ˆåˆ¶æ”»æ’ƒ
             battleDefeat();
         }
         else

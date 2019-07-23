@@ -1,10 +1,10 @@
-// Author: ’†‘º—GÆ
-// ƒGƒ“ƒJƒEƒ“ƒg‚µ‚½‚©”»’è‚·‚éŠÖ”‚Ì’è‹`
+// Author: ä¸­æ‘å®¥å“‰
+// ã‚¨ãƒ³ã‚«ã‚¦ãƒ³ãƒˆã—ãŸã‹åˆ¤å®šã™ã‚‹é–¢æ•°ã®å®šç¾©
 
 #ifndef CHECKENCOUNT
 #define CHECKENCOUNT
 
-bool checkEncount () // nextGradeFlag‚ªfalse && Šm—¦
+bool checkEncount () // nextGradeFlagãŒfalse && ç¢ºç‡
 {
     return (((float)rand() / (float)RAND_MAX) < getRoom()->popProbability) && !nextGradeFlag ? true : false;
 }

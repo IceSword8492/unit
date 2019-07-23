@@ -1,5 +1,5 @@
-// Author: �����G��
-// �Q�[���̏�Ԃ�ύX����֐��̒�`
+// Author: 中村宥哉
+// ゲームの状態を変更する関数の定義
 
 #ifndef SETSTATE
 #define SETSTATE

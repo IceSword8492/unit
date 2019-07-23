@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// shops•Ï”‰Šú‰»
+// Author: ä¸­æ‘å®¥å“‰
+// shopså¤‰æ•°åˆæœŸåŒ–
 
 #ifndef INITIALIZESHOPS
 #define INITIALIZESHOPS

@@ -1,5 +1,5 @@
-// Author: ТЖС║ЧGН╞
-// НwФГК╓ШAВ╠ТшЛ`
+// Author: ф╕нцЭСхоехУЙ
+// ш│╝ш▓╖щЦвщАгуБохоЪч╛й
 
 #ifndef SHOPDEF
 #define SHOPDEF

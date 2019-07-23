@@ -1,4 +1,4 @@
-//ƒQ[ƒ€‚ÌŸ—˜ˆ—by‹g‰ªŒÖ‘¾˜Y
+//ã‚²ãƒ¼ãƒ ã®å‹åˆ©å‡¦ç†byå‰å²¡èª‡å¤ªéƒ
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
 
@@ -7,7 +7,7 @@
 
 void gameClear(){
     win = true;
-    // ˆÈ‰º‚ÌAuthor ’†‘º—GÆ
+    // ä»¥ä¸‹ã®Author ä¸­æ‘å®¥å“‰
     score = getScore();
     saveScore();
     updateScores();

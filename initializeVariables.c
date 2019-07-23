@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// ƒOƒ[ƒoƒ‹•Ï”‰Šú‰»ŠÖ”‚Ì’è‹`
+// Author: ä¸­æ‘å®¥å“‰
+// ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°åˆæœŸåŒ–é–¢æ•°ã®å®šç¾©
 
 #ifndef INITVARS
 #define INITVARS
@@ -18,7 +18,7 @@ void initializeVariables ()
     memcpy(textBooks, tbs, 4);
     Cursor tmpcsr{2};
     memcpy(&cursor, &tmpcsr, sizeof(Cursor));
-    rand(); //‰‰ñ‚Ìƒ‰ƒ“ƒ_ƒ€’l‚ğÌ‚Ä‚é
+    rand(); //åˆå›ã®ãƒ©ãƒ³ãƒ€ãƒ å€¤ã‚’æ¨ã¦ã‚‹
     nextGradeFlag = false;
     refreshSpeed = 33;
     enemyPop = true;

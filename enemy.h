@@ -1,4 +1,4 @@
-// Author: ’†‘º—GÆ
+// Author: ä¸­æ‘å®¥å“‰
 // Define enemy struct and constructor
 
 #ifndef ENEMY
@@ -7,15 +7,15 @@
 typedef struct Enemy
 {
     float hp;             // HP
-    float maxHp;          // Å‘åHP
-    float stdAtk;       // Šî‘bUŒ‚—Í
-    bool charge;        // —­‚ß‚Ì—L–³
-    int dmgCut;         // ”¼Œ¸‚ÌŽc‚èƒ^[ƒ“”
-    int intelligence;   // ‚à‚ç‚¦‚é’mŽ¯—Ê
-    int type;           // ’†:1, ’Êí:2, — ƒ{ƒX:3‚©ŽG‹›:0‚©
-    int act;            // s“®ƒ‹[ƒ`ƒ“
-    int spact;          // “ÁŽês“®
-    int state[256];     // 0 -> ª«
+    float maxHp;          // æœ€å¤§HP
+    float stdAtk;       // åŸºç¤Žæ”»æ’ƒåŠ›
+    bool charge;        // æºœã‚ã®æœ‰ç„¡
+    int dmgCut;         // åŠæ¸›ã®æ®‹ã‚Šã‚¿ãƒ¼ãƒ³æ•°
+    int intelligence;   // ã‚‚ã‚‰ãˆã‚‹çŸ¥è­˜é‡
+    int type;           // ä¸­:1, é€šå¸¸:2, è£ãƒœã‚¹:3ã‹é›‘é­š:0ã‹
+    int act;            // è¡Œå‹•ãƒ«ãƒ¼ãƒãƒ³
+    int spact;          // ç‰¹æ®Šè¡Œå‹•
+    int state[256];     // 0 -> æ ¹æ€§
 } Enemy;
 
 Enemy new_Enemy (float hp, float maxHp, float stdAtk, int intelligence, int type, int act, int spact)

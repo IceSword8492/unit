@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// includeˆ—
+// Author: ä¸­æ‘å®¥å“‰
+// includeå‡¦ç†
 
 #include "cls.h"
 #include "initializeConsole.cpp"

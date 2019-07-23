@@ -1,35 +1,35 @@
-// Author: ’†‘º—GÆ
-// •Ï”éŒ¾
+// Author: ä¸­æ‘å®¥å“‰
+// å¤‰æ•°å®£è¨€
 
 #ifndef VARIABLES
 #define VARIABLES
 
 #define LIMIT_TIME 900000
 
-int startTime;      // ŠJnŠÔ
-int limitTime;      // §ŒÀŠÔ
-int prevTime;       // ƒtƒŒ[ƒ€ƒŒ[ƒg§Œä—p•Ï”
-int now;            // ƒtƒŒ[ƒ€ƒŒ[ƒg§Œä—p•Ï”
-int baseTime;       // ƒtƒŒ[ƒ€ƒŒ[ƒg§Œä—p•Ï”
-int count;          // ƒtƒŒ[ƒ€ƒŒ[ƒg§Œä—p•Ï”
-float fps;          // ƒtƒŒ[ƒ€ƒŒ[ƒg•Û•Ï”
+int startTime;      // é–‹å§‹æ™‚é–“
+int limitTime;      // åˆ¶é™æ™‚é–“
+int prevTime;       // ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆåˆ¶å¾¡ç”¨å¤‰æ•°
+int now;            // ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆåˆ¶å¾¡ç”¨å¤‰æ•°
+int baseTime;       // ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆåˆ¶å¾¡ç”¨å¤‰æ•°
+int count;          // ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆåˆ¶å¾¡ç”¨å¤‰æ•°
+float fps;          // ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆä¿æŒå¤‰æ•°
 char fpsString[256];
-float tmpAttack;      // UŒ‚—ÍŒvZ—p•Ï”
-bool win;           // ”ƒ‚Á‚½‚©
-bool lose;          // •‰‚¯‚½‚©
-bool trueClear;     // — ƒ{ƒX‚ğ“|‚µ‚½‚©
-float score;        // ƒXƒRƒA
-Student player;     // ƒvƒŒƒCƒ„[•Ï”
-Room dungeon[8][5]; // ƒ_ƒ“ƒWƒ‡ƒ“•Ï”
-Enemy enemies[9];     // “G”z—ñ
-bool isInShop;      // w”ƒ‚É‚¢‚é‚©
-int state;          // ƒQ[ƒ€‚Ìó‘Ô
-int prevState;      // •Ï‘J‘O‚ÌƒQ[ƒ€‚Ìó‘Ô
-bool showFps;       // setting—p•Ï”
-char message[256];  // ‰æ–Ê‚ÉƒƒbƒZ[ƒW‚ğo‚·‚½‚ß‚Ì•Ï”
-Cursor cursor;      // ƒJ[ƒ\ƒ‹ƒ|ƒWƒVƒ‡ƒ“‚ğ•Û‚·‚é•Ï”
-bool textBooks[4];  // ŠeŠK‘w‚ÌƒeƒLƒXƒgƒuƒbƒNæ“¾ó‹µ•Û•Ï”
-bool nextGradeFlag; // Šw”N‚ªã‚ª‚Á‚½‚ÉƒGƒ“ƒJƒEƒ“ƒg‚µ‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß‚Ì•Ï”
+float tmpAttack;      // æ”»æ’ƒåŠ›è¨ˆç®—ç”¨å¤‰æ•°
+bool win;           // è²·ã£ãŸã‹
+bool lose;          // è² ã‘ãŸã‹
+bool trueClear;     // è£ãƒœã‚¹ã‚’å€’ã—ãŸã‹
+float score;        // ã‚¹ã‚³ã‚¢
+Student player;     // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼å¤‰æ•°
+Room dungeon[8][5]; // ãƒ€ãƒ³ã‚¸ãƒ§ãƒ³å¤‰æ•°
+Enemy enemies[9];     // æ•µé…åˆ—
+bool isInShop;      // è³¼è²·ã«ã„ã‚‹ã‹
+int state;          // ã‚²ãƒ¼ãƒ ã®çŠ¶æ…‹
+int prevState;      // å¤‰é·å‰ã®ã‚²ãƒ¼ãƒ ã®çŠ¶æ…‹
+bool showFps;       // settingç”¨å¤‰æ•°
+char message[256];  // ç”»é¢ã«ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºã™ãŸã‚ã®å¤‰æ•°
+Cursor cursor;      // ã‚«ãƒ¼ã‚½ãƒ«ãƒã‚¸ã‚·ãƒ§ãƒ³ã‚’ä¿æŒã™ã‚‹å¤‰æ•°
+bool textBooks[4];  // å„éšå±¤ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ–ãƒƒã‚¯å–å¾—çŠ¶æ³ä¿æŒå¤‰æ•°
+bool nextGradeFlag; // å­¦å¹´ãŒä¸ŠãŒã£ãŸæ™‚ã«ã‚¨ãƒ³ã‚«ã‚¦ãƒ³ãƒˆã—ãªã„ã‚ˆã†ã«ã™ã‚‹ãŸã‚ã®å¤‰æ•°
 int refreshSpeed;
 bool enemyPop;
 Shop shops[4];

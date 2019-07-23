@@ -1,5 +1,5 @@
-// Author: ’†‘º—GÆ
-// í“¬Žž‚Ì•`‰æŠÖ”‚Ì’è‹`
+// Author: ä¸­æ‘å®¥å“‰
+// æˆ¦é—˜æ™‚ã®æç”»é–¢æ•°ã®å®šç¾©
 
 #ifndef DISPLAYBATTLE
 #define DISPLAYBATTLE
@@ -8,8 +8,8 @@ namespace display
 {
     void displayBattle ()
     {
-        //strcpy(message, getEnemy()->state[0] ? "“G‚Ìó‘Ô: ª«" : "");
-        printf("Žc‚èŽžŠÔ: %03ds                  Šw”N: %d\n%s%s\nHP: %5d / %5d           ’mŽ¯: %5d\n“GHP: %5d / %5d         ª«: %s\n             %s\nƒGƒiƒW[ƒhƒŠƒ“ƒN: %d ƒŒƒ|[ƒg—pŽ†: %3d —š—ð‘: %d\n|%soÈ|%sƒŒƒ|[ƒg’ño|%sƒXƒLƒ‹|%s‰ñ•œ(ƒGƒiƒW[ƒhƒŠƒ“ƒN)|\n",
+        //strcpy(message, getEnemy()->state[0] ? "æ•µã®çŠ¶æ…‹: æ ¹æ€§" : "");
+        printf("æ®‹ã‚Šæ™‚é–“: %03ds                  å­¦å¹´: %d\n%s%s\nHP: %5d / %5d           çŸ¥è­˜: %5d\næ•µHP: %5d / %5d         æ ¹æ€§: %s\n             %s\nã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯: %d ãƒ¬ãƒãƒ¼ãƒˆç”¨ç´™: %3d å±¥æ­´æ›¸: %d\n|%så‡ºå¸­|%sãƒ¬ãƒãƒ¼ãƒˆæå‡º|%sã‚¹ã‚­ãƒ«|%så›žå¾©(ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯)|\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
             showFps ? "FPS: " : "",
@@ -19,7 +19,7 @@ namespace display
             player.intelligence,
             (int) getEnemy()->hp,
             (int) getEnemy()->maxHp,
-            getEnemy()->state[0] == 1 ? "—L" : "–³",
+            getEnemy()->state[0] == 1 ? "æœ‰" : "ç„¡",
             message,
             player.item[0],
             player.item[1],
@@ -36,9 +36,9 @@ namespace display
         if (player.pos[0] / 2 > 0) sprintf(r1, "%d", player.recast[1]);
         if (player.pos[0] / 2 > 1) sprintf(r2, "%d", player.recast[2]);
         if (player.pos[0] / 2 > 2) sprintf(r3, "%d", player.recast[3]);
-        //strcpy(message, getEnemy()->state[0] ? "“G‚Ìó‘Ô: ª«" : "");
+        //strcpy(message, getEnemy()->state[0] ? "æ•µã®çŠ¶æ…‹: æ ¹æ€§" : "");
         strcpy(message," ");
-        printf("Žc‚èŽžŠÔ: %03ds                  Šw”N: %d\n%s%s\nHP: %5d / %5d           ’mŽ¯: %5d\n“GHP: %5d / %5d         ª«: %s\n%s\nƒGƒiƒW[ƒhƒŠƒ“ƒN: %d ƒŒƒ|[ƒg—pŽ†: %3d —š—ð‘: %d\n|%s–ß‚é|%s—\\K(%d)|%s%s%s%s%s%s%s%s%s%s%s%s\n",
+        printf("æ®‹ã‚Šæ™‚é–“: %03ds                  å­¦å¹´: %d\n%s%s\nHP: %5d / %5d           çŸ¥è­˜: %5d\næ•µHP: %5d / %5d         æ ¹æ€§: %s\n%s\nã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯: %d ãƒ¬ãƒãƒ¼ãƒˆç”¨ç´™: %3d å±¥æ­´æ›¸: %d\n|%sæˆ»ã‚‹|%säºˆ\ç¿’(%d)|%s%s%s%s%s%s%s%s%s%s%s%s\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
             showFps ? "FPS: " : "",
@@ -48,7 +48,7 @@ namespace display
             player.intelligence,
             (int) getEnemy()->hp,
             (int) getEnemy()->maxHp,
-            getEnemy()->state[0] == 1 ? "—L" : "–³",
+            getEnemy()->state[0] == 1 ? "æœ‰" : "ç„¡",
             message,
             player.item[0],
             player.item[1],
@@ -57,15 +57,15 @@ namespace display
             cursor.pos == 1 ? ">" : " ",
             player.recast[0],
             player.pos[0] / 2 > 0 && cursor.pos == 2 ? ">" : " ",
-            player.pos[0] / 2 > 0 ? "•œK(" : "",
+            player.pos[0] / 2 > 0 ? "å¾©ç¿’(" : "",
             r1,
             player.pos[0] / 2 > 0 ? ")|" : "",
             player.pos[0] / 2 > 1 && cursor.pos == 3 ? ">" : " ",
-            player.pos[0] / 2 > 1 ? "[ŒÄ‹z(" : "",
+            player.pos[0] / 2 > 1 ? "æ·±å‘¼å¸(" : "",
             r2,
             player.pos[0] / 2 > 1 ? ")|" : "",
             player.pos[0] / 2 > 2 && cursor.pos == 4 ? ">" : " ",
-            player.pos[0] / 2 > 2 ? "Œ¤‹†Žº–K–â(" : "",
+            player.pos[0] / 2 > 2 ? "ç ”ç©¶å®¤è¨ªå•(" : "",
             r3,
             player.pos[0] / 2 > 2 ? ")|" : ""
         );

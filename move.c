@@ -1,5 +1,5 @@
-//ŒFàV—SŠó
-//Šw¶‚ÌˆÚ“®
+//ç†Šæ¾¤ç¥å¸Œ
+//å­¦ç”Ÿã®ç§»å‹•
 
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
@@ -22,22 +22,22 @@ void move (int inputDirection)
         switch (inputDirection)
         {
         case 1:
-            player.pos[1]++; //‰E
+            player.pos[1]++; //å³
             break;
 
         case 2:
-            player.pos[0]++; //ã
+            player.pos[0]++; //ä¸Š
             break;
 
         case 4:
-            player.pos[1]--; //¶
+            player.pos[1]--; //å·¦
             break;
         }
         moved = true;
     }
     if (moved)
     {
-        // ƒGƒ“ƒJƒEƒ“ƒg‚µ‚½‚©”»’è
+        // ã‚¨ãƒ³ã‚«ã‚¦ãƒ³ãƒˆã—ãŸã‹åˆ¤å®š
         if (checkEncount() && enemyPop)
         {
             battleBegin();

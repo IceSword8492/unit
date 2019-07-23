@@ -64,10 +64,10 @@ enemies:
             }
             {
                 cond: "if once (this->hp <= 10%)"
-                act: "this->根性 = off"
+                act: "this->譬ｹ諤ｧ = off"
             }
             {
-                cond: "if (this->根性 && this->hp <= 0)"
+                cond: "if (this->譬ｹ諤ｧ && this->hp <= 0)"
                 act: "this->hp = 1"
             }
         int: 1000
@@ -76,7 +76,7 @@ enemies:
         atk: 2000
         skills:
             {
-                cond: "先制, if (!player->履歴書)"
+                cond: "蜈亥宛, if (!player->螻･豁ｴ譖ｸ)"
                 act: "atk 100%"
             }
             {
@@ -89,7 +89,7 @@ enemies:
             }
             {
                 cond: "loop2"
-                act: "半減 (2 turns)"
+                act: "蜊頑ｸ� (2 turns)"
             }
             {
                 cond: "loop3"
@@ -105,13 +105,13 @@ enemies:
             }
             {
                 cond: "if (this->hp <= 20%)"
-                act: "半減 (1 turn)"
+                act: "蜊頑ｸ� (1 turn)"
             }
             {
                 cond: "if once (this->hp <= 20%)"
-                act: "this->根性 = off"
+                act: "this->譬ｹ諤ｧ = off"
             }
             {
-                cond: "if (this->根性 && this->hp <= 0)"
+                cond: "if (this->譬ｹ諤ｧ && this->hp <= 0)"
                 act: "this->hp = 1"
             }

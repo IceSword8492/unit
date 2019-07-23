@@ -13,7 +13,7 @@
 #define ROUTINE_F4B 5
 #define SKILL_LAST 6
 #define ROUTINE_LAST 7
-//“G‚Ì‰Šú‰»by‹g‰ªŒÖ‘¾˜Y
+//æ•µã®åˆæœŸåŒ–byå‰å²¡èª‡å¤ªéƒ
 void initializeEnemies(){
     Enemy e[9] = {
         new_Enemy(500,500,500,100,0,0,0),//f1z

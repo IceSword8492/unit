@@ -1,5 +1,5 @@
-// Author:’†‘º—GÆ
-// Œˆ’èƒL[‰Ÿ‰ºŽžŽÀsŠÖ”‚Ì’è‹`
+// Author:ä¸­æ‘å®¥å“‰
+// æ±ºå®šã‚­ãƒ¼æŠ¼ä¸‹æ™‚å®Ÿè¡Œé–¢æ•°ã®å®šç¾©
 
 #ifndef EXECUTE
 #define EXECUTE

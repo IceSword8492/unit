@@ -5,12 +5,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include <windows.h>
-#include <conio.h>
 #include <string.h>
 #include <time.h>
 #include <signal.h>
-#include <winsock.h>
 
 #define D_RULE       0
 #define D_DUNGEON    1

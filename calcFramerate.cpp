@@ -1,6 +1,6 @@
-// Author: ’†‘º—GÆ
-// FPSŒvŽZŠÖ”‚Ì’è‹`
-// displayInformationŒÄ‚Ño‚µ‚ÌŠÖŒW‚ÅŠÖ”–¼•ÏX (calcFps -> controlFps)
+// Author: ä¸­æ‘å®¥å“‰
+// FPSè¨ˆç®—é–¢æ•°ã®å®šç¾©
+// displayInformationå‘¼ã³å‡ºã—ã®é–¢ä¿‚ã§é–¢æ•°åå¤‰æ›´ (calcFps -> controlFps)
 
 #ifndef CALCFPS
 #define CALCFPS

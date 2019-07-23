@@ -1,4 +1,4 @@
-// Author: ’†‘º—GÆ
+// Author: ä¸­æ‘å®¥å“‰
 // Define student struct and constructor
 
 #ifndef STUDENT

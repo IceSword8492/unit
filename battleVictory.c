@@ -1,5 +1,5 @@
-//‹g‰ªŒÖ‘¾˜Y
-//í“¬‚ÌŸ—˜ˆ—
+//å‰å²¡èª‡å¤ªéƒ
+//æˆ¦é—˜ã®å‹åˆ©å‡¦ç†
 void battleVictory ()
 {
     Enemy enemy = *getEnemy();

@@ -1,5 +1,5 @@
-// Author: ТЖС║ЧGН╞
-// Р▌ТшПЙК·Й╗К╓РФВ╠ТшЛ`
+// Author: ф╕нцЭСхоехУЙ
+// шинхоЪхИЭцЬЯхМЦщЦвцХ░уБохоЪч╛й
 
 #ifndef INITSETTINGS
 #define INITSETTINGS

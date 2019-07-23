@@ -1,12 +1,12 @@
-// Author: ’†‘º—GÆ
-// w”ƒ•`‰æŠÖ”’è‹`
+// Author: ä¸­æ‘å®¥å“‰
+// è³¼è²·æç”»é–¢æ•°å®šç¾©
 
 #ifndef DISPLAYSHOP
 #define DISPLAYSHOP
 
 void displayShop ()
 {
-    // printf("c‚èŠÔ: %03ds                                                                               Šw”N: %d\n%s%s\n’m¯: %d\n%s\n#DEBUG SHOP (Press any key to continue...)\n",
+    // printf("æ®‹ã‚Šæ™‚é–“: %03ds                                                                               å­¦å¹´: %d\n%s%s\nçŸ¥è­˜: %d\n%s\n#DEBUG SHOP (Press any key to continue...)\n",
     //     (calcRemain() / 1000),
     //     player.pos[0] / 2 + 1,
     //     showFps ? "FPS: " : "",
@@ -16,22 +16,22 @@ void displayShop ()
     // );
     using namespace std;
 
-    cout << "c‚èŠÔ: " << setw(3) << setfill('0') << (calcRemain() / 1000) << setfill(' ') << "s                  Šw”N: " << (player.pos[0] / 2 + 1) << "\n"
+    cout << "æ®‹ã‚Šæ™‚é–“: " << setw(3) << setfill('0') << (calcRemain() / 1000) << setfill(' ') << "s                  å­¦å¹´: " << (player.pos[0] / 2 + 1) << "\n"
         << setfill(' ') << (showFps ? "FPS: " : "") << (showFps ? fpsString : "") << "\n"
-        << "HP: " << setw(5) << (int) player.hp << " / " << setw(5) << (int) player.maxHp << "           ’m¯: " << setw(5) << player.intelligence << "\n"
-        << "Š‹à: " << setw(4) << player.money;
+        << "HP: " << setw(5) << (int) player.hp << " / " << setw(5) << (int) player.maxHp << "           çŸ¥è­˜: " << setw(5) << player.intelligence << "\n"
+        << "æ‰€æŒé‡‘: " << setw(4) << player.money;
     if (cursor.pos != 0)
     {
-        cout << "                Š”: " << setw(3) << player.item[cursor.pos - 1] << "\n" << "‰¿Ši: " << setw(4) << (shops[player.getGradeId()].prices[cursor.pos - 1]) << "                   c”: " << setw(4) << shops[player.getGradeId()].amount[cursor.pos - 1];
+        cout << "                æ‰€æŒæ•°: " << setw(3) << player.item[cursor.pos - 1] << "\n" << "ä¾¡æ ¼: " << setw(4) << (shops[player.getGradeId()].prices[cursor.pos - 1]) << "                   æ®‹æ•°: " << setw(4) << shops[player.getGradeId()].amount[cursor.pos - 1];
     }
     else
     {
         cout << "\n";
     }
-    cout << "\n|" << (cursor.pos == 0 ? ">" : " ") << "–ß‚é|" << (cursor.pos == 1 ? ">" : " ") << "ƒGƒiƒW[ƒhƒŠƒ“ƒN(‰ñ•œƒAƒCƒeƒ€)|" << (cursor.pos == 2 ? ">" : " ") << "ƒŒƒ|[ƒg—p†(5–‡)|";
+    cout << "\n|" << (cursor.pos == 0 ? ">" : " ") << "æˆ»ã‚‹|" << (cursor.pos == 1 ? ">" : " ") << "ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯(å›å¾©ã‚¢ã‚¤ãƒ†ãƒ )|" << (cursor.pos == 2 ? ">" : " ") << "ãƒ¬ãƒãƒ¼ãƒˆç”¨ç´™(5æš)|";
     if (player.pos[0] / 2 == 3)
     {
-        cout << (cursor.pos == 3 ? ">" : " ") << "—š—ğ‘|";
+        cout << (cursor.pos == 3 ? ">" : " ") << "å±¥æ­´æ›¸|";
     }
     cout << "\n";
 }

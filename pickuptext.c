@@ -1,4 +1,4 @@
-//教科書を拾って知識を上昇させる。textBooks[player.pos[0]/2]をfalseにする　by上杉大地
+//謨咏ｧ第嶌繧呈鏡縺｣縺ｦ遏･隴倥ｒ荳頑��縺輔○繧九ＵextBooks[player.pos[0]/2]繧断alse縺ｫ縺吶ｋ縲by荳頑揄螟ｧ蝨ｰ
 #ifndef PICKUPTEXT
 #define PICKUPTEXT
 

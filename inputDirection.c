@@ -5,7 +5,7 @@
 #ifndef INPUTDIRECTION
 #define INPUTDIRECTION
 
-//ˆÚ“®•ûŒü‚Ì“ü—Íby‹g‰ªŒÖ‘¾˜Y
+//ç§»å‹•æ–¹å‘ã®å…¥åŠ›byå‰å²¡èª‡å¤ªéƒ
 void inputDirection (char key)
 {
     if(key=='w'){

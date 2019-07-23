@@ -1,5 +1,5 @@
-// Author: ТЖС║ЧGН╞
-// ГLБ[У№Ч═К╓РФТшЛ`
+// Author: ф╕нцЭСхоехУЙ
+// уВнуГ╝хЕехКЫщЦвцХ░хоЪч╛й
 
 #ifndef INPUTKEY
 #define INPUTKEY

@@ -1,5 +1,5 @@
-//ŒFàV—SŠó
-//ƒNƒŠƒeƒBƒJƒ‹”»’è
+//ç†Šæ¾¤ç¥å¸Œ
+//ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«åˆ¤å®š
 
 #ifndef ISCRITICAL
 #define ISCRITICAL
