@@ -138,6 +138,28 @@ namespace display
         case D_ESC_MENU:
             displayEscMenu();
             break;
+        case D_DAMAGESTEP:
+            printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d         根性: %s\n%s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
+            (calcRemain() / 1000),
+            player.pos[0] / 2 + 1,
+            showFps ? "FPS: " : "",
+            showFps ? fpsString : "",
+            (int) player.hp,
+            (int) player.maxHp,
+            player.intelligence,
+            (int) getEnemy()->hp,
+            (int) getEnemy()->maxHp,
+            getEnemy()->state[0] == 1 ? "有" : "無",
+            message,
+            player.item[0],
+            player.item[1],
+            player.item[2],
+            cursor.pos == 0 ? ">" : " ",
+            cursor.pos == 1 ? ">" : " ",
+            cursor.pos == 2 ? ">" : " ",
+            cursor.pos == 3 ? ">" : " "
+            );
+            break;
         }
     }
 }

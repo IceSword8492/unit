@@ -20,6 +20,7 @@
 #define D_ITEM       5
 #define D_CLEAR      6
 #define D_GAMEOVER   7
+#define D_DAMAGESTEP 8
 #define D_ESC_MENU  99
 
 #include "headers.h"
@@ -83,6 +84,13 @@ int main (int argc, const char** argv)
             break;
         case D_GAMEOVER:
             inputKey();
+            break;
+        case D_DAMAGESTEP:
+            if (kbhit())
+            {
+                getch();
+                setState(prevState);
+            }
             break;
         }
 
