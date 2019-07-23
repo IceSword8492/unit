@@ -8,8 +8,8 @@ namespace display
 {
     void displayBattle ()
     {
-         strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
-        printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d\n             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
+        //strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
+        printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d         根性: %s\n             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
             showFps ? "FPS: " : "",
@@ -19,6 +19,7 @@ namespace display
             player.intelligence,
             (int) getEnemy()->hp,
             (int) getEnemy()->maxHp,
+            getEnemy()->state[0] == 1 ? "有" : "無",
             message,
             player.item[0],
             player.item[1],
@@ -35,8 +36,9 @@ namespace display
         if (player.pos[0] / 2 > 0) sprintf(r1, "%d", player.recast[1]);
         if (player.pos[0] / 2 > 1) sprintf(r2, "%d", player.recast[2]);
         if (player.pos[0] / 2 > 2) sprintf(r3, "%d", player.recast[3]);
-        strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
-        printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d             %s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s戻る|%s予\習(%d)|%s%s%s%s%s%s%s%s%s%s%s%s\n",
+        //strcpy(message, getEnemy()->state[0] ? "敵の状態: 根性" : "");
+        strcpy(message," ");
+        printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d         根性: %s\n%s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s戻る|%s予\習(%d)|%s%s%s%s%s%s%s%s%s%s%s%s\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
             showFps ? "FPS: " : "",
@@ -46,6 +48,7 @@ namespace display
             player.intelligence,
             (int) getEnemy()->hp,
             (int) getEnemy()->maxHp,
+            getEnemy()->state[0] == 1 ? "有" : "無",
             message,
             player.item[0],
             player.item[1],
