@@ -111,11 +111,29 @@ namespace display
             );
             break;
         case D_CLEAR:
-            printf("         ゲームクリア\n\n");
-            printf("         score :%5d",(int)score);
+            printf("Congratulations!\n\n");
+            printf("%s\n\n",
+                trueClear ? "トゥルークリア" : "ゲームクリア"
+            );
+            printf("名前:    %-s\n", player.name);
+            printf("スコア:  %-5d\n\n",(int)score);
+            printf("ランキング\n\n");
+            printScores();
+            printf("\n\n|%sRetry |%sQuit|\n",
+                cursor.pos == 0 ? ">" : " ",
+                cursor.pos == 1 ? ">" : " "
+            );
             break;
         case D_GAMEOVER:
-            printf("ゲームオーバー\n");
+            printf("ゲームオーバー\n\n");
+            printf("名前:    %-s\n", player.name);
+            printf("スコア:  %-5d\n\n",(int)score);
+            printf("ランキング\n\n");
+            printScores();
+            printf("\n\n|%sRetry |%sQuit|\n",
+                cursor.pos == 0 ? ">" : " ",
+                cursor.pos == 1 ? ">" : " "
+            );
             break;
         case D_ESC_MENU:
             displayEscMenu();

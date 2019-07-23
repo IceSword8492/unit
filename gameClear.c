@@ -12,6 +12,7 @@ void gameClear(){
     saveScore();
     updateScores();
     setState(D_CLEAR);
+    setCursor(0);
 }
 
 #endif

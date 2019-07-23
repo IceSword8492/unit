@@ -25,5 +25,14 @@ void request(const char*, const char*, int);
 extern struct Scores scores;
 int getScore();
 extern int debugTime;
+void initializeVariables();
+void initializeDungeon();
+void initializeStudent();
+void initializeSettings();
+void initializeStudentName();
+void initializeShops();
+void initializeFramerate();
+extern int s_argc;
+extern const char** s_argv;
 
 #endif
