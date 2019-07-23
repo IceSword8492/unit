@@ -24,5 +24,6 @@ extern float score;
 void request(const char*, const char*, int);
 extern struct Scores scores;
 int getScore();
+extern int debugTime;
 
 #endif

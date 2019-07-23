@@ -104,3 +104,9 @@ fpsを表示
 --set-critical <probability: integer>
 ```
 `probability`は0~100で指定 (それ以外は実行時エラーとなる)
+
+
+開始時の残り時間(秒)を設定
+```sh
+--set-time <time: integer>
+```

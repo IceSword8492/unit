@@ -103,6 +103,18 @@ void initializeSettings (int argc, const char** argv)
                 safeExit(1);
             }
         }
+        else if (strcmp(argv[i], "--set-time") == 0 | strcmp(argv[i], "-time") == 0)
+        {
+            if (debug)
+            {
+                debugTime = 900000 - atoi(argv[++i]) * 1000;
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
+        }
         else
         {
             std::cerr << "Unknown option: " << argv[i] << std::endl;

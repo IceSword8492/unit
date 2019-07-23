@@ -6,7 +6,7 @@
 
 int calcRemain () // returns remain time millisec
 {
-    return limitTime - (now - startTime);
+    return limitTime - (now - startTime) - debugTime;
 }
 
 #endif
