@@ -58,18 +58,26 @@ float spact_4b ()
 {
     if (getEnemy()->hp <= getEnemy()->maxHp / 2 && getEnemy()->state[1] == 0)
     {
-        player.hp -= (player.hp/100)*99;
+        if (player.skills[1])
+        {
+            player.hp -= (player.hp/100)*99 / 2;
+        }
+        else
+        {
+            player.hp -= (player.hp/100)*99;
+        }
         getEnemy()->state[1] = 1;
+        sprintf(message,"Š„‚è‡‚¢ƒ_ƒ[ƒW‚ğó‚¯‚½[press enter key]");
+        tmpAttack = 0;
         return 0;
     }
-        
-
     if (getEnemy()->hp <= getEnemy()->maxHp / 5)
     {
         getEnemy()->hp = getEnemy()->maxHp / 2;
+        sprintf(message,"HP‚ğ‰ñ•œ‚µ‚½[press enter key]");
+        tmpAttack = 0;
         return 0;
     }
-    //acttmp = true;
     return getEnemy()->stdAtk;
 }
 
@@ -78,9 +86,15 @@ float spact_last ()
     if (getEnemy()->hp <= getEnemy()->maxHp / 5)
     {
         getEnemy()->dmgCut = 1;
+        if (getEnemy()->state[2] == 0)
+        {
+            sprintf(message,"UŒ‚‚ª’Ê‚è‚É‚­‚­‚È‚Á‚½");
+            setState(D_DAMAGESTEP);
+            getEnemy()->state[2] = 1;
+
+        }
     }
-    //acttmp = true;
-    return getEnemy()->stdAtk;
+    return 0;
 }
 
 Spact spact[] = {
@@ -97,27 +111,30 @@ typedef struct Act {
     float (*act)();
 } Act;
 
-float act_4b ()
+float act_last ()
 {
     switch (turn % 4)
     {
     case 1:
         getEnemy()->charge = true;
+        sprintf(message,"UŒ‚‚Ì‹@‰ï‚ğ‚¤‚©‚ª‚Á‚Ä‚¢‚é[press enter key]");
         return 0;
     default:
         return getEnemy()->stdAtk;
     }
 }
 
-float act_last ()
+float act_4b ()
 {
     switch (turn % 5)
     {
     case 1:
         getEnemy()->dmgCut = 2;
+        sprintf(message,"ç‚è‚ğŒÅ‚ß‚Ä‚¢‚é[press enter key]");
         return 0;
     case 2:
         getEnemy()->charge = true;
+        sprintf(message,"UŒ‚‚Ì‹@‰ï‚ğ‚¤‚©‚ª‚Á‚Ä‚¢‚é[press enter key]");
         return 0;
     default:
         return getEnemy()->stdAtk;
@@ -164,12 +181,22 @@ void battleBegin ()
     turn = 0;
     setState(D_BATTLE);
     setCursor(0);
+    if (getEnemy()->type == 2 || getEnemy()->type == 3)
+    {
+        getEnemy()->state[0] = 1;
+    }
     if (getEnemy()->type == 3)
     {
         if (!player.item[2])
         {
             player.item[2] -= 1;
             player.hp = 0; // æ§UŒ‚
+            battleDefeat();
+        }
+        else
+        {
+        
+        player.item[2] -= 1;
         }
     }
 }

@@ -10,10 +10,15 @@
 void initializeStudent ()
 {
     cls();
+    player = new_Student("");
+}
+
+void initializeStudentName ()
+{
     char name[256];
-    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë\n> ");
+    printf("–¼‘O‚ð“ü—Í‚µ‚Ä‚Ë(”¼Šp‰p”Žš)\n> ");
     scanf("%s", name);
-    player = new_Student(name);
+    strcpy(player.name, name);
 }
 
 #endif

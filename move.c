@@ -46,6 +46,10 @@ void move (int inputDirection)
         {
             getRoom()->event();
         }
+        if (strcmp(getRoom()->eventName, "gameClear") == 0)
+        {
+            getRoom()->event();
+        }
     }
 }
 

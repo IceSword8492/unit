@@ -19,6 +19,10 @@ bool attack () // void -> bool by Yuya Nakamura
         res = true;
     }
     a:;
+    if(enemy->hp <= enemy->maxHp / 5 && enemy->state[0])
+    {
+        enemy->state[0] = 0;
+    }
     return res;
 }
 

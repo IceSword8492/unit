@@ -7,6 +7,8 @@
 #include "enemy.h"
 #include "student.h"
 #include "preDeclear.h"
+#include "scores.h"
+#include "request.cpp"
 #include "shop.h"
 #include "variables.h"
 #include "addIntelligence.c"
@@ -38,3 +40,4 @@
 #include "calcFramerate.cpp"
 #include "initializeSettings.h"
 #include "initializeShops.cpp"
+#include "score.c"

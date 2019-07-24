@@ -3,9 +3,18 @@
 #ifndef BATTLEDEFEAT
 #define BATTLEDEFEAT
 
+Enemy enemy = *getEnemy();
 void battleDefeat ()
 {
-    lose = true;
+    Enemy enemy = *getEnemy();
+    if (enemy.type == 3)
+    {
+        win = true;
+    }
+    else
+    {
+        lose = true;
+    }
 }
 
 #endif

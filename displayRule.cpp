@@ -1,9 +1,9 @@
-// ŒFàV—SŠó
-// ƒ‹[ƒ‹‚Ì•\Ž¦
+// ç†Šæ¾¤ç¥å¸Œ
+// ãƒ«ãƒ¼ãƒ«ã®è¡¨ç¤º
 
 // fixed by Yuya Nakamura
 // added #ifndef~#endif
-// bug fixed (couldnt print "—\K")
+// bug fixed (couldnt print "äºˆç¿’")
 
 #ifndef DISPLAYRULE
 #define DISPLAYRULE
@@ -11,12 +11,12 @@
 namespace display
 {
     void displayRule() {
-        // printf("ƒvƒŒ[ƒ„[‚ª‚Å‚«‚é‚±‚Æ\nEUŒ‚(ƒŒƒ|[ƒg’ñoA—š—ð‘’ñoA˜_•¶’ño)\nE’áŠm—¦‚ÅƒNƒŠƒeƒBƒJƒ‹ƒqƒbƒg\nEƒAƒCƒeƒ€Žg—p(ƒGƒiƒW[ƒhƒŠƒ“ƒN)\nEƒhƒƒbƒvƒAƒCƒeƒ€‚ÌE“¾\nEƒXƒLƒ‹‚ÌŽg—p([ŒÄ‹z - HP‰ñ•œA—\\K - UŒ‚—Íã¸A•œK - ƒ_ƒ[ƒWŒyŒ¸AŒ¤‹†Žº–K–â - ‚·‚Î‚â‚³ã¸)\nEƒŠƒLƒƒƒXƒgƒ^ƒCƒ€—L\n");
+        // printf("ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ãŒã§ãã‚‹ã“ã¨\nãƒ»æ”»æ’ƒ(ãƒ¬ãƒãƒ¼ãƒˆæå‡ºã€å±¥æ­´æ›¸æå‡ºã€è«–æ–‡æå‡º)\nãƒ»ä½Žç¢ºçŽ‡ã§ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ’ãƒƒãƒˆ\nãƒ»ã‚¢ã‚¤ãƒ†ãƒ ä½¿ç”¨(ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯)\nãƒ»ãƒ‰ãƒ­ãƒƒãƒ—ã‚¢ã‚¤ãƒ†ãƒ ã®æ‹¾å¾—\nãƒ»ã‚¹ã‚­ãƒ«ã®ä½¿ç”¨(æ·±å‘¼å¸ - HPå›žå¾©ã€äºˆ\ç¿’ - æ”»æ’ƒåŠ›ä¸Šæ˜‡ã€å¾©ç¿’ - ãƒ€ãƒ¡ãƒ¼ã‚¸è»½æ¸›ã€ç ”ç©¶å®¤è¨ªå• - ã™ã°ã‚„ã•ä¸Šæ˜‡)\nãƒ»ãƒªã‚­ãƒ£ã‚¹ãƒˆã‚¿ã‚¤ãƒ æœ‰\n");
         cls();
-        printf("ŠT—v\n\tE‹³Žö‚©‚ç’PˆÊ‚ðŽæ“¾‚µ‚Ä‘²‹Æ‚ð–ÚŽw‚»‚¤\nƒ‹[ƒ‹\n\tEƒvƒŒƒCƒ„[‚ª‚Å‚«‚é‚±‚Æ\n\t\tEUŒ‚(’ÊíAƒŒƒ|[ƒg’ño(ƒŒƒ|[ƒg—pŽ†‚ð1–‡Á”ï‚·‚é)A—š—ð‘’ñoA˜_•¶’ño)\n\t\t\tE’áŠm—¦‚ÅƒNƒŠƒeƒBƒJƒ‹ƒqƒbƒg‚ª”­¶\n\t\tEƒAƒCƒeƒ€Žg—p(ƒGƒiƒW[ƒhƒŠƒ“ƒN)\n\t\tEƒhƒƒbƒvƒAƒCƒeƒ€‚ÌE“¾\n\t\tEƒXƒLƒ‹‚ÌŽg—p(ƒŠƒLƒƒƒXƒgƒ^ƒCƒ€—L)\n\t\t\tEí“¬‚ªI—¹‚·‚é‚Æ‘SƒXƒLƒ‹‚ÌƒŠƒLƒƒƒXƒg‚Í0‚É–ß‚è‚Ü‚·¡\n\t\t\t\tE—\\K: UŒ‚—Íã¸iƒŠƒLƒƒƒXƒg@4j\n\t\t\t\tE•œK: ƒ_ƒ[ƒWŒyŒ¸iƒŠƒLƒƒƒXƒg@5j\n\t\t\t\tE[ŒÄ‹z: HP‘S‰ñ•œiƒŠƒLƒƒƒXƒg@2j\n\t\t\t\tEŒ¤‹†Žº–K–â: ‘SƒXƒLƒ‹‚ÌƒŠƒLƒƒƒXƒg‚ð1ƒ^[ƒ“’ZkiƒŠƒLƒƒƒXƒg@5j\nŸ—˜ðŒ\n\tEƒ{ƒX‹³Žö‚ð“|‚·\n”s–kðŒ\n\tE“G‚É“|‚³‚ê‚é\n‘€ì•û–@\n\tEƒJ[ƒ\\ƒ‹ˆÚ“®: A(¶), W(ã), D(‰E)\n\tEŒˆ’è: Enter\n\tEƒƒjƒ…[: ESC\n\tEƒGƒiƒW[ƒhƒŠƒ“ƒNŽg—p: H\n\tEƒAƒCƒeƒ€Žc—Êƒ`ƒFƒbƒN: I\n\nPress any key to continue...\n"); // Author: ’†‘º—GÆ
+        printf("æ¦‚è¦\n\tãƒ»æ•™æŽˆã‹ã‚‰å˜ä½ã‚’å–å¾—ã—ã¦å’æ¥­ã‚’ç›®æŒ‡ãã†\nãƒ«ãƒ¼ãƒ«\n\tãƒ»ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒã§ãã‚‹ã“ã¨\n\t\tãƒ»æ”»æ’ƒ(é€šå¸¸ã€ãƒ¬ãƒãƒ¼ãƒˆæå‡º(ãƒ¬ãƒãƒ¼ãƒˆç”¨ç´™ã‚’1æžšæ¶ˆè²»ã™ã‚‹)ã€å±¥æ­´æ›¸æå‡ºã€è«–æ–‡æå‡º)\n\t\t\tãƒ»ä½Žç¢ºçŽ‡ã§ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ’ãƒƒãƒˆãŒç™ºç”Ÿ\n\t\tãƒ»ã‚¢ã‚¤ãƒ†ãƒ ä½¿ç”¨(ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯)\n\t\tãƒ»ãƒ‰ãƒ­ãƒƒãƒ—ã‚¢ã‚¤ãƒ†ãƒ ã®æ‹¾å¾—\n\t\tãƒ»ã‚¹ã‚­ãƒ«ã®ä½¿ç”¨(ãƒªã‚­ãƒ£ã‚¹ãƒˆã‚¿ã‚¤ãƒ æœ‰)\n\t\t\tãƒ»æˆ¦é—˜ãŒçµ‚äº†ã™ã‚‹ã¨å…¨ã‚¹ã‚­ãƒ«ã®ãƒªã‚­ãƒ£ã‚¹ãƒˆã¯0ã«æˆ»ã‚Šã¾ã™ã€‚\n\t\t\t\tãƒ»äºˆ\ç¿’: æ”»æ’ƒåŠ›ä¸Šæ˜‡ï¼ˆãƒªã‚­ãƒ£ã‚¹ãƒˆã€€4ï¼‰\n\t\t\t\tãƒ»å¾©ç¿’: ãƒ€ãƒ¡ãƒ¼ã‚¸è»½æ¸›ï¼ˆãƒªã‚­ãƒ£ã‚¹ãƒˆã€€5ï¼‰\n\t\t\t\tãƒ»æ·±å‘¼å¸: HPå…¨å›žå¾©ï¼ˆãƒªã‚­ãƒ£ã‚¹ãƒˆã€€2ï¼‰\n\t\t\t\tãƒ»ç ”ç©¶å®¤è¨ªå•: å…¨ã‚¹ã‚­ãƒ«ã®ãƒªã‚­ãƒ£ã‚¹ãƒˆã‚’1ã‚¿ãƒ¼ãƒ³çŸ­ç¸®ï¼ˆãƒªã‚­ãƒ£ã‚¹ãƒˆã€€5ï¼‰\nå‹åˆ©æ¡ä»¶\n\tãƒ»ãƒœã‚¹æ•™æŽˆã‚’å€’ã™\næ•—åŒ—æ¡ä»¶\n\tãƒ»æ•µã«å€’ã•ã‚Œã‚‹\næ“ä½œæ–¹æ³•\n\tãƒ»ã‚«ãƒ¼ã‚½\ãƒ«ç§»å‹•: A(å·¦), W(ä¸Š), D(å³)\n\tãƒ»æ±ºå®š: Enter\n\tãƒ»ãƒ¡ãƒ‹ãƒ¥ãƒ¼: ESC\n\tãƒ»ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒªãƒ³ã‚¯ä½¿ç”¨: H\n\tãƒ»ã‚¢ã‚¤ãƒ†ãƒ æ®‹é‡ãƒã‚§ãƒƒã‚¯: I\n\nPress any key to continue...\n"); // Author: ä¸­æ‘å®¥å“‰
         getch();
         cls();
-        printf("Tips\n\tE\"‘€ì•û–@‚ª‚í‚©‚ç‚È‚­‚È‚Á‚½‚çESCƒL[‚ð‰Ÿ‚·‚ÆŠm”F‚Å‚«‚Ü‚·B\"\n\tEƒŒƒ|[ƒg’ñoUŒ‚‚Í’mŽ¯—Ê‚É‰ž‚¶‚ÄUŒ‚—Í‚ªã¸‚µ‚Ü‚·B\n\tE‹³Žö‚ð“|‚·‚Æ’mŽ¯—Ê‚ªã¸‚µ‚Ü‚·B\n\tE‹³‰È‘‚ª—Ž‚¿‚Ä‚¢‚é•”‰®‚É“ü‚é‚Æ’mŽ¯—Ê‚ªã¸‚µ‚Ü‚·B\n\tE—\\KƒXƒLƒ‹‚ÍÏ‹É“I‚ÉŽg‚¢‚Ü‚µ‚å‚¤B\n\tEi‹‰‚·‚é‚Æi‹‰j‚¢‹à‚ðŠl“¾‚Å‚«‚Ü‚·B\n\tEi‹‰‚·‚é‚ÆŽg‚¦‚éƒXƒLƒ‹‚ª‘‚¦‚Ü‚·B\n\nPress any key to continue...\n"); // Author: ’†‘º—GÆ
+        printf("Tips\n\tãƒ»\"æ“ä½œæ–¹æ³•ãŒã‚ã‹ã‚‰ãªããªã£ãŸã‚‰ESCã‚­ãƒ¼ã‚’æŠ¼ã™ã¨ç¢ºèªã§ãã¾ã™ã€‚\"\n\tãƒ»ãƒ¬ãƒãƒ¼ãƒˆæå‡ºæ”»æ’ƒã¯çŸ¥è­˜é‡ã«å¿œã˜ã¦æ”»æ’ƒåŠ›ãŒä¸Šæ˜‡ã—ã¾ã™ã€‚\n\tãƒ»æ•™æŽˆã‚’å€’ã™ã¨çŸ¥è­˜é‡ãŒä¸Šæ˜‡ã—ã¾ã™ã€‚\n\tãƒ»æ•™ç§‘æ›¸ãŒè½ã¡ã¦ã„ã‚‹éƒ¨å±‹ã«å…¥ã‚‹ã¨çŸ¥è­˜é‡ãŒä¸Šæ˜‡ã—ã¾ã™ã€‚\n\tãƒ»äºˆ\ç¿’ã‚¹ã‚­ãƒ«ã¯ç©æ¥µçš„ã«ä½¿ã„ã¾ã—ã‚‡ã†ã€‚\n\tãƒ»é€²ç´šã™ã‚‹ã¨é€²ç´šç¥ã„é‡‘ã‚’ç²å¾—ã§ãã¾ã™ã€‚\n\tãƒ»é€²ç´šã™ã‚‹ã¨ä½¿ãˆã‚‹ã‚¹ã‚­ãƒ«ãŒå¢—ãˆã¾ã™ã€‚\n\tãƒ»æ ¹æ€§ã‚’æŒã£ã¦ã„ã¦å€’ã›ãªã„æ•µãŒã„ã¾ã™ã€‚æ ¹æ€§ãŒç™ºå‹•ã›ãšã«ä¸€å®šå€¤ã‚’ä¸‹å›žã‚‹ã¨è§£é™¤ã•ã‚Œã¾ã™ã€‚\n\nPress any key to continue...\n"); // Author: ä¸­æ‘å®¥å“‰
     }
 }
 

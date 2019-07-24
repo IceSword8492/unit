@@ -4,11 +4,18 @@
 #ifndef INITSETTINGS
 #define INITSETTINGS
 
-void initializeSettings (int argc, const char** argv)
+void initializeSettings ()
 {
+    int argc = s_argc;
+    const char** argv = s_argv;
+
     for (int i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i], "-fps") == 0 | strcmp(argv[i], "--show-fps") == 0)
+        if (strcmp(argv[i], "--debug") == 0 | strcmp(argv[i], "-d") == 0)
+        {
+            debug = true;
+        }
+        else if (strcmp(argv[i], "-fps") == 0 | strcmp(argv[i], "--show-fps") == 0)
         {
             showFps = true;
         }
@@ -28,13 +35,33 @@ void initializeSettings (int argc, const char** argv)
         {
             refreshSpeed = 7;
         }
-        else if (strcmp(argv[i], "--extremely-very-high-fps") == 0 | strcmp(argv[i], "-evhfps") == 0 | strcmp(argv[i], "-vvhfps") == 0) // target: 240fps (250fps)
+        else if (strcmp(argv[i], "--extremely-high-fps") == 0 | strcmp(argv[i], "-ehfps") == 0 | strcmp(argv[i], "-vvhfps") == 0) // target: 240fps (250fps)
         {
             refreshSpeed = 4;
         }
+        else if (strcmp(argv[i], "--set-critical") == 0 | strcmp(argv[i], "-critical") == 0)
+        {
+            if (debug)
+            {
+                criticalWeight = 100 / atoi(argv[++i]);
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
+        }
         else if (strcmp(argv[i], "--no-enemy") == 0 | strcmp(argv[i], "-noEnemy") == 0)
         {
-            enemyPop = false;
+            if (debug)
+            {
+                enemyPop = false;
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
         }
         else if (strcmp(argv[i], "--set-fps") == 0 | strcmp(argv[i], "-sfps") == 0)
         {
@@ -42,18 +69,54 @@ void initializeSettings (int argc, const char** argv)
         }
         else if (strcmp(argv[i], "--set-start-position") == 0 | strcmp(argv[i], "-ssp") == 0)
         {
-            player.pos[0] = atoi(argv[++i]);
-            player.pos[1] = atoi(argv[++i]);
+            if (debug)
+            {
+                player.pos[0] = atoi(argv[++i]);
+                player.pos[1] = atoi(argv[++i]);
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
         }
         else if (strcmp(argv[i], "--set-intelligence") == 0 | strcmp(argv[i], "-sint") == 0)
         {
-            player.intelligence = atoi(argv[++i]);
+            if (debug)
+            {
+                player.intelligence = atoi(argv[++i]);
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
         }
         else if (strcmp(argv[i], "--set-items") == 0 | strcmp(argv[i], "-sitem") == 0)
         {
-            player.item[0] = atoi(argv[++i]);
-            player.item[1] = atoi(argv[++i]);
-            player.item[2] = atoi(argv[++i]);
+            if (debug)
+            {
+                player.item[0] = atoi(argv[++i]);
+                player.item[1] = atoi(argv[++i]);
+                player.item[2] = atoi(argv[++i]);
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
+        }
+        else if (strcmp(argv[i], "--set-time") == 0 | strcmp(argv[i], "-time") == 0)
+        {
+            if (debug)
+            {
+                debugTime = 900000 - atoi(argv[++i]) * 1000;
+            }
+            else
+            {
+                printf("you must use --debug option");
+                safeExit(1);
+            }
         }
         else
         {

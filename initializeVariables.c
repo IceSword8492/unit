@@ -22,6 +22,8 @@ void initializeVariables ()
     nextGradeFlag = false;
     refreshSpeed = 33;
     enemyPop = true;
+    debug = false;
+    debugTime = 0;
 }
 
 #endif
