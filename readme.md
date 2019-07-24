@@ -2,21 +2,21 @@
 
 ![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-1.0.0-success.svg) ![DOCUMENT](https://img.shields.io/badge/documents-avaiable-success.svg) ![STABLE](https://img.shields.io/badge/stable-1.0.0-success.svg)
 
-## €”õ
+## æº–å‚™
 
 
-### ƒRƒ“ƒpƒCƒ‹
+### ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 
--03ƒIƒvƒVƒ‡ƒ“‚ğ•t—^‚·‚é‚Æ’v–½“I‚ÈƒGƒ‰[‚ª”­¶‚µ‚Ü‚·
+-03ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’ä»˜ä¸ã™ã‚‹ã¨è‡´å‘½çš„ãªã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã™
 ```sh
 g++ ./main.cpp -lwinmm -lws2_32 -static-libgcc -static-libstdc++ -llibstdc++ -o unit.exe
 ```
 
 
-## Às
+## å®Ÿè¡Œ
 
 
-### ÀsƒRƒ}ƒ“ƒh
+### å®Ÿè¡Œã‚³ãƒãƒ³ãƒ‰
 
 
 ```sh
@@ -24,89 +24,89 @@ g++ ./main.cpp -lwinmm -lws2_32 -static-libgcc -static-libstdc++ -llibstdc++ -o 
 ```
 
 
-### ƒIƒvƒVƒ‡ƒ“
+### ã‚ªãƒ—ã‚·ãƒ§ãƒ³
 
 
-debugƒ‚[ƒh‚Å‹N“® (Score‚Í0‚ÉŒÅ’è‚³‚ê‚Ü‚·)
+debugãƒ¢ãƒ¼ãƒ‰ã§èµ·å‹• (Scoreã¯0ã«å›ºå®šã•ã‚Œã¾ã™)
 ```sh
 --debug
 ```
 
 
-fps‚ğ•\¦
+fpsã‚’è¡¨ç¤º
 ```sh
 --show-fps
 ```
 
 
-2fps‚ÅÀs
+2fpsã§å®Ÿè¡Œ
 ```sh
 --very-low-fps
 ```
 
 
-10fps‚ÅÀs
+10fpsã§å®Ÿè¡Œ
 ```sh
 --low-fps
 ```
 
 
-60fps‚ÅÀs
+60fpsã§å®Ÿè¡Œ
 ```sh
 --high-fps
 ```
 
 
-120fps‚ÅÀs
+120fpsã§å®Ÿè¡Œ
 ```sh
 --very-high-fps
 ```
 
 
-240fps‚ÅÀs
+240fpsã§å®Ÿè¡Œ
 ```sh
 --extremely-high-fps
 ```
 
 
-‹³ö‚ÌƒXƒ|[ƒ“Šm—¦‚ğ0‚É•ÏX
+æ•™æˆã®ã‚¹ãƒãƒ¼ãƒ³ç¢ºç‡ã‚’0ã«å¤‰æ›´
 ```sh
 --no-enemy
 ```
 
 
-”CˆÓ‚ÌƒtƒŒ[ƒ€ƒŒ[ƒg‚ÅÀs
+ä»»æ„ã®ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆã§å®Ÿè¡Œ
 ```sh
 --set-fps <fps: int>
 ```
 
 
-ŠJn’n“_‚ğİ’è
+é–‹å§‹åœ°ç‚¹ã‚’è¨­å®š
 ```sh
 --set-start-position <floor: int> <room: int>
 ```
 
 
-ŠJn‚Ì’m¯—Ê‚ğİ’è
+é–‹å§‹æ™‚ã®çŸ¥è­˜é‡ã‚’è¨­å®š
 ```sh
 --set-intelligence <intelligence: int>
 ```
 
 
-ŠJn‚ÉŠ‚µ‚Ä‚¢‚éƒAƒCƒeƒ€—Ê‚ğİ’è
+é–‹å§‹æ™‚ã«æ‰€æŒã—ã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ é‡ã‚’è¨­å®š
 ```sh
 --set-items <energyDrinkCount: int> <paperCount: int> <esCount: int>
 ```
 
 
-ƒNƒŠƒeƒBƒJƒ‹Šm—¦‚ğİ’è
+ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ç¢ºç‡ã‚’è¨­å®š
 ```sh
 --set-critical <probability: integer>
 ```
-`probability`‚Í0~100‚Åw’è (‚»‚êˆÈŠO‚ÍÀsƒGƒ‰[‚Æ‚È‚é)
+`probability`ã¯0~100ã§æŒ‡å®š (ãã‚Œä»¥å¤–ã¯å®Ÿè¡Œæ™‚ã‚¨ãƒ©ãƒ¼ã¨ãªã‚‹)
 
 
-ŠJn‚Ìc‚èŠÔ(•b)‚ğİ’è
+é–‹å§‹æ™‚ã®æ®‹ã‚Šæ™‚é–“(ç§’)ã‚’è¨­å®š
 ```sh
 --set-time <time: integer>
 ```
