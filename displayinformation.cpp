@@ -113,7 +113,7 @@ namespace display
         case D_CLEAR:
             printf("Congratulations!\n\n");
             printf("%s\n\n",
-                trueClear ? "トゥルークリア" : "ゲームクリア"
+                trueClear ? "TrueClear" : "GameClear"
             );
             printf("名前:    %-s\n", player.name);
             printf("スコア:  %-5d\n\n",(int)score);
@@ -125,7 +125,7 @@ namespace display
             );
             break;
         case D_GAMEOVER:
-            printf("ゲームオーバー\n\n");
+            printf("GameOver\n\n");
             printf("名前:    %-s\n", player.name);
             printf("スコア:  %-5d\n\n",(int)score);
             printf("ランキング\n\n");
@@ -139,7 +139,7 @@ namespace display
             displayEscMenu();
             break;
         case D_DAMAGESTEP:
-            printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d         根性: %s\n%s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
+            printf("残り時間: %03ds                  学年: %d\n%s%s\nHP: %5d / %5d           知識: %5d\n敵HP: %5d / %5d                %s\n%s\nエナジードリンク: %d レポート用紙: %3d 履歴書: %d\n|%s出席|%sレポート提出|%sスキル|%s回復(エナジードリンク)|\n",
             (calcRemain() / 1000),
             player.pos[0] / 2 + 1,
             showFps ? "FPS: " : "",
@@ -149,7 +149,7 @@ namespace display
             player.intelligence,
             (int) getEnemy()->hp,
             (int) getEnemy()->maxHp,
-            getEnemy()->state[0] == 1 ? "有" : "無",
+            getEnemy()->state[0] == 1 ? "根性" : "",
             message,
             player.item[0],
             player.item[1],

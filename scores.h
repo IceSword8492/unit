@@ -49,10 +49,10 @@ void printScores ()
     }
     char name[4096], score[256];
     int i = 0;
-    printf("名前%16s |スコア\n\n", "");
+    printf("名前%16s | スコア\n\n", "");
     while (fscanf(fp, "%[^:]:%s\n", name, score) != EOF)
     {
-        printf("%20s |%s\n", name, score);
+        printf("%-20s | %s\n", name, score);
     }
     fclose(fp);
 }
