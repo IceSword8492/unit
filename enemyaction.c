@@ -27,7 +27,7 @@ void enemyAction ()
         }
         if(tmpAttack != 0)
         {
-            sprintf(message,"%dダメージを受けた[press any key]",(int)tmpAttack);
+            sprintf(message,"%dダメージを受けた[press enter key]",(int)tmpAttack);
             setState(D_DAMAGESTEP);
         }
     }
@@ -42,7 +42,7 @@ void enemyAction ()
         }
         if(tmpAttack != 0)
         {
-            sprintf(message,"%dダメージを受けた[press any key]",(int)tmpAttack);
+            sprintf(message,"%dダメージを受けた[press enter key]",(int)tmpAttack);
             setState(D_DAMAGESTEP);
         }
     }
@@ -50,7 +50,7 @@ void enemyAction ()
     {
         player.hp -= tmpAttack * enemy->stdAtk;
         tmpAttack *= enemy->stdAtk;
-        sprintf(message,"%dダメージを受けた[press any key]",(int)tmpAttack);
+        sprintf(message,"%dダメージを受けた[press enter key]",(int)tmpAttack);
         setState(D_DAMAGESTEP);
     }
     if (player.hp <= .0)

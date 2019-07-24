@@ -88,8 +88,10 @@ int main (int argc, const char** argv)
         case D_DAMAGESTEP:
             if (kbhit())
             {
-                getch();
-                setState(prevState);
+                if (getch() == 13)
+                {
+                    setState(prevState);
+                }
             }
             break;
         }
