@@ -67,14 +67,14 @@ float spact_4b ()
             player.hp -= (player.hp/100)*99;
         }
         getEnemy()->state[1] = 1;
-        sprintf(message,"割り合いダメージを受けた[press any key]");
+        sprintf(message,"割り合いダメージを受けた[press enter key]");
         tmpAttack = 0;
         return 0;
     }
     if (getEnemy()->hp <= getEnemy()->maxHp / 5)
     {
         getEnemy()->hp = getEnemy()->maxHp / 2;
-        sprintf(message,"HPを回復した[press any key]");
+        sprintf(message,"HPを回復した[press enter key]");
         tmpAttack = 0;
         return 0;
     }
@@ -117,7 +117,7 @@ float act_last ()
     {
     case 1:
         getEnemy()->charge = true;
-        sprintf(message,"攻撃の機会をうかがっている[press any key]");
+        sprintf(message,"攻撃の機会をうかがっている[press enter key]");
         return 0;
     default:
         return getEnemy()->stdAtk;
@@ -130,11 +130,11 @@ float act_4b ()
     {
     case 1:
         getEnemy()->dmgCut = 2;
-        sprintf(message,"守りを固めている[press any key]");
+        sprintf(message,"守りを固めている[press enter key]");
         return 0;
     case 2:
         getEnemy()->charge = true;
-        sprintf(message,"攻撃の機会をうかがっている[press any key]");
+        sprintf(message,"攻撃の機会をうかがっている[press enter key]");
         return 0;
     default:
         return getEnemy()->stdAtk;
