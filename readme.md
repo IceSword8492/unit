@@ -9,7 +9,7 @@
 
 -03オプションを付与すると致命的なエラーが発生します
 ```sh
-g++ ./main.cpp -lwinmm -lws2_32 -static-libgcc -static-libstdc++ -llibstdc++ -o unit.exe
+g++ ./main.cpp -lwinmm -lws2_32 -static-libgcc -static-libstdc++ -o unit.exe
 ```
 
 
