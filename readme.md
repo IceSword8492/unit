@@ -9,7 +9,7 @@
 
 -03オプションを付与すると致命的なエラーが発生します
 ```sh
-g++ ./main.cpp -lwinmm -lws2_32
+g++ ./main.cpp -lwinmm -lws2_32 -o unit.exe
 ```
 
 
@@ -20,7 +20,7 @@ g++ ./main.cpp -lwinmm -lws2_32
 
 
 ```sh
-./a.exe ([option]...)
+./unit.exe ([option]...)
 ```
 
 
