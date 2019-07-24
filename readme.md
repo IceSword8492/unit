@@ -1,13 +1,13 @@
 # Unit
 
-![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.3.17b-orange.svg) ![DOCUMENT](https://img.shields.io/badge/documents-unavailable-red.svg) ![STABLE](https://img.shields.io/badge/stable-N%2FA-red.svg)
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.4.0p-blue.svg) ![DOCUMENT](https://img.shields.io/badge/documents-beta-blue.svg) ![STABLE](https://img.shields.io/badge/stable-0.4.0p-blue.svg)
 
 ## 準備
 
 
 ### コンパイル
 
-
+-03オプションを付与すると致命的なエラーが発生します
 ```sh
 g++ ./main.cpp -lwinmm -lws2_32
 ```
