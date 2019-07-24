@@ -6,16 +6,11 @@
 
 int calcRemain () // returns remain time millisec
 {
-    int finish;
-    if (win || lose)
+    if (lose || finish != 0)
     {
-        if (finish == 0)
-        {
-            finish = now;
-        }
         return limitTime -(finish - startTime) - debugTime;
     }
-    return limitTime - (now - startTime) - debugTime;
+        return limitTime - (now - startTime) - debugTime;
 }
 
 #endif
