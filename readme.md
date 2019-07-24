@@ -1,6 +1,6 @@
 # Unit
 
-![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-0.4.0p-blue.svg) ![DOCUMENT](https://img.shields.io/badge/documents-beta-blue.svg) ![STABLE](https://img.shields.io/badge/stable-0.4.0p-blue.svg)
+![BUILDSTATUS](https://img.shields.io/badge/build-passing-success.svg) ![VERSION](https://img.shields.io/badge/version-1.0.0-success.svg) ![DOCUMENT](https://img.shields.io/badge/documents-avaiable-success.svg) ![STABLE](https://img.shields.io/badge/stable-1.0.0-success.svg)
 
 ## 準備
 
@@ -9,7 +9,7 @@
 
 -03オプションを付与すると致命的なエラーが発生します
 ```sh
-g++ ./main.cpp -lwinmm -lws2_32 -o unit.exe
+g++ ./main.cpp -lwinmm -lws2_32 -static-libgcc -static-libstdc++ -llibstdc++ -o unit.exe
 ```
 
 
