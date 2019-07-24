@@ -14,6 +14,10 @@ void battleVictory ()
         player.pos[0]++;
         player.money += 1000;
     }
+    if (enemy.type == 2)
+    {
+        finish = now;
+    }
     if (enemy.type == 3)
     {
         win = true;

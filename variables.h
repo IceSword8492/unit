@@ -10,6 +10,7 @@ int startTime;      // 開始時間
 int limitTime;      // 制限時間
 int prevTime;       // フレームレート制御用変数
 int now;            // フレームレート制御用変数
+int finish;         // フレームレート制御用変数
 int baseTime;       // フレームレート制御用変数
 int count;          // フレームレート制御用変数
 float fps;          // フレームレート保持変数
