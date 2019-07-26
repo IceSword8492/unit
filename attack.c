@@ -13,6 +13,7 @@ bool attack () // void -> bool by Yuya Nakamura
         if (enemy->state[0])
         {
             enemy->hp = enemy->maxHp / 2;
+            enemy->state[0] = 0;
             goto a;
         }
         battleVictory();

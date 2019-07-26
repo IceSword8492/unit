@@ -191,7 +191,7 @@ void battleBegin ()
         {
             player.item[2] -= 1;
             player.hp = 0; // æ§UŒ‚
-            strcpy(message,"—š—ğ‘‚ª‚È‚¢‚½‚ß‹A‚ç‚³‚ê‚½");
+            sprintf(message,"—š—ğ‘‚ª‚È‚¢‚½‚ß‹A‚ç‚³‚ê‚½");
             setState(D_DAMAGESTEP);
             battleDefeat();
         }
